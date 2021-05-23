@@ -1,0 +1,67 @@
+/* the homepage is styled here */
+
+.background-image {
+    background-position: center;
+    background-size: cover;
+}
+
+#background-image-homepage {
+    background-image: url("../images/background_homepage.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#background-image-homepage > h1 {
+    font-size: 5rem;
+}
+
+.padding-background-image {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+#home-background-1 {
+    background-image: url("../images/home-1.jpg");
+}
+
+#home-background-2 {
+    background-image: url("../images/home-2.jpg");
+}
+
+
+
+
+
+/* this rules are used for the footer */
+
+#rug-logo-footer {
+    filter: invert(80%);
+    max-width: calc(100vw - 4rem);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+
+
+@media (max-width: 767.98px) {
+    .padding-background-image{
+        height: 300px;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+    }
+ }
