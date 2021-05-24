@@ -10,7 +10,7 @@
     <div class="row wp-row mx-0" style="width: 100vw;">
 
         <div class="col-md-6 px-1 mx-0 background-image" id="background-image-homepage" style="height: calc(100vh - 56px);">
-            <h1 class="text-white text-center">
+            <h1 class="mx-2 text-white text-center">
                 Wiki Page Finder
             </h1>
         </div>
@@ -18,14 +18,14 @@
         <div class="col-md-6 flex-column d-flex justify-content-center align-items-center" style="padding: 2rem;">
             <div class="shadow p-4" style="border-radius: 0.5rem;">
                 <div>
-                    <h3>Submit text</h3>
+                    <h3 class="text-center">Submit text</h3>
                 </div>
                 <div>
                     <form method="POST" enctype="multipart/form-data" action="/process_files" id="process-data">
                         <div id="file-input-div" class="custom-file mt-2 mb-2">
                             <input type="file" class="custom-file-input" id="file-input" name="file-input" required>
                             <label class="custom-file-label" style="overflow: hidden;" for="validatedCustomFile">Choose file...</label>
-                            <div id="file-input-feedback" class="invalid-feedback">File is uploaded to the website</div>
+                            <div id="file-input-feedback" class="invalid-feedback my-2">File is uploaded to the website</div>
                         </div>
 
                         <div id="text-area-input-div" class="form-group d-none mt-3">
@@ -42,7 +42,7 @@
                             <p class="text-muted">When not all named entities are correct, you can change them yourself</p>
                         </div>
 
-                        <button type="submit" class="btn btn-primary file btn-sm" id="submit-data">Look for Wiki pages!</button>
+                        <button type="submit" class="btn btn-primary float-right file btn-sm" id="submit-data">Look for Wiki pages!</button>
 
                     </form>
                 </div>

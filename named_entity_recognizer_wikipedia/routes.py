@@ -20,3 +20,8 @@ def documentation():
 @app.route("/output", methods=["GET"])
 def output():
     return render_template("output.html")
+
+
+@app.route("/check_entities", methods=["GET"])
+def check_entities():
+    return render_template("check_entities.html")

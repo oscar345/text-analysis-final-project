@@ -24,7 +24,7 @@ function showUploadedFilename() {
         var fileFeedbackDiv = nextSibling.nextElementSibling;
         nextSibling.innerText = fileName;
         fileFeedbackDiv.classList.replace("invalid-feedback", "valid-feedback");
-        fileFeedbackDiv.innerText = "The file has been uploaded succesfully to the website";
+        fileFeedbackDiv.innerText = "Your file has been successfully uploaded to the website";
         fileFeedbackDiv.style.display = "block";
     })
 }
