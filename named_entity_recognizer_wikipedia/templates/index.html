@@ -23,23 +23,26 @@
                 <div>
                     <form method="POST" enctype="multipart/form-data" action="/process_files" id="process-data">
                         <div id="file-input-div" class="custom-file mt-2 mb-2">
-                            <input type="file" class="custom-file-input" id="file-input" name="file-input" required>
+                            <input type="file" class="custom-file-input mb-2" id="file-input" name="file-input" required>
                             <label class="custom-file-label" style="overflow: hidden;" for="validatedCustomFile">Choose file...</label>
-                            <div id="file-input-feedback" class="invalid-feedback my-2">File is uploaded to the website</div>
+                            <div id="file-input-feedback" class="invalid-feedback mb-2">File is uploaded to the website</div>
+                            <p class="text-muted">Upload your text file here.</p>
                         </div>
 
                         <div id="text-area-input-div" class="form-group d-none mt-3">
-                            <textarea class="form-control" id="text-area-input" name="text-area-input" rows="10" placeholder="Enter your text here ..."></textarea>
+                            <textarea class="form-control" id="text-area-input" name="text-area-input" rows="5" placeholder="Enter your text here ..."></textarea>
                         </div>
 
                         <button type="button" class="btn btn-outline-secondary mt-2 file btn-sm" id="switch-input-method">Type text</button>
 
-                        <div class="form-check mt-3">
-                            <input class="form-check-input" type="checkbox" value="" id="check-entities" name="check-entities">
-                            <label class="form-check-label" for="check-entities">
-                                Check named entities
-                            </label>
-                            <p class="text-muted">When not all named entities are correct, you can change them yourself</p>
+                        <div class="input-group mb-3 mt-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <input type="checkbox" aria-label="Checkbox for following text input">
+                                </div>
+                            </div>
+                            <input type="text" class="form-control" name="CoreNLP-path-input" id="CoreNLP-path-input" placeholder="Stanford CoreNLP path" aria-label="Text input with checkbox">
+                            <p class="text-muted mt-2">Add the path to your Core NLP directory here and check the checkbox. This will run a bash command, making the Core NLP server run. If you have it running already, you can leave the input field blank.</p>
                         </div>
 
                         <button type="submit" class="btn btn-primary float-right file btn-sm" id="submit-data">Look for Wiki pages!</button>
@@ -58,9 +61,9 @@
             </h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ante vel nisi pulvinar facilisis vitae non odio. Sed tempor arcu sit amet orci efficitur, in iaculis arcu commodo. Cras urna sapien, suscipit ut ullamcorper sed, sagittis et nisl. Sed turpis ligula, aliquam nec massa vitae, posuere ullamcorper odio. Vestibulum dui orci, dignissim in porta ut, convallis quis urna. Suspendisse ut diam et tortor laoreet efficitur vel ac erat. Aenean auctor lectus libero, et fermentum odio convallis eu. Maecenas dui purus, tincidunt nec bibendum a, luctus nec nunc. Duis mi ipsum, rhoncus ut turpis a, volutpat dapibus risus. Praesent viverra nibh sem, in bibendum arcu mattis consequat. Mauris eget dolor commodo, mollis orci vitae, vulputate sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Aliquam porttitor magna sit amet odio ultrices ultricies vel sit amet tellus. Sed in consequat orci.
-                                                                                                    
-                                                                                                    Cras venenatis semper ultrices. Vivamus neque lacus, volutpat sit amet tortor non, sagittis rhoncus neque. Curabitur vehicula lorem non volutpat cursus. Nunc ultrices, tellus ut euismod scelerisque, libero purus sodales velit, ut posuere eros enim vehicula leo. Nam molestie sagittis feugiat. Mauris felis odio, ultricies euismod sapien eu, posuere volutpat elit. Vivamus tincidunt libero et turpis dignissim aliquam.
-                                                                                                    
+                                                                                                                                    
+                                                                                                                                    Cras venenatis semper ultrices. Vivamus neque lacus, volutpat sit amet tortor non, sagittis rhoncus neque. Curabitur vehicula lorem non volutpat cursus. Nunc ultrices, tellus ut euismod scelerisque, libero purus sodales velit, ut posuere eros enim vehicula leo. Nam molestie sagittis feugiat. Mauris felis odio, ultricies euismod sapien eu, posuere volutpat elit. Vivamus tincidunt libero et turpis dignissim aliquam.
+
 
             </p>
         </div>
@@ -80,9 +83,9 @@
             </h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ante vel nisi pulvinar facilisis vitae non odio. Sed tempor arcu sit amet orci efficitur, in iaculis arcu commodo. Cras urna sapien, suscipit ut ullamcorper sed, sagittis et nisl. Sed turpis ligula, aliquam nec massa vitae, posuere ullamcorper odio. Vestibulum dui orci, dignissim in porta ut, convallis quis urna. Suspendisse ut diam et tortor laoreet efficitur vel ac erat. Aenean auctor lectus libero, et fermentum odio convallis eu. Maecenas dui purus, tincidunt nec bibendum a, luctus nec nunc. Duis mi ipsum, rhoncus ut turpis a, volutpat dapibus risus. Praesent viverra nibh sem, in bibendum arcu mattis consequat. Mauris eget dolor commodo, mollis orci vitae, vulputate sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Aliquam porttitor magna sit amet odio ultrices ultricies vel sit amet tellus. Sed in consequat orci.
-                                                                                                    
-                                                                                                    Cras venenatis semper ultrices. Vivamus neque lacus, volutpat sit amet tortor non, sagittis rhoncus neque. Curabitur vehicula lorem non volutpat cursus. Nunc ultrices, tellus ut euismod scelerisque, libero purus sodales velit, ut posuere eros enim vehicula leo. Nam molestie sagittis feugiat. Mauris felis odio, ultricies euismod sapien eu, posuere volutpat elit. Vivamus tincidunt libero et turpis dignissim aliquam.
-                                                                                                    
+                                                                                                                                    
+                                                                                                                                    Cras venenatis semper ultrices. Vivamus neque lacus, volutpat sit amet tortor non, sagittis rhoncus neque. Curabitur vehicula lorem non volutpat cursus. Nunc ultrices, tellus ut euismod scelerisque, libero purus sodales velit, ut posuere eros enim vehicula leo. Nam molestie sagittis feugiat. Mauris felis odio, ultricies euismod sapien eu, posuere volutpat elit. Vivamus tincidunt libero et turpis dignissim aliquam.
+
             </p>
         </div>
     </div>

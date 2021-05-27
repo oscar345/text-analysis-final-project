@@ -1,5 +1,5 @@
 from werkzeug.utils import redirect
-from named_entity_recognizer_wikipedia import app
+from named_entity_recognizer_wikipedia import (app, named_entity_recognizer)
 from flask import request, redirect, url_for
 import os
 import re
@@ -24,8 +24,8 @@ def process_files():
 
     if file_input:
         file_input.save(filename)
-
-    if check_entities is not None:
-        return redirect(url_for("check_entities"))
-
+    
+    NamedEntityRecognizer = named_entity_recognizer.NamedEntityRecognizer()
+    
+    NamedEntityRecognizer.run_core_NLP_server()
     return redirect(url_for("output"))
