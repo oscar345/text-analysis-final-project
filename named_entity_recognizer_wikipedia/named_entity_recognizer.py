@@ -1,6 +1,7 @@
 from nltk.corpus import wordnet
 from nltk.corpus.reader.wordnet import information_content
 from nltk.stem.wordnet import WordNetLemmatizer
+from nltk.text import TokenSearcher
 from nltk.wsd import lesk
 from nltk import word_tokenize, sent_tokenize, pos_tag
 import os
@@ -26,11 +27,12 @@ from urllib.parse import urlparse
 
 class NamedEntityRecognizer():
     def __init__(self):
-        self.tokens = list()
-        self.named_entities = list()
+        self.tokens = dict()
+        self.named_entities = dict()
         self.reviewed_text_sents = list()
         self.pos_file = str()
 
+    # Functions that were used to create the training set
     def open_dev_files(self, directory_name, file_name):
         opened_files = list()
         for subset in os.listdir(directory_name):
@@ -54,24 +56,15 @@ class NamedEntityRecognizer():
                 training_data_line = f"{words[3]}\t{words[5]}"
                 new_training_data_file.append(training_data_line)
         return "\n".join(new_training_data_file)
+
     
+    # Here are the functions that will be used to recognize named entities
     def create_pos_file(self, pos_file):
-        #TODO : needs some work
+        # TODO : needs some work
         self.pos_file = pos_file
-    
+
     def add_pos_file(self, pos_file):
         self.pos_file = pos_file
-    
-
-    # def run_core_NLP_server(self, coreNLPpath):
-    #     try:
-    #         bash_command = f'cd "{coreNLPpath}" ; cat > iamhere.txt ; java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -preload tokenize,ssplit,pos,lemma,ner,parse,depparse -status_port 9000 -port 9000 -timeout 15000 &'
-
-    #         os.system(bash_command)
-    #         return "We have succesfully started the server for you"
-    #     except:
-    #         return ("We could not start the server for you. Please do this"
-    #                 "manually")
 
     def get_data_from_file(self):
         sent = list()
@@ -80,17 +73,18 @@ class NamedEntityRecognizer():
             line = line.split()
             if line != [] and sent_num == line[2][0]:
                 sent.append(line[3])
-                self.tokens.append(line[3])
+                self.tokens[line[2]] = line[3]
             elif line != []:
                 self.reviewed_text_sents.append(sent)
                 sent.clear()
                 sent.append(line[3])
                 sent_num += 1
-                self.tokens.append(line[3])
+                self.tokens[line[2]] = line[3]
         self.reviewed_text_sents.append(sent)
 
     def tag_named_entities_Core_NLP(self, url_Core_NLP):
         ner_tagger = CoreNLPParser(url=url_Core_NLP, tagtype="ner")
+
         # piece of code I stole from github to let flask wait for a
         # request until the core NLP server is ready for one.
         # https://github.com/Lynten/stanford-corenlp/blob/dec81f51b72469877512c78abc45fd2581bd1237/stanfordcorenlp/corenlp.py
@@ -106,11 +100,15 @@ class NamedEntityRecognizer():
             time.sleep(1)
         logging.info('The server is available.')
         # End of the code i did not write myself.
-        self.named_entities.append(list(ner_tagger.tag(self.tokens)))
-    
+        tokens = [token for token in self.tokens.values()]
+        named_entities = (list(ner_tagger.tag(tokens)))
+        token_locations = list(self.tokens.keys())
+
+        for index, token_location in enumerate(token_locations):
+            self.named_entities[token_location] = named_entities[index]
+
     def tag_named_entities_WordNet(self):
         return ""
-        
 
     def return_reviewed_text_sents(self):
         return self.reviewed_text_sents

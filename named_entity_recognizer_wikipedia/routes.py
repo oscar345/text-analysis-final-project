@@ -21,7 +21,7 @@ def documentation():
 @app.route("/output", methods=["GET"])
 def output():
     named_entities = session["named_entities"]
-    return render_template("output.html", named_entities=named_entities[0])
+    return render_template("output.html", named_entities=named_entities.items())
 
 
 @app.route("/check_entities", methods=["GET"])
