@@ -4,7 +4,7 @@ function switchInputMethod() {
         $("#text-area-input-div").toggleClass("d-none");
 
         if ($(this).hasClass("file")) {
-            $(this).text("Use file upload");
+            $(this).text("Use .pos file");
             $('#file-input').prop('required', false);
             $('#text-area-input').prop('required', true);
         } else {

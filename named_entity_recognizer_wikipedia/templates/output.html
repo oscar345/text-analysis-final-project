@@ -1,5 +1,8 @@
 {% extends 'layout.html' %}
 {% block title %}Output{% endblock %}
 
-
-{% block content %}{% endblock %}
+{% block content %}
+{% for named_entity in named_entities %}
+    <p>{{ named_entity }}</p>
+{% endfor %}
+{% endblock %}

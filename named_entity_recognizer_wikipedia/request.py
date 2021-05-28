@@ -1,16 +1,16 @@
 from werkzeug.utils import redirect
-from named_entity_recognizer_wikipedia import (app, named_entity_recognizer)
-from flask import request, redirect, url_for
+from named_entity_recognizer_wikipedia import app, named_entity_recognizer
+from flask import request, redirect, url_for, session
 import os
-import re
 
 
 @app.post("/process_files")
 def process_files():
     text_area_input = request.form.get("text-area-input")
     file_input = request.files["file-input"]
-    check_entities = request.form.get("check-entities")
-
+    
+    NamedEntityRecognizer = named_entity_recognizer.NamedEntityRecognizer()
+    
     upload_file_names = os.listdir(app.config["UPLOAD_FILES"])
     try:
         index_upload_file = int(upload_file_names[-1].replace("upload_file_", "").replace(".txt", "")) + 1
@@ -19,13 +19,14 @@ def process_files():
     filename = f"./named_entity_recognizer_wikipedia/static/upload_files/upload_file_{index_upload_file}.txt"
 
     if text_area_input:
-        with open(filename, "w") as text_file:
-            text_file.write(text_area_input)
-
-    if file_input:
+        NamedEntityRecognizer.create_pos_file()
+    elif file_input:
         file_input.save(filename)
-    
-    NamedEntityRecognizer = named_entity_recognizer.NamedEntityRecognizer()
-    
-    NamedEntityRecognizer.run_core_NLP_server()
+        with open(filename, "r") as file:
+            NamedEntityRecognizer.add_pos_file(file.read())
+            
+    NamedEntityRecognizer.get_data_from_file()
+    NamedEntityRecognizer.tag_named_entities_Core_NLP("http://10.211.55.3:9000")
+    named_entities = NamedEntityRecognizer.return_named_entities()
+    session["named_entities"] = named_entities
     return redirect(url_for("output"))

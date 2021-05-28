@@ -1,5 +1,6 @@
-from flask import render_template, redirect
+from flask import render_template, redirect, session, request
 from named_entity_recognizer_wikipedia import app
+import jinja2
 
 
 @app.route("/", methods=["GET"])
@@ -19,7 +20,8 @@ def documentation():
 
 @app.route("/output", methods=["GET"])
 def output():
-    return render_template("output.html")
+    named_entities = session["named_entities"]
+    return render_template("output.html", named_entities=named_entities[0])
 
 
 @app.route("/check_entities", methods=["GET"])
