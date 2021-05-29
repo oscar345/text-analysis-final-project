@@ -41,7 +41,7 @@ class NamedEntityRecognizer():
         annotated files are located.
         file_name -- the name of the file in which annotations are
         stored
-        
+
         returns -- a list with each file opened as a string.
         """
         opened_files = list()
@@ -58,7 +58,7 @@ class NamedEntityRecognizer():
     def create_training_data_core_NLP(self, ent_file):
         """
         entfile -- the file in which the annotations are stored
-        
+
         returns -- a string in a format that can be used by Core NLP to
         train a named entity recognizer model
         """
@@ -110,11 +110,11 @@ class NamedEntityRecognizer():
         """
         url_Core_NLP -- the url on which the core nlp server is
         listening. Most of the time this would be localhost:9000
-        
+
         the named entities will be added to the instance of
         NamedEntityRecognizer
         """
-        
+
         ner_tagger = CoreNLPParser(url=url_Core_NLP, tagtype="ner")
 
         # piece of code I stole from github to let flask wait for a
@@ -133,8 +133,13 @@ class NamedEntityRecognizer():
         logging.info('The server is available.')
         # End of the code i did not write myself.
         self.named_entities = list(ner_tagger.tag(self.tokens))
-        
+
     def sync_tokens_named_entities(self):
+        """
+        the Core NLP server tokenizes the tokens again and does it
+        differently than NLTK. This will make the number of items uneven
+        and will add urls to the wrong words in the Wikifier.
+        """
         for index, token in enumerate(self.tokens):
             if token != self.named_entities[index][0]:
                 ne_index = 0
@@ -184,10 +189,34 @@ class Wikifier():
         while self.named_entities[index + extra_tokens + 1][1] == category_previous:
             extra_tokens += 1
         return extra_tokens
+    
+    def handle_wiki_page_err(self, most_similiar_wiki_page, abbreviation, named_entity):
+        if most_similiar_wiki_page:
+            best_wiki_page = str()
+            
+            try:
+                best_wiki_page = wikipedia.page(title=most_similiar_wiki_page, auto_suggest=abbreviation)
+            except wikipedia.exceptions.DisambiguationError:
+                try:
+                    best_wiki_page = wikipedia.page(title=f"{most_similiar_wiki_page} {self.fullout_tags[named_entity[1]]}")
+                except wikipedia.exceptions.DisambiguationError:
+                    print("again ambiguation")
+                except TypeError:
+                    print("page id does not exist")
+            except wikipedia.exceptions.PageError:
+                print("page id does not exist")
+            except TypeError:
+                print("page id does not exist")
+
+            if best_wiki_page:
+                self.wiki_urls.append(best_wiki_page.url)
+                return best_wiki_page
+            else:
+                self.wiki_urls.append("")
 
     def get_right_wiki_page(self):
         known = list()
-                
+
         for index, named_entity in enumerate(self.named_entities):
             if index in known:
                 continue
@@ -202,46 +231,21 @@ class Wikifier():
                     wiki_search_term = " ".join(tokens_search_term)
 
                 abbreviation = "." in wiki_search_term
+                # most abbreviations are found best by wikipedia self.
+                
                 if not abbreviation:
-                    print(wiki_search_term)
                     wiki_pages = [str(title) for title in wikipedia.search(wiki_search_term)]
-                    print(wiki_pages)
                     if wiki_pages:
                         most_similiar_wiki_page = process.extractOne(wiki_search_term, wiki_pages, scorer=fuzz.ratio)[0]
                 else:
                     most_similiar_wiki_page = wiki_search_term
                 
-                if most_similiar_wiki_page:
-                    print(most_similiar_wiki_page)
-
-                    best_wiki_page = str()
-                    
-                    try:
-                        best_wiki_page = wikipedia.page(title=most_similiar_wiki_page, auto_suggest=abbreviation)
-                    except wikipedia.exceptions.DisambiguationError:
-                        try:
-                            best_wiki_page = wikipedia.page(title=f"{most_similiar_wiki_page} {self.fullout_tags[named_entity[1]]}")
-                        except wikipedia.exceptions.DisambiguationError:
-                            print("again ambiguation")
-                        except TypeError:
-                            print("page id does not exist")
-                    except wikipedia.exceptions.PageError:
-                        print("page id does not exist")
-                    except TypeError:
-                        print("page id does not exist")
-
-
-                    if best_wiki_page:
-                        self.wiki_urls.append(best_wiki_page.url)
-                    else:
-                        self.wiki_urls.append("")
+                best_wiki_page = self.handle_wiki_page_err(most_similiar_wiki_page, abbreviation, named_entity)
                 
-                if extra_tokens != 0:
+                if extra_tokens != 0 and best_wiki_page:
                     for i in range(extra_tokens):
                         self.wiki_urls.append(best_wiki_page.url)
-                    
-                print(best_wiki_page)
-                print("\n\n\n")
+
             else:
                 self.wiki_urls.append("")
 
