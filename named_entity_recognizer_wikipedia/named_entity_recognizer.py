@@ -6,7 +6,7 @@ from nltk.wsd import lesk
 from nltk import word_tokenize, sent_tokenize, pos_tag
 import os
 import wikipedia
-from collections import Counter
+from collections import Counter, OrderedDict
 from random import randrange
 from nltk.parse import CoreNLPParser
 from nltk.wsd import lesk
@@ -36,6 +36,14 @@ class NamedEntityRecognizer():
 
     # Functions that were used to create the training set
     def open_dev_files(self, directory_name, file_name):
+        """
+        directory_name -- the name of the directory in which the
+        annotated files are located.
+        file_name -- the name of the file in which annotations are
+        stored
+        
+        returns -- a list with each file opened as a string.
+        """
         opened_files = list()
         for subset in os.listdir(directory_name):
             if not subset.startswith("."):
@@ -48,6 +56,12 @@ class NamedEntityRecognizer():
         return opened_files
 
     def create_training_data_core_NLP(self, ent_file):
+        """
+        entfile -- the file in which the annotations are stored
+        
+        returns -- a string in a format that can be used by Core NLP to
+        train a named entity recognizer model
+        """
         new_training_data_file = list()
         for line in ent_file.split("\n"):
             words = line.split()
@@ -68,6 +82,10 @@ class NamedEntityRecognizer():
         self.pos_file = pos_file.split("\n")
 
     def get_data_from_file(self):
+        """
+        this function is responsible for adding information contained
+        in the posfile to the instance of NamedEntityRecognizer
+        """
         sent = list()
         sent_num = 0
         for line in self.pos_file:
@@ -76,9 +94,11 @@ class NamedEntityRecognizer():
                 break
             word = line[3]
             if sent_num == line[2][0]:
+                self.token_positions.append(f"{line[0]} {line[1]} {line[2]}")
                 sent.append(word)
                 self.tokens.append(word)
             else:
+                self.token_positions.append(line[2])
                 self.sents.append(sent)
                 sent.clear()
                 sent.append(word)
@@ -87,6 +107,14 @@ class NamedEntityRecognizer():
         self.sents.append(sent)
 
     def tag_named_entities_Core_NLP(self, url_Core_NLP):
+        """
+        url_Core_NLP -- the url on which the core nlp server is
+        listening. Most of the time this would be localhost:9000
+        
+        the named entities will be added to the instance of
+        NamedEntityRecognizer
+        """
+        
         ner_tagger = CoreNLPParser(url=url_Core_NLP, tagtype="ner")
 
         # piece of code I stole from github to let flask wait for a
@@ -105,6 +133,16 @@ class NamedEntityRecognizer():
         logging.info('The server is available.')
         # End of the code i did not write myself.
         self.named_entities = list(ner_tagger.tag(self.tokens))
+        
+    def sync_tokens_named_entities(self):
+        for index, token in enumerate(self.tokens):
+            if token != self.named_entities[index][0]:
+                ne_index = 0
+                while self.tokens[index + 1] != self.named_entities[index + ne_index][0]:
+                    ne_index += 1
+                ne_tag = self.named_entities[index][1]
+                del self.named_entities[index:index + ne_index]
+                self.named_entities.insert(index, (token, ne_tag))
 
     def tag_named_entities_WordNet(self):
         return self.named_entities
@@ -121,6 +159,7 @@ class NamedEntityRecognizer():
     def return_token_positions(self):
         return self.token_positions
 
+
 class Wikifier():
     def __init__(self, sents_text, named_entities, pos_file, tokens, token_positions):
         self.tokens = tokens
@@ -129,36 +168,78 @@ class Wikifier():
         self.pos_file = pos_file
         self.token_positions = token_positions
         self.wiki_urls = list()
-    
+        self.fullout_tags = {
+            "PER": "person",
+            "ORG": "organization",
+            "COU": "country",
+            "CIT": "city",
+            "ANI": "animal",
+            "SPO": "sport",
+            "NAT": "natural place",
+            "ENT": "entertainment"
+        }
+
     def check_for_collocation(self, index, category_previous):
-        extra_tokens = 1
-        while self.named_entities[index + extra_tokens][1] == category_previous:
+        extra_tokens = 0
+        while self.named_entities[index + extra_tokens + 1][1] == category_previous:
             extra_tokens += 1
         return extra_tokens
 
     def get_right_wiki_page(self):
+        known = list()
+                
         for index, named_entity in enumerate(self.named_entities):
-            if named_entity[1] != "0":
+            if index in known:
+                continue
+            elif named_entity[1] != "0":
                 wiki_search_term = named_entity[0]
                 extra_tokens = self.check_for_collocation(index, named_entity[1])
-                if extra_tokens != 1:
+                if extra_tokens != 0:
                     tokens_search_term = [named_entity[0]]
                     for i in range(1, extra_tokens + 1):
                         tokens_search_term.append(self.tokens[index + i])
+                        known.append(index + i)
                     wiki_search_term = " ".join(tokens_search_term)
 
-                print(wiki_search_term)
-                wiki_pages = wikipedia.search(wiki_search_term)
-                most_similiar_wiki_page = process.extractOne(wiki_search_term, wiki_pages)
+                abbreviation = "." in wiki_search_term
+                if not abbreviation:
+                    print(wiki_search_term)
+                    wiki_pages = [str(title) for title in wikipedia.search(wiki_search_term)]
+                    print(wiki_pages)
+                    if wiki_pages:
+                        most_similiar_wiki_page = process.extractOne(wiki_search_term, wiki_pages, scorer=fuzz.ratio)[0]
+                else:
+                    most_similiar_wiki_page = wiki_search_term
+                
+                if most_similiar_wiki_page:
+                    print(most_similiar_wiki_page)
 
-                try:
-                    best_wiki_page = wikipedia.page(title=most_similiar_wiki_page[0].lower())
-                except wikipedia.exceptions.DisambiguationError:
-                    best_wiki_page = wikipedia.page(title=f"{most_similiar_wiki_page[0].lower()} {self.named_entities[1]}")
-                except wikipedia.exceptions.PageError:
-                    print("page id does not exist")
+                    best_wiki_page = str()
+                    
+                    try:
+                        best_wiki_page = wikipedia.page(title=most_similiar_wiki_page, auto_suggest=abbreviation)
+                    except wikipedia.exceptions.DisambiguationError:
+                        try:
+                            best_wiki_page = wikipedia.page(title=f"{most_similiar_wiki_page} {self.fullout_tags[named_entity[1]]}")
+                        except wikipedia.exceptions.DisambiguationError:
+                            print("again ambiguation")
+                        except TypeError:
+                            print("page id does not exist")
+                    except wikipedia.exceptions.PageError:
+                        print("page id does not exist")
+                    except TypeError:
+                        print("page id does not exist")
 
-                self.wiki_urls.append(best_wiki_page.url)
+
+                    if best_wiki_page:
+                        self.wiki_urls.append(best_wiki_page.url)
+                    else:
+                        self.wiki_urls.append("")
+                
+                if extra_tokens != 0:
+                    for i in range(extra_tokens):
+                        self.wiki_urls.append(best_wiki_page.url)
+                    
                 print(best_wiki_page)
                 print("\n\n\n")
             else:
@@ -167,5 +248,11 @@ class Wikifier():
     def create_output_file():
         return ""
 
-    def create_html_output():
-        return ""
+    def create_dict_output(self):
+        output = OrderedDict()
+        print(len(self.token_positions), len(self.tokens), len(self.named_entities), len(self.wiki_urls))
+
+        for i, location in enumerate(self.token_positions):
+            output[location] = [self.tokens[i], self.named_entities[i][1], self.wiki_urls[i]]
+        return output
+        

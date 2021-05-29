@@ -2,7 +2,21 @@
 {% block title %}Output{% endblock %}
 
 {% block content %}
-{% for named_entity in named_entities %}
-    <p>{{ named_entity }}</p>
-{% endfor %}
+
+<div class="container">
+    <h1 class="text-center my-5">Output</h1>
+    <p>
+        {% for location, info in output %}
+            {% if info[2] == "" %}
+            <span>{{ info[0] }}</span>
+            {% else %}
+            <a class="show-link-preview" href="{{ info[2] }}">{{ info[0] }}</a>
+            {% endif %}
+        {% endfor %}
+    </p>
+    {% for location, info in output %}
+            <p>{{ info }}</p>
+    {% endfor %}
+</div>
+
 {% endblock %}
