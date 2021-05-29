@@ -17,6 +17,7 @@ import socket
 import time
 import logging
 from urllib.parse import urlparse
+from fuzzywuzzy import fuzz, process
 
 # sports are required by using the hyponyms of sport
 # for animals and entertainment the same thing will be done.
@@ -27,10 +28,11 @@ from urllib.parse import urlparse
 
 class NamedEntityRecognizer():
     def __init__(self):
-        self.tokens = dict()
-        self.named_entities = dict()
-        self.reviewed_text_sents = list()
-        self.pos_file = str()
+        self.tokens = list()
+        self.named_entities = list()
+        self.sents = list()
+        self.pos_file = list()
+        self.token_positions = list()
 
     # Functions that were used to create the training set
     def open_dev_files(self, directory_name, file_name):
@@ -57,30 +59,32 @@ class NamedEntityRecognizer():
                 new_training_data_file.append(training_data_line)
         return "\n".join(new_training_data_file)
 
-    
     # Here are the functions that will be used to recognize named entities
     def create_pos_file(self, pos_file):
         # TODO : needs some work
         self.pos_file = pos_file
 
     def add_pos_file(self, pos_file):
-        self.pos_file = pos_file
+        self.pos_file = pos_file.split("\n")
 
     def get_data_from_file(self):
         sent = list()
         sent_num = 0
-        for line in self.pos_file.split('\n'):
+        for line in self.pos_file:
             line = line.split()
-            if line != [] and sent_num == line[2][0]:
-                sent.append(line[3])
-                self.tokens[line[2]] = line[3]
-            elif line != []:
-                self.reviewed_text_sents.append(sent)
+            if line == []:
+                break
+            word = line[3]
+            if sent_num == line[2][0]:
+                sent.append(word)
+                self.tokens.append(word)
+            else:
+                self.sents.append(sent)
                 sent.clear()
-                sent.append(line[3])
+                sent.append(word)
                 sent_num += 1
-                self.tokens[line[2]] = line[3]
-        self.reviewed_text_sents.append(sent)
+                self.tokens.append(word)
+        self.sents.append(sent)
 
     def tag_named_entities_Core_NLP(self, url_Core_NLP):
         ner_tagger = CoreNLPParser(url=url_Core_NLP, tagtype="ner")
@@ -100,42 +104,65 @@ class NamedEntityRecognizer():
             time.sleep(1)
         logging.info('The server is available.')
         # End of the code i did not write myself.
-        tokens = [token for token in self.tokens.values()]
-        named_entities = (list(ner_tagger.tag(tokens)))
-        token_locations = list(self.tokens.keys())
-
-        for index, token_location in enumerate(token_locations):
-            self.named_entities[token_location] = named_entities[index]
+        self.named_entities = list(ner_tagger.tag(self.tokens))
 
     def tag_named_entities_WordNet(self):
-        return ""
+        return self.named_entities
 
-    def return_reviewed_text_sents(self):
-        return self.reviewed_text_sents
+    def return_sents(self):
+        return self.sents
 
     def return_named_entities(self):
         return self.named_entities
 
+    def return_tokens(self):
+        return self.tokens
+
+    def return_token_positions(self):
+        return self.token_positions
 
 class Wikifier():
-    def __init__(self, reviewed_text_sents, named_entities):
-        self.tokens = list()
+    def __init__(self, sents_text, named_entities, pos_file, tokens, token_positions):
+        self.tokens = tokens
         self.named_entities = named_entities
-        self.reviewed_text_sents = reviewed_text_sents
-        self.pos_file = str()
+        self.sents_text = sents_text
+        self.pos_file = pos_file
+        self.token_positions = token_positions
+        self.wiki_urls = list()
+    
+    def check_for_collocation(self, index, category_previous):
+        extra_tokens = 1
+        while self.named_entities[index + extra_tokens][1] == category_previous:
+            extra_tokens += 1
+        return extra_tokens
 
-    def get_summaries(self):
-        something = list()
-        for named_entity in self.named_entities:
-            something = named_entity
-        self.named_entities = something
-        
-        
     def get_right_wiki_page(self):
-        #for sent in self.tokens:
-        return ""
-            
-            
+        for index, named_entity in enumerate(self.named_entities):
+            if named_entity[1] != "0":
+                wiki_search_term = named_entity[0]
+                extra_tokens = self.check_for_collocation(index, named_entity[1])
+                if extra_tokens != 1:
+                    tokens_search_term = [named_entity[0]]
+                    for i in range(1, extra_tokens + 1):
+                        tokens_search_term.append(self.tokens[index + i])
+                    wiki_search_term = " ".join(tokens_search_term)
+
+                print(wiki_search_term)
+                wiki_pages = wikipedia.search(wiki_search_term)
+                most_similiar_wiki_page = process.extractOne(wiki_search_term, wiki_pages)
+
+                try:
+                    best_wiki_page = wikipedia.page(title=most_similiar_wiki_page[0].lower())
+                except wikipedia.exceptions.DisambiguationError:
+                    best_wiki_page = wikipedia.page(title=f"{most_similiar_wiki_page[0].lower()} {self.named_entities[1]}")
+                except wikipedia.exceptions.PageError:
+                    print("page id does not exist")
+
+                self.wiki_urls.append(best_wiki_page.url)
+                print(best_wiki_page)
+                print("\n\n\n")
+            else:
+                self.wiki_urls.append("")
 
     def create_output_file():
         return ""

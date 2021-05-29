@@ -7,3 +7,15 @@ def run_core_NLP_server(self, coreNLPpath):
     except:
         return ("We could not start the server for you. Please do this"
                 "manually")
+        
+        
+
+best_ratio_score = 0
+for wiki_page in wiki_pages:
+    try:
+        if fuzz.token_set_ratio(wikipedia.summary(wiki_page), text) > best_ratio_score:
+            best_wiki_page = wiki_page
+    except wikipedia.exceptions.DisambiguationError:
+        continue
+    except wikipedia.exceptions.PageError:
+        continue
