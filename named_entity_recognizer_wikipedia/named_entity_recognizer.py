@@ -9,12 +9,11 @@ import wikipedia
 from collections import OrderedDict
 from nltk.parse import CoreNLPParser
 from nltk.wsd import lesk
-from requests.adapters import HTTPAdapter
 import socket
 import time
 import logging
 from urllib.parse import urlparse
-#from fuzzywuzzy import fuzz, process
+from fuzzywuzzy import fuzz, process
 
 # sports are required by using the hyponyms of sport
 # for animals and entertainment the same thing will be done.
@@ -30,7 +29,8 @@ class NamedEntityRecognizer():
         self.sents = list()
         self.pos_file = list()
         self.token_positions = list()
-        self.list_of_synset = list()
+        self.list_of_synsets = list()
+        self.wordnet_named_entities = list()
 
     # Functions that were used to create the training set
     def open_dev_files(self, directory_name, file_name):
@@ -147,26 +147,19 @@ class NamedEntityRecognizer():
                 del self.named_entities[index:index + ne_index]
                 self.named_entities.insert(index, (token, ne_tag))
 
-    def tag_named_entities_WordNet(self):
-        tokens = self.tokens
-        pos_tags =  pos_tag(tokens)
-        lemmas = []
+    def create_lemma_synsets(self):
+        token_pos_tags = pos_tag(self.tokens)
         lemmatizer = WordNetLemmatizer()
-        for item in pos_tags:
-            if item[1].startswith('NN') and item[1] != ('NNP'):
-                lemmas.append(lemmatizer.lemmatize(item[0], wordnet.NOUN))
-        lemma_synsets = list()
-        for lemma in lemmas:
-            try:
-                lemma_synsets.append(wordnet.synsets(lemma, pos="n"))
-            except IndexError:
-                continue
-        list_of_synset = []
-        for lemma in lemmas:
-            lemma_synset = wordnet.synsets(lemma, pos='n')
-            for synset in lemma_synset:
-                list_of_synset.append(synset)
-        self.list_of_synset = list_of_synset
+        for token_pos_tag in token_pos_tags:
+            if token_pos_tag[1].startswith('NN'):
+                lemma = (lemmatizer.lemmatize(token_pos_tag[0], wordnet.NOUN))
+                try:
+                    lemma_synsets = (wordnet.synsets(lemma, pos="n"))
+                    self.list_of_synsets.append(lemma_synsets)
+                except IndexError:
+                    self.list_of_synsets.append(None)
+            else:
+                self.list_of_synsets.append(None)
 
     def hypernym_of(self, lemma_synset, hypernym_synset):
         if lemma_synset == hypernym_synset:
@@ -178,17 +171,34 @@ class NamedEntityRecognizer():
                 return True
         return False
 
-    def synset_list(self):
-        categories = ["entertainment", "animal", "sport"]
-        list_synset = self.list_of_synset 
-        for category in categories:
-            hypernym_synset = wordnet.synsets(category, pos="n")[0]
-            relative_lemmas = list()
-            for lemma_synset in list_synset:
-                if self.hypernym_of(lemma_synset, hypernym_synset):
-                    relative_lemmas.append(lemma_synset)
-        return relative_lemmas
+    def get_category(self, category, lemma_synsets, index):
+        hypernym_synset = wordnet.synsets(category, pos="n")[0]
+        right_synset = None
+        if len(lemma_synsets) > 1:
+            sent_num = int(self.token_positions[index][0])
+            right_synset = lesk(self.sents[sent_num], self.tokens[index], synsets=lemma_synsets)
+        elif len(lemma_synsets) == 1:  
+            right_synset = lemma_synsets[0]
+        if right_synset is not None and self.hypernym_of(right_synset, hypernym_synset):
+            self.wordnet_named_entities[index] = category
 
+    def tag_named_entities_wordnet(self):
+        categories = ["entertainment", "animal", "sport"]
+        for index, lemma_synsets in enumerate(self.list_of_synsets):
+            self.wordnet_named_entities.append(None)
+            if lemma_synsets is not None:
+                for category in categories:
+                    self.get_category(category, lemma_synsets, index)
+
+    def combine_named_entities(self):
+        named_entity_abbreviation = {
+            "animal": "ANI",
+            "sport": "SPO",
+            "entertainment": "ENT"
+        }
+        for index, named_entity in enumerate(self.named_entities):
+            if named_entity[1] == "0" and self.wordnet_named_entities[index] is not None:
+                self.named_entities[index] = (named_entity[0], named_entity_abbreviation[self.wordnet_named_entities[index]])
 
     def return_sents(self):
         return self.sents
@@ -228,12 +238,12 @@ class Wikifier():
         while self.named_entities[index + extra_tokens + 1][1] == category_previous:
             extra_tokens += 1
         return extra_tokens
-    
+
     def handle_wiki_page_err(self, most_similiar_wiki_page, abbreviation,
                              named_entity):
         if most_similiar_wiki_page:
             best_wiki_page = str()
-            
+
             try:
                 best_wiki_page = wikipedia.page(title=most_similiar_wiki_page,
                                                 auto_suggest=abbreviation)
@@ -276,7 +286,7 @@ class Wikifier():
 
                 abbreviation = "." in wiki_search_term
                 # most abbreviations are found best by wikipedia self.
-                
+
                 if not abbreviation:
                     wiki_pages = [str(title) for title in wikipedia.search(
                         wiki_search_term)]
@@ -285,12 +295,12 @@ class Wikifier():
                             wiki_search_term, wiki_pages, scorer=fuzz.ratio)[0]
                 else:
                     most_similiar_wiki_page = wiki_search_term
-                
+
                 best_wiki_page = self.handle_wiki_page_err(
                     most_similiar_wiki_page, abbreviation, named_entity)
                 # Is done in another method to prevent this method from
                 # becoming to large with too much indentation
-                
+
                 if extra_tokens != 0 and best_wiki_page:
                     for i in range(extra_tokens):
                         self.wiki_urls.append(best_wiki_page.url)
@@ -308,4 +318,3 @@ class Wikifier():
             output[location] = [self.tokens[i], self.named_entities[i][1],
                                 self.wiki_urls[i]]
         return output
-        

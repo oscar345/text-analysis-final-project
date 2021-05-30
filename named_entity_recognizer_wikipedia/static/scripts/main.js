@@ -41,7 +41,7 @@ function getProgress() {
             })
             .then(request => request.json())
             .then((request) => {
-                let percentage = Math.round(request.progress / 6 * 100);
+                let percentage = Math.round(request.progress / 9 * 100);
                 $("#progress-bar").css("width", `${percentage}%`);
                 $("#progress-bar").text(percentage);
             })

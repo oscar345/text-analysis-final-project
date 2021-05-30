@@ -38,14 +38,20 @@ def process_files():
     progress_value = 2
     NamedEntityRecognizer.sync_tokens_named_entities()
     progress_value = 3
+    NamedEntityRecognizer.create_lemma_synsets()
+    progress_value = 4
+    NamedEntityRecognizer.tag_named_entities_wordnet()
+    progress_value = 5
+    NamedEntityRecognizer.combine_named_entities()
+    progress_value = 6
     sents = NamedEntityRecognizer.return_sents()
     tokens = NamedEntityRecognizer.return_tokens()
     token_positions = NamedEntityRecognizer.return_token_positions()
-    progress_value = 4
+    progress_value = 7
 
     Wikifier = named_entity_recognizer.Wikifier(sents, named_entities, pos_file, tokens, token_positions)
     Wikifier.get_right_wiki_page()
-    progress_value = 5
+    progress_value = 8
     output = Wikifier.create_dict_output()
 
     session["output"] = output
