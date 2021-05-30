@@ -6,12 +6,9 @@ from nltk.wsd import lesk
 from nltk import word_tokenize, sent_tokenize, pos_tag
 import os
 import wikipedia
-from collections import Counter, OrderedDict
-from random import randrange
+from collections import OrderedDict
 from nltk.parse import CoreNLPParser
 from nltk.wsd import lesk
-import subprocess
-from time import sleep
 from requests.adapters import HTTPAdapter
 import socket
 import time
@@ -166,7 +163,8 @@ class NamedEntityRecognizer():
 
 
 class Wikifier():
-    def __init__(self, sents_text, named_entities, pos_file, tokens, token_positions):
+    def __init__(self, sents_text, named_entities, pos_file, tokens,
+                 token_positions):
         self.tokens = tokens
         self.named_entities = named_entities
         self.sents_text = sents_text
@@ -190,15 +188,19 @@ class Wikifier():
             extra_tokens += 1
         return extra_tokens
     
-    def handle_wiki_page_err(self, most_similiar_wiki_page, abbreviation, named_entity):
+    def handle_wiki_page_err(self, most_similiar_wiki_page, abbreviation,
+                             named_entity):
         if most_similiar_wiki_page:
             best_wiki_page = str()
             
             try:
-                best_wiki_page = wikipedia.page(title=most_similiar_wiki_page, auto_suggest=abbreviation)
+                best_wiki_page = wikipedia.page(title=most_similiar_wiki_page,
+                                                auto_suggest=abbreviation)
             except wikipedia.exceptions.DisambiguationError:
                 try:
-                    best_wiki_page = wikipedia.page(title=f"{most_similiar_wiki_page} {self.fullout_tags[named_entity[1]]}")
+                    best_wiki_page = wikipedia.page(
+                        title=f"{most_similiar_wiki_page} "
+                        f"{self.fullout_tags[named_entity[1]]}")
                 except wikipedia.exceptions.DisambiguationError:
                     print("again ambiguation")
                 except TypeError:
@@ -222,7 +224,8 @@ class Wikifier():
                 continue
             elif named_entity[1] != "0":
                 wiki_search_term = named_entity[0]
-                extra_tokens = self.check_for_collocation(index, named_entity[1])
+                extra_tokens = self.check_for_collocation(index,
+                                                          named_entity[1])
                 if extra_tokens != 0:
                     tokens_search_term = [named_entity[0]]
                     for i in range(1, extra_tokens + 1):
@@ -234,13 +237,18 @@ class Wikifier():
                 # most abbreviations are found best by wikipedia self.
                 
                 if not abbreviation:
-                    wiki_pages = [str(title) for title in wikipedia.search(wiki_search_term)]
+                    wiki_pages = [str(title) for title in wikipedia.search(
+                        wiki_search_term)]
                     if wiki_pages:
-                        most_similiar_wiki_page = process.extractOne(wiki_search_term, wiki_pages, scorer=fuzz.ratio)[0]
+                        most_similiar_wiki_page = process.extractOne(
+                            wiki_search_term, wiki_pages, scorer=fuzz.ratio)[0]
                 else:
                     most_similiar_wiki_page = wiki_search_term
                 
-                best_wiki_page = self.handle_wiki_page_err(most_similiar_wiki_page, abbreviation, named_entity)
+                best_wiki_page = self.handle_wiki_page_err(
+                    most_similiar_wiki_page, abbreviation, named_entity)
+                # Is done in another method to prevent this method from
+                # becoming to large with too much indentation
                 
                 if extra_tokens != 0 and best_wiki_page:
                     for i in range(extra_tokens):
@@ -254,9 +262,9 @@ class Wikifier():
 
     def create_dict_output(self):
         output = OrderedDict()
-        print(len(self.token_positions), len(self.tokens), len(self.named_entities), len(self.wiki_urls))
 
         for i, location in enumerate(self.token_positions):
-            output[location] = [self.tokens[i], self.named_entities[i][1], self.wiki_urls[i]]
+            output[location] = [self.tokens[i], self.named_entities[i][1],
+                                self.wiki_urls[i]]
         return output
         
