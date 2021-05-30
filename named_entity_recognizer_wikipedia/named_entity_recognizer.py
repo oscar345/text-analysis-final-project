@@ -14,7 +14,7 @@ import socket
 import time
 import logging
 from urllib.parse import urlparse
-from fuzzywuzzy import fuzz, process
+#from fuzzywuzzy import fuzz, process
 
 # sports are required by using the hyponyms of sport
 # for animals and entertainment the same thing will be done.
@@ -30,6 +30,7 @@ class NamedEntityRecognizer():
         self.sents = list()
         self.pos_file = list()
         self.token_positions = list()
+        self.list_of_synset = list()
 
     # Functions that were used to create the training set
     def open_dev_files(self, directory_name, file_name):
@@ -147,7 +148,47 @@ class NamedEntityRecognizer():
                 self.named_entities.insert(index, (token, ne_tag))
 
     def tag_named_entities_WordNet(self):
-        return self.named_entities
+        tokens = self.tokens
+        pos_tags =  pos_tag(tokens)
+        lemmas = []
+        lemmatizer = WordNetLemmatizer()
+        for item in pos_tags:
+            if item[1].startswith('NN') and item[1] != ('NNP'):
+                lemmas.append(lemmatizer.lemmatize(item[0], wordnet.NOUN))
+        lemma_synsets = list()
+        for lemma in lemmas:
+            try:
+                lemma_synsets.append(wordnet.synsets(lemma, pos="n"))
+            except IndexError:
+                continue
+        list_of_synset = []
+        for lemma in lemmas:
+            lemma_synset = wordnet.synsets(lemma, pos='n')
+            for synset in lemma_synset:
+                list_of_synset.append(synset)
+        self.list_of_synset = list_of_synset
+
+    def hypernym_of(self, lemma_synset, hypernym_synset):
+        if lemma_synset == hypernym_synset:
+            return True
+        for lemma_hypernym in lemma_synset.hypernyms():
+            if hypernym_synset == lemma_hypernym:
+                return True
+            if self.hypernym_of(lemma_hypernym, hypernym_synset):
+                return True
+        return False
+
+    def synset_list(self):
+        categories = ["entertainment", "animal", "sport"]
+        list_synset = self.list_of_synset 
+        for category in categories:
+            hypernym_synset = wordnet.synsets(category, pos="n")[0]
+            relative_lemmas = list()
+            for lemma_synset in list_synset:
+                if self.hypernym_of(lemma_synset, hypernym_synset):
+                    relative_lemmas.append(lemma_synset)
+        return relative_lemmas
+
 
     def return_sents(self):
         return self.sents
