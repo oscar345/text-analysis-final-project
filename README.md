@@ -31,7 +31,7 @@ For this you need to get the virtual environment running as well, which is discu
 $ python3 wikfier.py en.tok.off.pos
 ```
 
-Features like testing testing and chosing the categories the Wordnet tagger should look for, are not available here. For those you should use the website.
+Features like testing, are not available here. For those you should use the website.
 
 ## Get Core NLP running
 This is necessary for both the script and the website to process tagging the files. Add the `server.properties` and the `.ner-model.ser.gz` files in your Stanford Core NLP directory. Open this directory in your terminal and enter the following command:
