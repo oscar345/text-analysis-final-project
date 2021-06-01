@@ -3,14 +3,13 @@ from named_entity_recognizer_wikipedia import app, named_entity_recognizer as ne
 from flask import json, request, redirect, url_for, session, jsonify, send_file
 import os
 from pathlib import Path
+import matplotlib.pyplot as plt
 
 
 def create_filenames_and_user_id():
     user_ids = sorted([int(dr.replace("user_upload_", "")) for dr in os.listdir(app.config["USER_UPLOADS"])])
-    print(user_ids)
     try:
         index_user = user_ids[-1] + 1
-        print(index_user)
     except IndexError:
         index_user = 0
     create_files = ["pos_file.txt", "progress.txt", "ent_file", "test_ent_file.txt"]
@@ -30,13 +29,14 @@ def recognize_named_entities(progress_file, categories, NERecognizer):
     NERecognizer.get_data_from_file()
     NERecognizer.tag_named_entities_Core_NLP(
         "http://10.211.55.3:9000")
-    write_progress(progress_file, "1")
-    NERecognizer.create_lemma_synsets()
-    write_progress(progress_file, "2")
-    NERecognizer.tag_named_entities_wordnet(categories=categories)
-    write_progress(progress_file, "3")
-    NERecognizer.combine_named_entities()
-    write_progress(progress_file, "4")
+    if categories != []:
+        write_progress(progress_file, "1")
+        NERecognizer.create_lemma_synsets()
+        write_progress(progress_file, "2")
+        NERecognizer.tag_named_entities_wordnet(categories=categories)
+        write_progress(progress_file, "3")
+        NERecognizer.combine_named_entities()
+        write_progress(progress_file, "4")
 
     sents = NERecognizer.return_sents()
     tokens = NERecognizer.return_tokens()
@@ -56,6 +56,8 @@ def process_files():
     test_file_input = request.files["test-file-input"]
     filenames, index_user = create_filenames_and_user_id()
     session["index_user"] = index_user
+    
+    print(categories)
 
     if text_area_input:
         NERecognizer.create_pos_file(text_area_input)
@@ -83,8 +85,10 @@ def process_files():
         named_entities_tags = [named_entity[1] for named_entity in named_entities]
         guessed_urls = [value[2] for value in output.values()]
         results = ner_mod.calculate_scores(named_entities_tags, ent_file_tags[0], guessed_urls, ent_file_tags[1])
-        session["scores"] = [results[1], results[2], results[3], results[4]]
+        session["scores"] = [results[1], results[2], results[3], results[4], results[5]]
         results[0].figure.savefig(app.config["USER_UPLOADS"] + f"user_upload_{index_user}" + "/plot.png")
+        plt.clf()
+
         
     session["is_testing"] = is_testing
     session["output"] = output

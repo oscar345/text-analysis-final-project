@@ -7,119 +7,134 @@
 
 {% block content %}
 
-    <div class="d-flex flex-row row row-wp" style="max-width: 100vw; margin: 0;">
-        <div class="col-md-4" style="min-height: 100%; margin: 0 0 0 0; padding: 0 0 0 0; z-index: 0;">
-            <div class="col-md-4" style="height: 3rem;">
+<div class="d-flex flex-row row row-wp" style="max-width: 100vw; margin: 0;">
+    <div class="col-md-4" style="min-height: 100%; margin: 0 0 0 0; padding: 0 0 0 0; z-index: 0;">
+        <div class="col-md-4" style="height: 3rem;">
 
-            </div>
-            <div class="p-3 bg-light mt-4 mx-4 rounded" style="z-index: 10; position: sticky; top: 1.5rem; overflow-y: scroll;">
-                <h4 class="text-center mb-3">Index</h4>
-                <ul style="list-style-type: none; padding: 0px">
-                    <li class="mt-2">
-                        <a href="#setup-section">How to set up the website</a>
-                    </li>
-                    <li class="mt-2">
-                        <ul class="pl-3" style="list-style-type: none; padding: 0px">
-                            <li class="mt-2">
-                                <a href="#setup-section">Setting up the server properties</a>
-                            </li>
-                            <li class="mt-2">
-                                <a href="#setup-model-section">Run the Core NLP server</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="mt-2">
-                        <a href="#form-section">How does the form work</a>
-                    </li>
-                    <li class="mt-2">
-                        <ul class="pl-3" style="list-style-type: none; padding: 0px">
-                            <li class="mt-2">
-                                <a href="#form-files-section">Run with file input</a>
-                            </li>
-                            <li class="mt-2">
-                                <a href="#form-text-section">Run with file input</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="mt-2">
-                        <a href="#output-section">How does the output look</a>
-                    </li>
-                    <li class="mt-2">
-                        <ul class="pl-3" style="list-style-type: none; padding: 0px">
-                            <li class="mt-2">
-                                <a href="#output-download-section">Download ent file</a>
-                            </li>
-                            <li class="mt-2">
-                                <a href="#output-text-section">See the output text</a>
-                            </li>
-                        </ul>
-                    </li>
-                    
-
-
-                </ul>
-            </div>
         </div>
-        <!-- <div class="col-md-4" style="z-index: -2; min-height: 100%;"></div> -->
-        <div class="col-md-8 p-3">
-            <h1 class="text-center my-5">Documentation</h1>
-            <h2 id="setup-section">How to set up the website</h2>
-            <h4 id="setup-model-section">Setting up the server properties</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ante vel nisi pulvinar facilisis vitae non odio. Sed tempor arcu sit amet orci efficitur, in iaculis arcu commodo. Cras urna sapien, suscipit ut ullamcorper sed, sagittis et nisl. Sed turpis ligula, aliquam nec massa vitae, posuere ullamcorper odio. Vestibulum dui orci, dignissim in porta ut, convallis quis urna. Suspendisse ut diam et tortor laoreet efficitur vel ac erat. Aenean auctor lectus libero, et fermentum odio convallis eu. Maecenas dui purus, tincidunt nec bibendum a, luctus nec nunc. Duis mi ipsum, rhoncus ut turpis a, volutpat dapibus risus. Praesent viverra nibh sem, in bibendum arcu mattis consequat. Mauris eget dolor commodo, mollis orci vitae, vulputate sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Aliquam porttitor magna sit amet odio ultrices ultricies vel sit amet tellus. Sed in consequat orci.
-                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                    Cras venenatis semper ultrices. Vivamus neque lacus, volutpat sit amet tortor non, sagittis rhoncus neque. Curabitur vehicula lorem non volutpat cursus. Nunc ultrices, tellus ut euismod scelerisque, libero purus sodales velit, ut posuere eros enim vehicula leo. Nam molestie sagittis feugiat. Mauris felis odio, ultricies euismod sapien eu, posuere volutpat elit. Vivamus tincidunt libero et turpis dignissim aliquam.
+        <div class="p-3 bg-light mt-4 mx-4 rounded"
+            style="z-index: 10; position: sticky; top: 1.5rem; overflow-y: scroll;">
+            <h4 class="text-center mb-3">Index</h4>
+            <ul style="list-style-type: none; padding: 0px">
+                <li class="mt-2">
+                    <a href="#setup-section">How to set up the website</a>
+                </li>
+                <li class="mt-2">
+                    <ul class="pl-3" style="list-style-type: none; padding: 0px">
+                        <li class="mt-2">
+                            <a href="#setup-model-section">Setting up the server properties</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mt-2">
+                    <a href="#form-section">How does the form work</a>
+                </li>
+                <li class="mt-2">
+                    <ul class="pl-3" style="list-style-type: none; padding: 0px">
+                        <li class="mt-2">
+                            <a href="#form-files-section">File or text input</a>
+                        </li>
+                        <li class="mt-2">
+                            <a href="#form-testing-section">Testing the output</a>
+                        </li>
+                        <li class="mt-2">
+                            <a href="#form-wordnet-section">Choosing wordnet categories</a>
+                        </li>
+                    </ul>
+                </li>
 
-
-            </p>
-            <h4 id="setup-run-corenlp-section">Run the Core NLP server</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ante vel nisi pulvinar facilisis vitae non odio. Sed tempor arcu sit amet orci efficitur, in iaculis arcu commodo. Cras urna sapien, suscipit ut ullamcorper sed, sagittis et nisl. Sed turpis ligula, aliquam nec massa vitae, posuere ullamcorper odio. Vestibulum dui orci, dignissim in porta ut, convallis quis urna. Suspendisse ut diam et tortor laoreet efficitur vel ac erat. Aenean auctor lectus libero, et fermentum odio convallis eu. Maecenas dui purus, tincidunt nec bibendum a, luctus nec nunc. Duis mi ipsum, rhoncus ut turpis a, volutpat dapibus risus. Praesent viverra nibh sem, in bibendum arcu mattis consequat. Mauris eget dolor commodo, mollis orci vitae, vulputate sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Aliquam porttitor magna sit amet odio ultrices ultricies vel sit amet tellus. Sed in consequat orci.
-                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                    Cras venenatis semper ultrices. Vivamus neque lacus, volutpat sit amet tortor non, sagittis rhoncus neque. Curabitur vehicula lorem non volutpat cursus. Nunc ultrices, tellus ut euismod scelerisque, libero purus sodales velit, ut posuere eros enim vehicula leo. Nam molestie sagittis feugiat. Mauris felis odio, ultricies euismod sapien eu, posuere volutpat elit. Vivamus tincidunt libero et turpis dignissim aliquam.
-
-
-            </p>
-            <script src="https://gist.github.com/oscar345/5208584dc597d8799463c5bcd1365c90.js"></script>
-
-            <h2 id="form-section">How does the form work</h2>
-            <h4 id="form-files-section">Run with file input</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ante vel nisi pulvinar facilisis vitae non odio. Sed tempor arcu sit amet orci efficitur, in iaculis arcu commodo. Cras urna sapien, suscipit ut ullamcorper sed, sagittis et nisl. Sed turpis ligula, aliquam nec massa vitae, posuere ullamcorper odio. Vestibulum dui orci, dignissim in porta ut, convallis quis urna. Suspendisse ut diam et tortor laoreet efficitur vel ac erat. Aenean auctor lectus libero, et fermentum odio convallis eu. Maecenas dui purus, tincidunt nec bibendum a, luctus nec nunc. Duis mi ipsum, rhoncus ut turpis a, volutpat dapibus risus. Praesent viverra nibh sem, in bibendum arcu mattis consequat. Mauris eget dolor commodo, mollis orci vitae, vulputate sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Aliquam porttitor magna sit amet odio ultrices ultricies vel sit amet tellus. Sed in consequat orci.
-                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                    Cras venenatis semper ultrices. Vivamus neque lacus, volutpat sit amet tortor non, sagittis rhoncus neque. Curabitur vehicula lorem non volutpat cursus. Nunc ultrices, tellus ut euismod scelerisque, libero purus sodales velit, ut posuere eros enim vehicula leo. Nam molestie sagittis feugiat. Mauris felis odio, ultricies euismod sapien eu, posuere volutpat elit. Vivamus tincidunt libero et turpis dignissim aliquam.
-
-
-            </p>
-            <h4 id="form-text-section">Run with file input</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ante vel nisi pulvinar facilisis vitae non odio. Sed tempor arcu sit amet orci efficitur, in iaculis arcu commodo. Cras urna sapien, suscipit ut ullamcorper sed, sagittis et nisl. Sed turpis ligula, aliquam nec massa vitae, posuere ullamcorper odio. Vestibulum dui orci, dignissim in porta ut, convallis quis urna. Suspendisse ut diam et tortor laoreet efficitur vel ac erat. Aenean auctor lectus libero, et fermentum odio convallis eu. Maecenas dui purus, tincidunt nec bibendum a, luctus nec nunc. Duis mi ipsum, rhoncus ut turpis a, volutpat dapibus risus. Praesent viverra nibh sem, in bibendum arcu mattis consequat. Mauris eget dolor commodo, mollis orci vitae, vulputate sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Aliquam porttitor magna sit amet odio ultrices ultricies vel sit amet tellus. Sed in consequat orci.
-                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                    Cras venenatis semper ultrices. Vivamus neque lacus, volutpat sit amet tortor non, sagittis rhoncus neque. Curabitur vehicula lorem non volutpat cursus. Nunc ultrices, tellus ut euismod scelerisque, libero purus sodales velit, ut posuere eros enim vehicula leo. Nam molestie sagittis feugiat. Mauris felis odio, ultricies euismod sapien eu, posuere volutpat elit. Vivamus tincidunt libero et turpis dignissim aliquam.
-
-
-            </p>
-            <h2 id="output-section">How does the output look</h2>
-            <h4 id="output-download-section">Download ent file</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ante vel nisi pulvinar facilisis vitae non odio. Sed tempor arcu sit amet orci efficitur, in iaculis arcu commodo. Cras urna sapien, suscipit ut ullamcorper sed, sagittis et nisl. Sed turpis ligula, aliquam nec massa vitae, posuere ullamcorper odio. Vestibulum dui orci, dignissim in porta ut, convallis quis urna. Suspendisse ut diam et tortor laoreet efficitur vel ac erat. Aenean auctor lectus libero, et fermentum odio convallis eu. Maecenas dui purus, tincidunt nec bibendum a, luctus nec nunc. Duis mi ipsum, rhoncus ut turpis a, volutpat dapibus risus. Praesent viverra nibh sem, in bibendum arcu mattis consequat. Mauris eget dolor commodo, mollis orci vitae, vulputate sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Aliquam porttitor magna sit amet odio ultrices ultricies vel sit amet tellus. Sed in consequat orci.
-                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                    Cras venenatis semper ultrices. Vivamus neque lacus, volutpat sit amet tortor non, sagittis rhoncus neque. Curabitur vehicula lorem non volutpat cursus. Nunc ultrices, tellus ut euismod scelerisque, libero purus sodales velit, ut posuere eros enim vehicula leo. Nam molestie sagittis feugiat. Mauris felis odio, ultricies euismod sapien eu, posuere volutpat elit. Vivamus tincidunt libero et turpis dignissim aliquam.
-
-
-            </p>
-            <h4 id="output-text-section">See the text</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ante vel nisi pulvinar facilisis vitae non odio. Sed tempor arcu sit amet orci efficitur, in iaculis arcu commodo. Cras urna sapien, suscipit ut ullamcorper sed, sagittis et nisl. Sed turpis ligula, aliquam nec massa vitae, posuere ullamcorper odio. Vestibulum dui orci, dignissim in porta ut, convallis quis urna. Suspendisse ut diam et tortor laoreet efficitur vel ac erat. Aenean auctor lectus libero, et fermentum odio convallis eu. Maecenas dui purus, tincidunt nec bibendum a, luctus nec nunc. Duis mi ipsum, rhoncus ut turpis a, volutpat dapibus risus. Praesent viverra nibh sem, in bibendum arcu mattis consequat. Mauris eget dolor commodo, mollis orci vitae, vulputate sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi. Aliquam porttitor magna sit amet odio ultrices ultricies vel sit amet tellus. Sed in consequat orci.
-                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                    Cras venenatis semper ultrices. Vivamus neque lacus, volutpat sit amet tortor non, sagittis rhoncus neque. Curabitur vehicula lorem non volutpat cursus. Nunc ultrices, tellus ut euismod scelerisque, libero purus sodales velit, ut posuere eros enim vehicula leo. Nam molestie sagittis feugiat. Mauris felis odio, ultricies euismod sapien eu, posuere volutpat elit. Vivamus tincidunt libero et turpis dignissim aliquam.
-
-
-            </p>
+                <li class="mt-2">
+                    <a href="#output-section">How does the output look</a>
+                </li>
+                <li class="mt-2">
+                    <ul class="pl-3" style="list-style-type: none; padding: 0px">
+                        <li class="mt-2">
+                            <a href="#output-standard-section">Standard output</a>
+                        </li>
+                        <li class="mt-2">
+                            <a href="#output-testing-section">Testing output</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-
     </div>
+    <!-- <div class="col-md-4" style="z-index: -2; min-height: 100%;"></div> -->
+    <div class="col-md-8 p-3">
+        <h1 class="text-center my-5">Documentation</h1>
+        <h2 id="setup-section">How to set up the website</h2>
+        <h4 id="setup-model-section">Setting up the server properties</h4>
+        <p>
+            When you read this documentation, setting up the website must have been successful. However it is possible
+            you still need to start running the Core NLP server. The next part can also be found in the ReadMe on our
+            github: </p>
+
+        <p>
+            This is necessary for both the script and the website to process tagging the files. Add the
+            server.properties and the .ner-model.ser.gz files in your Stanford Core NLP directory (these can be found in
+            the Core_NLP_files directory on our github page). Open the Stanford directory (the one on your computer)
+            in your terminal and enter the following command:
+
+        </p>
+        <script src="https://gist.github.com/oscar345/5208584dc597d8799463c5bcd1365c90.js"></script>
+        <p>
+            A server will start listening and is now accessible by the python scripts, hopefully. If an error occurs
+            that the Core NLP server is not accessible, you should open request.py when using the website and
+            wikifier.py when using the script. In those scripts this function is used:
+        </p>
+        <script src="https://gist.github.com/oscar345/dfbf8fe9d805b82882ce93b98077864d.js"></script>
+        <p>
+            Running Core NLP on another system (like a virtual machine) than where your are running the Flask server or
+            wikifier.py script, will
+            require you to replace localhost with your local ip address.
+        </p>
+
+        <h2 id="form-section">How does the form work</h2>
+        <p>There are multiple options available using the form to wikify your text. Each option is discussed here below.
+        </p>
+        <h4 id="form-files-section">File or text input</h4>
+
+        <p>
+            There are two methods of giving input to the form to wikify your text. This can be in the form of a .pos
+            file, which already has the right formatting, or your can enter text in the textarea. This text will be
+            converted to the same format as a posfile, so it can be used by the same functions.
+        </p>
+        <h4 id="form-testing-section">Testing the output</h4>
+        <p>
+            You can test the output that is created by the named entity recognizer and the wikifier by uploading your
+            own annotated .ent file. This file has the same formatting as the .pos file, however after every token that
+            is a named entity, the kind of named entity and the url to its wikipage are added. Uploading this file will
+            compare the .ent file created by the wikifier with the one you uploaded. The output page will provide a
+            confusion matrix, the f-score and the cohen-kappa-score for the named entities tags and the accuracy for the
+            wikipedia urls.
+        </p>
+        <h4 id="form-wordnet-section">Choosing wordnet categories</h4>
+        <p>
+            Stanford Core NLP and Wordnet are responsible for tagging the named entities. Wordnet does the animal, sport
+            and entertainment categories by default. This can be changed, however. You can add categories that wordnet
+            should also look for (do keep in mind that adding categories will slow down the process of creating output).
+            Core NLP automatically tags all categories, but is not great at recognizing animals, sport and
+            entertainment.
+        </p>
+        <h2 id="output-section">How does the output look</h2>
+        <h4 id="output-standard-section">Standard output</h4>
+        <p>
+            Standard output is created when you are not testing the system. The standard output contains a text with
+            anchor tags, that will redirect you to the corresponding Wikipedia page. A download button is also present.
+            With that button you can download the created .ent file. Lastly, all the named entities are shown inside a
+            table, with the corresponding wikipedia url and the position of that named entity in the text.
+        </p>
+        <h4 id="output-testing-section">Testing output</h4>
+        <p>
+            The output when you have tested the system is slightly different. It contains all the element the standard
+            output contains as well, but two extra elements are added. A confusion matrix showing the differences
+            between the created file and the annotated file. Some scores regarding the performance of the system is the
+            second extra element. These scores include the f-scores and cohen-kappa-score for the named entity tags and
+            also the accuracy score the wikipedia urls.
+        </p>
+    </div>
+
+</div>
 
 
 {% endblock %}

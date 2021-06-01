@@ -481,17 +481,26 @@ class Wikifier():
                     if wiki_pages:
                         most_similiar_wiki_page = process.extractOne(
                             wiki_search_term, wiki_pages, scorer=fuzz.ratio)[0]
+                    else:
+                        most_similiar_wiki_page = None
+                        self.wiki_urls.append("")
                 else:
                     most_similiar_wiki_page = wiki_search_term
 
-                best_wiki_page = self.handle_wiki_page_err(
-                    most_similiar_wiki_page, abbreviation, named_entity)
+                if most_similiar_wiki_page is not None:
+                    best_wiki_page = self.handle_wiki_page_err(
+                        most_similiar_wiki_page, abbreviation, named_entity)
+                else:
+                    best_wiki_page = None
                 # Is done in another method to prevent this method from
                 # becoming to large with too much indentation
 
-                if extra_tokens != 0 and best_wiki_page:
+                if extra_tokens != 0:
                     for i in range(extra_tokens):
-                        self.wiki_urls.append(best_wiki_page.url)
+                        if best_wiki_page is not None:
+                            self.wiki_urls.append(best_wiki_page.url)
+                        else:
+                            self.wiki_urls.append("")
 
             else:
                 self.wiki_urls.append("")
@@ -544,14 +553,16 @@ def calculate_scores(new_file, annotated_file, guessed_urls, annotated_urls):
     plt.xlabel("Predicted")
     plt.ylabel("Annotated") 
     
-    same_urls = list()
-    for index, anno_url in enumerate(annotated_urls):
-        if guessed_urls[index] == anno_url:
-            same_urls.append(True)
-        else:
-            same_urls.append(False)
-    counts = Counter(same_urls)
-    
-    accuracy = round(counts[True] / len(same_urls) * 100, 2)
+    print(annotated_urls)
 
-    return (cfmatrix_img, f_scores, round(cohen_kappa_score(new_file, annotated_file), 3), accuracy, labels)
+    correct_urls = len([url for index, url in enumerate(guessed_urls) if url !=
+                        "" and annotated_urls[index] == url])
+    guessed_urls = len([url for url in guessed_urls if url != ""])
+    anno_urls = len([url for url in annotated_urls if url != ""])
+    
+    print(correct_urls, guessed_urls, anno_urls)
+    accuracy_recall = round(correct_urls / anno_urls * 100, 2)
+    accuracy_precision = round(correct_urls / guessed_urls * 100, 2)
+
+    return (cfmatrix_img, f_scores, round(cohen_kappa_score(new_file, \
+        annotated_file), 3), accuracy_recall, accuracy_precision, labels)

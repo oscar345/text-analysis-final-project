@@ -44,7 +44,7 @@
                 were the same for each token in the annotated file and the created file. The more tokens are represented
                 on the diagonal line, the better. Besides the confusion matrix, the cohen-kappa-score is calculated,
                 which has a value of <b>{{ scores[1] }}</b>. Not only are the named entity tags tested, the wiki urls
-                are also evaluated. The evaluation score for those is <b>{{ scores[2] }}%</b>.
+                are also evaluated. The evaluation recall score for those is <b>{{ scores[2] }}%</b> and the precision score is <b>{{ scores[3] }}%</b>.
             </p>
             <div style="overflow-x: scroll;">
                 <table class="table mt-3">
@@ -57,7 +57,7 @@
                     <tbody>
                         {% for f_score in scores[0] %}
                         <tr>
-                            <td>{{ scores[3][loop.index0] }}</td>
+                            <td>{{ scores[4][loop.index0] }}</td>
                             <th style="font-weight: lighter;" scope="row">{{ f_score }}</th>
                         </tr>
                         {% endfor %}
