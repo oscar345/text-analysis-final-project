@@ -5,18 +5,64 @@
 
 <div class="container">
     <h1 class="text-center my-5">Output</h1>
-    <p>
-        {% for location, info in output %}
-            {% if info[2] == "" %}
-            <span>{{ info[0] }}</span>
-            {% else %}
-            <a class="show-link-preview" href="{{ info[2] }}">{{ info[0] }}</a>
+
+    <div class="row wp-row">
+        <div class="col-md-8">
+            <h3>
+                Text with wiki urls
+            </h3>
+            <p>
+                {% for location, info in output %}
+                {% if info[2] == "" %}
+                <span>{{ info[0] }}</span>
+                {% else %}
+                <a class="show-link-preview" href="{{ info[2] }}">{{ info[0] }}</a>
+                {% endif %}
+                {% endfor %}
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h3>Download ent file</h3>
+            <p class="text-muted">Download the entfile here. This entfile can be used for calculating precision and recall, if you manually annotated your uploaded pos file before. This can also be done by uploading an entfile on the homepage.</p>
+            <a href="{{ url_for('download_file', index_user=index_user) }}" style="width: 100%;" class="btn btn-primary">Download ent file</a>
+        </div>
+    </div>
+
+    {% if is_testing == True %}
+    <div class="row wp-row">
+        <div class="col-md-6">
+            <h3>Confusion Matrix</h3>
+            <img width="100%" src="{{ url_for('static', filename='user_files/user_upload_' + index_user + '/plot.png' ) }}" alt="">
+        </div> 
+        <div class="col-md-6">
+            <h3>Kappa score and f-scores</h3>
+
+        </div>
+    </div>
+    {% endif %}
+
+    <table class="table mt-3" style="overflow-x: scroll;">
+        <thead>
+            <tr>
+                <th scope="col">Position</th>
+                <th scope="col">Word</th>
+                <th scope="col">Named entity tag</th>
+                <th scope="col">Wiki url</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for location, info in output %}
+            {% if info[2] != "" %}
+            <tr>
+                <th style="font-weight: lighter;" scope="row">{{ location }}</th>
+                <td>{{ info[0] }}</td>
+                <td style="font-weight: lighter;">{{ info[1] }}</td>
+                <td style="font-weight: lighter;"><a href="{{ info[2] }}">{{ info[2] }}</a></td>
+            </tr>
             {% endif %}
-        {% endfor %}
-    </p>
-    {% for location, info in output %}
-            <p>{{ info }}</p>
-    {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 
 {% endblock %}

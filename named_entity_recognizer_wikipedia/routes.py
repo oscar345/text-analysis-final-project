@@ -21,8 +21,9 @@ def documentation():
 @app.route("/output", methods=["GET"])
 def output():
     output = session["output"]
-    print(output)
-    return render_template("output.html", output=output.items())
+    index_user = session["index_user"]
+    is_testing = session["is_testing"]
+    return render_template("output.html", output=output.items(), index_user=str(index_user), is_testing=is_testing)
 
 
 @app.route("/check_entities", methods=["GET"])

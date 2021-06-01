@@ -17,9 +17,9 @@ function switchInputMethod() {
 }
 
 
-function showUploadedFilename() {
-    document.querySelector('.custom-file-input').addEventListener('change', function (e) {
-        var fileName = document.getElementById("file-input").files[0].name;
+function showUploadedFilename(fileInputId) {
+    document.querySelector(`#${fileInputId}`).addEventListener('change', function (e) {
+        var fileName = document.getElementById(fileInputId).files[0].name;
         var nextSibling = e.target.nextElementSibling;
         var fileFeedbackDiv = nextSibling.nextElementSibling;
         nextSibling.innerText = fileName;
@@ -27,6 +27,19 @@ function showUploadedFilename() {
         fileFeedbackDiv.innerText = "Your file has been successfully uploaded to the website";
         fileFeedbackDiv.style.display = "block";
     })
+}
+
+function showHideElement(elementId) {
+    $(`#${elementId}`).toggleClass("d-none");
+}
+
+function showHideOptions() {
+    $("#add-test-file").click(function() {
+        showHideElement("test-file-input-div")
+    });
+    $("#add-extra-tags").click(function() {
+        showHideElement("extra-categories-input")
+    });
 }
 
 
@@ -41,18 +54,20 @@ function getProgress() {
             })
             .then(request => request.json())
             .then((request) => {
-                let percentage = Math.round(request.progress / 9 * 100);
+                let percentage = Math.round(request.progress / 7 * 100);
                 $("#progress-bar").css("width", `${percentage}%`);
                 $("#progress-bar").text(percentage);
             })
-        }, 50)
+        }, 500)
     })
 }
 
 
 $(function () {
     switchInputMethod();
-    showUploadedFilename();
+    showUploadedFilename("file-input");
+    showUploadedFilename("test-file-input");
     getProgress();
+    showHideOptions();
 })
 
