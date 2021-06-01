@@ -6,6 +6,16 @@ __pycache__/
 .DS_Store
 *..DS_Store
 
+upload_files/*.
+named_entity_recognizer_wikipedia/static/user_files/*
+images_og
+delete_code.py
+indexold.html
+
+
+
+test.py
+
 # C extensions
 *.so
 
