@@ -23,4 +23,24 @@ With the packages install you are able to run the website with the flask backend
 $ python3 run.py
 ```
 
-A server is running now and the terminal provided a URL for you to open in your browser.  
+A server is running now and the terminal provided a URL for you to open in your browser.
+
+## Use this as a script in the terminal
+For this you need to get the virtual environment running as well, which is discussed above. Running the script in the terminal can be done with `wikifier.py`, which takes one argument: the path to the .pos file. 
+```
+$ python3 wikfier.py en.tok.off.pos
+```
+
+Features like testing, are not available here. For those you should use the website.
+
+## Get Core NLP running
+This is necessary for both the script and the website to process tagging the files. Add the `server.properties` and the `.ner-model.ser.gz` files in your Stanford Core NLP directory. Open this directory in your terminal and enter the following command:
+```
+java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000 -host "0.0.0.0" -serverProperties server.properties
+```
+
+A server will start listening and is now accessible by the python scripts, hopefully. If an error occurs that the Core NLP server is not accessible, you should open `request.py` when using the website and `wikifier.py` when using the script. In those scripts this function is used:
+```
+NERecognizer.tag_named_entities_Core_NLP("http://localhost:9000")
+```
+Running Core NLP on another system (like a virtual machine) than the Flask server or `wikifier.py`, will require you to replace localhost with your local ip address (this connects your computer with your router).
