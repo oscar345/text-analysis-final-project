@@ -1,0 +1,65 @@
+0 5 1001 There EX
+6 9 1002 has VBZ
+10 14 1003 been VBN
+15 19 1004 some DT
+20 28 1005 positive JJ
+29 33 1006 news NN
+34 40 1007 coming VBG
+41 44 1008 out IN
+45 47 1009 of IN
+48 51 1010 the DT
+52 65 1011 International NNP 
+66 76 1012 Conference NNP
+77 79 1013 on IN
+80 89 1014 Alzheimer NNP
+89 92 1015 's, POS
+93 97 1016 held ,
+98 102 1017 July VBD
+103 108 1018 26-31 NNP
+109 111 1019 in JJ
+112 119 1020 Chicago IN CIT https://en.wikipedia.org/wiki/Chicago
+119 120 1021 , NNP
+121 129 1022 Illinois NNP COU https://en.wikipedia.org/wiki/Illinois
+129 130 1023 . NNP
+132 135 2001 Two .
+136 147 2002 preliminary CD
+148 155 2003 studies JJ
+156 160 2004 show NNS
+161 169 2005 progress VBP
+170 174 2006 with NN
+175 178 2007 use IN
+179 181 2008 of NN
+182 184 2009 an IN
+185 198 2010 antihistamine DT
+199 202 2011 and NN
+203 204 2012 a CC
+205 210 2013 nasal DT
+211 216 2014 spray JJ
+216 217 2015 . NN
+219 222 3001 But .
+223 234 3002 researchers CC
+235 238 3003 say NNS
+239 248 3004 lifestyle VBP
+249 256 3005 factors JJ
+257 260 3006 and NNS
+261 269 3007 heredity CC
+270 274 3008 also NN
+275 279 3009 play RB
+280 281 3010 a VBD
+282 289 3011 crucial DT
+290 294 3012 role JJ
+295 297 3013 in NN
+298 309 3014 determining IN
+310 317 3015 whether VBG
+318 321 3016 you IN
+322 329 3017 develop PRP
+330 339 3018 Alzheimer VBP
+339 341 3019 's NNP
+341 342 3020 . POS
+344 347 4001 VOA . ENT https://en.wikipedia.org/wiki/Voice_of_America
+347 349 4002 's NNP
+350 357 4003 Melinda POS PER https://en.wikipedia.org/wiki/Melinda_Smith
+358 363 4004 Smith NNP PER https://en.wikipedia.org/wiki/Melinda_Smith
+364 367 4005 has NNP
+368 372 4006 more VBZ
+372 373 4007 . JJR

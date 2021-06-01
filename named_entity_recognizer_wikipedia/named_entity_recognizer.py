@@ -15,6 +15,7 @@ from urllib.parse import urlparse
 from fuzzywuzzy import fuzz, process
 from sklearn.metrics import cohen_kappa_score, confusion_matrix
 import seaborn as sns
+from nltk.metrics import ConfusionMatrix
 
 matplotlib.use("Agg")
 # Otherwise an assetion CAN occur, not all the time though
@@ -163,16 +164,19 @@ class NamedEntityRecognizer():
         """
         get the named entities and the wiki urls from the annotated file
         """
-        compare_output = list()
+        ent_urls = list()
+        ent_tags = list()
         for line in entfile.split("\n"):
             line = line.split()
             if line == []:
                 break
             elif len(line) > 5:
-                compare_output.append(line[5])
+                ent_urls.append(line[6])
+                ent_tags.append(line[5])
             else:
-                compare_output.append("0")
-        return compare_output
+                ent_urls.append("")
+                ent_tags.append("0")
+        return ent_tags, ent_urls
 
     def tag_named_entities_Core_NLP(self, url_Core_NLP):
         """
@@ -504,27 +508,22 @@ class Wikifier():
         return output
 
 
-def calculate_scores(new_file, annotated_file):
+def calculate_scores(new_file, annotated_file, guessed_urls, annotated_urls):
     all_labels = new_file + annotated_file
     labels = sorted(list(set(all_labels)))
-    cfm = confusion_matrix(new_file, annotated_file, labels=labels)
+    cfmsk = confusion_matrix(annotated_file, new_file, labels=labels)
+    cfm = ConfusionMatrix(annotated_file, new_file)
     true_positives = Counter()
     false_negatives = Counter()
     false_positives = Counter()
-    
-    amount_labels = len(labels)
 
-    for i in range(amount_labels):
-        for j in range(amount_labels):
+    for i in labels:
+        for j in labels:
             if i == j:
                 true_positives[i] += cfm[i, j]
             else:
                 false_negatives[i] += cfm[i, j]
                 false_positives[j] += cfm[i, j]
-
-    # true_positives = sum(true_positives.values()), true_positives
-    # false_negatives = sum(false_negatives.values()), false_negatives
-    # false_positives = sum(false_positives.values()), false_positives
 
     f_scores = list()
     for i in sorted(labels):
@@ -537,11 +536,22 @@ def calculate_scores(new_file, annotated_file):
                                                + false_negatives[i])
             f_scores.append(2 * (precision * recall) / float(precision
                                                              + recall))
-    cfmatrix_img = sns.heatmap(cfm, annot=True, cmap='Blues',
+    cfmatrix_img = None
+    # For some reason this is neccesary to make sure previous heatmaps
+    # dont overlap
+    cfmatrix_img = sns.heatmap(cfmsk, annot=True, cmap='Blues',
                                xticklabels=labels, yticklabels=labels)
     plt.xlabel("Predicted")
-
     plt.ylabel("Annotated") 
     
-    return (cfmatrix_img, f_scores, cohen_kappa_score(new_file,
-                                                      annotated_file))
+    same_urls = list()
+    for index, anno_url in enumerate(annotated_urls):
+        if guessed_urls[index] == anno_url:
+            same_urls.append(True)
+        else:
+            same_urls.append(False)
+    counts = Counter(same_urls)
+    
+    accuracy = round(counts[True] / len(same_urls) * 100, 2)
+
+    return (cfmatrix_img, f_scores, round(cohen_kappa_score(new_file, annotated_file), 3), accuracy, labels)

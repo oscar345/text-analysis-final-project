@@ -1,0 +1,54 @@
+0 6 1001 Prince NNP COU https://en.wikipedia.org/wiki/Prince_William_County,_Virginia
+7 14 1002 William NNP COU https://en.wikipedia.org/wiki/Prince_William_County,_Virginia
+15 21 1003 County NNP COU https://en.wikipedia.org/wiki/Prince_William_County,_Virginia
+21 22 1004 , ,
+23 25 1005 in IN
+26 29 1006 the DT
+30 38 1007 Virginia NNP COU https://en.wikipedia.org/wiki/Virginia
+39 46 1008 suburbs NNP
+47 54 1009 outside IN
+55 57 1010 of IN
+58 68 1011 Washington NNP COU https://en.wikipedia.org/wiki/Washington,_D.C.
+68 69 1012 , ,
+70 72 1013 is VBZ
+73 80 1014 drawing VBG
+81 90 1015 attention NN
+91 97 1016 across IN
+98 101 1017 the DT
+102 108 1018 United NNP COU https://en.wikipedia.org/wiki/United_States
+109 115 1019 States NNPS COU https://en.wikipedia.org/wiki/United_States
+116 118 1020 by IN
+119 128 1021 enforcing VBG
+129 134 1022 local JJ
+135 139 1023 laws NNS
+140 144 1024 that WDT
+145 149 1025 lead VBP
+150 152 1026 to TO
+153 156 1027 the DT
+157 168 1028 deportation NN
+169 171 1029 of IN
+172 180 1030 hundreds NNS
+181 183 1031 of IN
+184 191 1032 illegal JJ
+192 202 1033 immigrants NNS
+202 203 1034 . .
+204 213 2001 Community NNP
+214 223 2002 activists NNS
+224 227 2003 say VBP
+228 230 2004 it PRP
+231 234 2005 has VBZ
+235 242 2006 created VBN
+243 244 2007 a DT
+245 252 2008 hostile JJ
+253 264 2009 environment NN
+265 271 2010 toward IN
+272 275 2011 all DT
+276 286 2012 immigrants NNS
+286 287 2013 . .
+288 296 3001 Producer NNP
+297 303 3002 Zulima NNP
+304 311 3003 Palacio NNP
+312 320 3004 prepared VBD
+321 324 3005 the DT
+325 330 3006 story NN
+330 331 3007 . .

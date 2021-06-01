@@ -1,0 +1,86 @@
+1 3 1001 An DT
+4 14 1002 Indonesian JJ
+15 21 1003 health NN
+22 30 1004 official NN
+31 35 1005 says VBZ
+36 37 1006 a DT
+38 45 1007 chicken NN ANI https://en.wikipedia.org/wiki/Chicken
+46 52 1008 seller NN
+53 62 1009 suspected VBD
+63 65 1010 of IN
+66 71 1011 being VBG
+72 80 1012 infected VBN
+81 85 1013 with IN
+86 90 1014 bird NN ANI https://en.wikipedia.org/wiki/Bird
+91 94 1015 flu NN
+95 98 1016 has VBZ
+99 103 1017 died VBN
+104 106 1018 at IN
+107 114 1019 Jakarta NNP CIT https://en.wikipedia.org/wiki/Jakarta
+114 116 1020 's POS
+117 127 1021 infectious JJ
+128 136 1022 diseases NNS
+137 145 1023 hospital NN
+145 146 1024 . .
+147 148 2001 A DT
+149 157 2002 hospital NN
+158 167 2003 spokesman NN
+168 172 2004 said VBD
+173 176 2005 the DT
+177 188 2006 22-year-old JJ
+189 193 2007 dead JJ
+194 197 2008 man NN
+198 201 2009 had VBD
+202 203 2010 a DT
+204 211 2011 history NN
+212 214 2012 of IN
+215 222 2013 contact NN
+223 227 2014 with IN
+228 235 2015 poultry NN
+235 236 2016 . .
+237 247 3001 Indonesian JJ
+248 259 3002 authorities NNS
+260 263 3003 say VBP
+264 269 3004 their PRP$
+270 275 3005 tests NNS
+276 284 3006 indicate VBP
+285 288 3007 the DT
+289 292 3008 man NN
+293 296 3009 was VBD
+297 305 3010 infected VBN
+306 310 3011 with IN
+311 314 3012 the DT
+315 321 3013 deadly JJ
+322 326 3014 H5N1 NNP
+327 333 3015 strain NN
+334 336 3016 of IN
+337 340 3017 the DT
+341 346 3018 avian JJ
+347 350 3019 flu NN
+351 356 3020 virus NN
+356 357 3021 . .
+358 360 4001 If IN
+361 364 4002 the DT
+365 370 4003 World NNP ORG https://en.wikipedia.org/wiki/World_Health_Organization
+371 377 4004 Health NNP ORG https://en.wikipedia.org/wiki/World_Health_Organization
+378 390 4005 Organization NNP ORG https://en.wikipedia.org/wiki/World_Health_Organization
+391 401 4006 laboratory NN
+402 404 4007 in IN
+405 409 4008 Hong NNP CIT https://en.wikipedia.org/wiki/Hong_Kong
+410 414 4009 Kong NNP CIT https://en.wikipedia.org/wiki/Hong_Kong
+415 423 4010 confirms VBZ
+424 427 4011 the DT
+428 432 4012 case NN
+432 433 4013 , ,
+434 437 4014 the DT
+438 441 4015 man NN
+442 446 4016 will MD
+447 449 4017 be VB
+450 459 4018 Indonesia NNP COU https://en.wikipedia.org/wiki/Indonesia
+459 461 4019 's POS
+462 466 4020 15th CD
+467 475 4021 fatality NN
+476 480 4022 from IN
+481 486 4023 avian JJ
+487 496 4024 influenza NN
+496 497 4025 . .

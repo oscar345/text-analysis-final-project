@@ -1,0 +1,70 @@
+1 4 1001 Two CD
+5 13 1002 American JJ COU https://en.wikipedia.org/wiki/United_States
+14 25 1003 journalists NNS
+26 30 1004 have VBP
+31 35 1005 been VBN
+36 44 1006 reunited VBN
+45 49 1007 with IN
+50 55 1008 their PRP$
+56 64 1009 families NNS
+65 70 1010 after IN
+71 76 1011 being VBG
+77 85 1012 released VBN
+86 90 1013 from IN
+91 100 1014 detention NN
+101 103 1015 in IN
+104 109 1016 North NNP COU https://en.wikipedia.org/wiki/North_Korea
+110 115 1017 Korea NNP COU https://en.wikipedia.org/wiki/North_Korea
+115 116 1018 . .
+117 120 2001 The DT
+121 124 2002 two CD
+125 129 2003 were VBD
+130 135 2004 freed VBN
+136 141 2005 after IN
+142 143 2006 a DT
+144 154 2007 diplomatic JJ
+155 159 2008 trip NN
+160 162 2009 to TO
+163 172 2010 Pyongyang NNP CIT https://en.wikipedia.org/wiki/Pyongyang
+173 175 2011 by IN
+176 182 2012 former JJ
+183 192 2013 president NN PER https://en.wikipedia.org/wiki/Bill_Clinton
+193 197 2014 Bill NNP PER https://en.wikipedia.org/wiki/Bill_Clinton
+198 205 2015 Clinton NNP PER https://en.wikipedia.org/wiki/Bill_Clinton
+205 206 2016 . .
+207 209 3001 In IN
+210 212 3002 an DT
+213 222 3003 interview NN
+223 227 3004 with IN
+228 231 3005 VOA NNP ENT https://en.wikipedia.org/wiki/Voice_of_America
+232 238 3006 Senior NNP
+239 252 3007 Correspondent NNP
+253 258 3008 André NNP
+259 261 3009 de FW
+262 269 3010 Nesnera NNP
+269 270 3011 , ,
+271 277 3012 former JJ
+278 282 3013 U.S. NNP COU https://en.wikipedia.org/wiki/United_States
+283 293 3014 Ambassador NNP
+294 296 3015 to TO
+297 300 3016 the DT
+301 307 3017 United NNP ORG https://en.wikipedia.org/wiki/United_Nations
+308 315 3018 Nations NNP ORG https://en.wikipedia.org/wiki/United_Nations
+316 320 3019 John NNP PER https://en.wikipedia.org/wiki/John_Bolton
+321 327 3020 Bolton NNP PER https://en.wikipedia.org/wiki/John_Bolton
+328 333 3021 talks NNS
+334 339 3022 about IN
+341 345 3023 Bill NNP PER https://en.wikipedia.org/wiki/Bill_Clinton
+346 353 3024 Clinton NNP PER https://en.wikipedia.org/wiki/Bill_Clinton
+353 355 3025 ’s NNPS
+356 360 3026 trip NN
+361 364 3027 and CC
+365 368 3028 the DT
+369 374 3029 issue NN
+375 377 3030 of IN
+378 383 3031 North NNP COU https://en.wikipedia.org/wiki/North_Korea
+384 389 3032 Korea NNP COU https://en.wikipedia.org/wiki/North_Korea
+389 391 3033 ’s NNP
+392 399 3034 nuclear JJ
+400 409 3035 ambitions NNS
+409 410 3036 . .

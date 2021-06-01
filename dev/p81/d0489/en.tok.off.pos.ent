@@ -1,0 +1,90 @@
+0 6 1001 Police NNS
+7 10 1002 say VB
+11 18 1003 unknown JJ
+19 28 1004 attackers NNS
+29 33 1005 have VB
+34 40 1006 killed VBN
+41 43 1007 at IN
+44 49 1008 least JJS
+50 55 1009 seven CD
+56 62 1010 police NNS
+63 71 1011 officers NNS
+72 74 1012 in IN
+75 82 1013 central JJ
+83 91 1014 Pakistan NN COU https://en.wikipedia.org/wiki/Pakistan
+91 92 1015 . .
+94 97 2001 The DT
+98 104 2002 attack NN
+105 113 2003 happened VBD
+114 119 2004 early RB
+120 128 2005 Saturday NNP
+129 133 2006 near IN
+134 137 2007 the DT
+138 142 2008 town NN
+143 145 2009 of IN
+146 154 2010 Mianwali NN CIT https://en.wikipedia.org/wiki/Mianwali
+154 155 2011 , ,
+156 158 2012 in IN
+159 165 2013 Punjab NN COU https://en.wikipedia.org/wiki/Punjab,_Pakistan
+166 174 2014 province NN COU https://en.wikipedia.org/wiki/Punjab,_Pakistan
+174 175 2015 . .
+177 183 3001 Police NNS
+184 187 3002 say VB
+188 197 3003 militants NNS
+198 203 3004 first RB
+204 210 3005 opened VBN
+211 215 3006 fire NN
+216 218 3007 on IN
+219 220 3008 a DT
+221 227 3009 police NNS
+228 238 3010 checkpoint NN
+239 242 3011 and CC
+243 247 3012 then RB
+248 252 3013 blew NN
+253 255 3014 it PRP
+256 258 3015 up RB
+259 263 3016 with IN
+264 274 3017 explosives NNS
+274 275 3018 . .
+277 280 4001 The DT
+281 288 4002 outpost NN
+289 297 4003 building NN
+298 301 4004 was VBD
+302 311 4005 destroyed NN
+312 314 4006 in IN
+315 318 4007 the DT
+319 324 4008 blast NN
+324 325 4009 . .
+327 335 5001 Security NN
+336 345 5002 officials NNS
+346 349 5003 say VB
+350 352 5004 it PRP
+353 355 5005 is VBZ
+356 359 5006 not RB
+360 365 5007 clear JJ
+366 369 5008 who WP
+370 372 5009 is VBZ
+373 379 5010 behind IN
+380 383 5011 the DT
+384 390 5012 attack NN
+390 391 5013 . .
+393 401 6001 Mianwali NN CIT https://en.wikipedia.org/wiki/Mianwali
+402 404 6002 is VBZ
+405 409 6003 near IN
+410 413 6004 the DT
+414 421 6005 restive NN
+422 427 6006 North NN COU https://en.wikipedia.org/wiki/North-West_Frontier_Province
+428 432 6007 West NNP COU https://en.wikipedia.org/wiki/North-West_Frontier_Province
+433 441 6008 Frontier NN COU https://en.wikipedia.org/wiki/North-West_Frontier_Province
+442 450 6009 Province NN COU https://en.wikipedia.org/wiki/North-West_Frontier_Province
+450 451 6010 , ,
+452 457 6011 where WRB
+458 467 6012 Pakistani NN
+468 476 6013 security NN
+477 483 6014 forces NNS
+484 488 6015 have VB
+489 493 6016 been VBN
+494 502 6017 battling NN
+503 514 6018 pro-Taliban NN
+515 524 6019 militants NNS
+524 525 6020 . .

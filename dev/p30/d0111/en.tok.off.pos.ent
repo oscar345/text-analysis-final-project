@@ -1,0 +1,57 @@
+0 4 1001 Amid IN
+5 11 1002 rising VBG
+12 20 1003 gasoline NN
+21 27 1004 prices NNS
+28 31 1005 and CC
+32 40 1006 slumping VBG
+41 45 1007 U.S. NNP COU https://en.wikipedia.org/wiki/United_States
+46 51 1008 sales NNS
+51 52 1009 , ,
+53 66 1010 international JJ
+67 71 1011 auto NN
+72 77 1012 giant JJ
+78 85 1013 General NNP ORG https://en.wikipedia.org/wiki/General_Motors
+86 92 1014 Motors NNPS ORG https://en.wikipedia.org/wiki/General_Motors
+93 102 1015 announced VBD
+103 104 1016 a DT
+105 109 1017 plan NN
+110 117 1018 Tuesday NNP
+118 119 1019 [ NNP
+119 123 1020 July NNP
+124 128 1021 15th CD
+128 129 1022 ] NN
+130 132 1023 to TO
+133 136 1024 cut VB
+137 145 1025 expenses NNS
+146 149 1026 and CC
+150 155 1027 shift VB
+156 166 1028 production NN
+167 169 1029 to TO
+170 174 1030 more RBR
+175 189 1031 fuel-efficient JJ
+190 194 1032 cars NNS
+194 195 1033 . .
+196 203 2001 Company NN
+204 213 2002 officials NNS
+214 217 2003 say VBP
+218 222 2004 they PRP
+223 227 2005 will MD
+228 231 2006 lay VB
+232 235 2007 off RP
+236 243 2008 workers NNS
+243 244 2009 , ,
+245 248 2010 cut VBD
+249 254 2011 truck NN
+255 265 2012 production NN
+266 269 2013 and CC
+270 277 2014 suspend VB
+278 281 2015 its PRP$
+282 287 2016 stock NN
+288 296 2017 dividend NN
+296 297 2018 . .
+298 301 3001 VOA NNP ENT https://en.wikipedia.org/wiki/Voice_of_America
+301 303 3002 's POS
+304 308 3003 Jeff NNP
+309 316 3004 Swicord NNP
+317 324 3005 Reports NNP
+324 325 3006 . .

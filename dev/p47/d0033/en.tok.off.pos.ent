@@ -1,0 +1,96 @@
+0 8 1001 Nigerian JJ ORG https://en.wikipedia.org/wiki/Federal_government_of_Nigeria
+9 19 1002 government NN ORG https://en.wikipedia.org/wiki/Federal_government_of_Nigeria
+20 29 1003 officials NNS
+30 33 1004 say VBP
+34 40 1005 former JJ
+41 49 1006 Liberian JJ COU https://en.wikipedia.org/wiki/Liberia
+50 56 1007 leader NN
+57 60 1008 and CC
+61 64 1009 war NN
+65 71 1010 crimes NNS
+72 79 1011 suspect VBP
+80 87 1012 Charles NNP PER https://en.wikipedia.org/wiki/Charles_Taylor_(Liberian_politician)
+88 94 1013 Taylor NNP PER https://en.wikipedia.org/wiki/Charles_Taylor_(Liberian_politician)
+95 98 1014 has VBZ
+99 110 1015 disappeared VBN
+111 115 1016 from IN
+116 119 1017 the DT
+120 125 1018 house NN
+126 131 1019 where WRB
+132 134 1020 he PRP
+135 138 1021 was VBD
+139 145 1022 living VBG
+146 148 1023 in IN
+149 154 1024 exile NN
+155 157 1025 in IN
+158 165 1026 Nigeria NNP COU https://en.wikipedia.org/wiki/Nigeria
+165 166 1027 . .
+167 171 2001 They PRP
+172 175 2002 say VBP
+176 182 2003 Taylor NNP PER https://en.wikipedia.org/wiki/Charles_Taylor_(Liberian_politician)
+183 187 2004 left VBD
+188 191 2005 his PRP$
+192 197 2006 villa NN
+198 200 2007 in IN
+201 204 2008 the DT
+205 213 2009 southern JJ
+214 218 2010 town NN
+219 221 2011 of IN
+222 229 2012 Calabar NNP CIT https://en.wikipedia.org/wiki/Calabar
+230 236 2013 Monday NNP
+237 242 2014 night NN
+242 243 2015 . .
+244 247 3001 His PRP$
+248 261 3002 disappearance NN
+262 266 3003 came VBD
+267 271 3004 just RB
+272 277 3005 after IN
+278 281 3006 the DT
+282 290 3007 Nigerian JJ ORG https://en.wikipedia.org/wiki/Federal_government_of_Nigeria
+291 301 3008 government NN ORG https://en.wikipedia.org/wiki/Federal_government_of_Nigeria
+302 306 3009 said VBD
+307 311 3010 they PRP
+312 316 3011 were VBD
+317 324 3012 willing JJ
+325 327 3013 to TO
+328 333 3014 allow VB
+334 341 3015 Liberia NNP COU https://en.wikipedia.org/wiki/Liberia
+342 344 3016 to TO
+345 351 3017 arrest VB
+352 358 3018 Taylor NNP PER https://en.wikipedia.org/wiki/Charles_Taylor_(Liberian_politician)
+358 359 3019 . .
+360 363 4001 The DT
+364 370 4002 United NNP ORG https://en.wikipedia.org/wiki/United_Nations
+371 378 4003 Nations NNP ORG https://en.wikipedia.org/wiki/United_Nations
+379 382 4004 war NN ORG https://en.wikipedia.org/wiki/Special_Court_for_Sierra_Leone
+383 389 4005 crimes NNS ORG https://en.wikipedia.org/wiki/Special_Court_for_Sierra_Leone
+390 398 4006 tribunal JJ ORG https://en.wikipedia.org/wiki/Special_Court_for_Sierra_Leone
+399 402 4007 for IN ORG https://en.wikipedia.org/wiki/Special_Court_for_Sierra_Leone
+403 409 4008 Sierra NNP ORG https://en.wikipedia.org/wiki/Special_Court_for_Sierra_Leone
+410 415 4009 Leone NNP ORG https://en.wikipedia.org/wiki/Special_Court_for_Sierra_Leone
+416 419 4010 had VBD
+420 425 4011 asked VBN
+426 429 4012 for IN
+430 433 4013 his PRP$
+434 440 4014 arrest NN
+441 443 4015 on IN
+444 451 4016 charges NNS
+452 454 4017 of IN
+455 459 4018 rape NN
+460 463 4019 and CC
+464 471 4020 torture NN
+472 479 4021 related VBN
+480 482 4022 to TO
+483 486 4023 his PRP$
+487 491 4024 rule NN
+492 494 4025 in IN
+495 502 4026 Liberia NNP COU https://en.wikipedia.org/wiki/Liberia
+503 506 4027 and CC
+507 508 4028 a DT
+509 514 4029 civil JJ
+515 518 4030 war NN
+519 521 4031 in IN
+522 533 4032 neighboring VBG
+534 540 4033 Sierra NNP COU https://en.wikipedia.org/wiki/Sierra_Leone
+541 546 4034 Leone NNP COU https://en.wikipedia.org/wiki/Sierra_Leone
+546 547 4035 . .

@@ -1,0 +1,96 @@
+0 4 1001 U.S. NNP COU https://en.wikipedia.org/wiki/United_States
+5 14 1002 officials NNS
+15 17 1003 in IN
+18 25 1004 Beijing NNP CIT https://en.wikipedia.org/wiki/Beijing
+26 30 1005 have VBP
+31 40 1006 announced VBN
+41 45 1007 that IN
+46 53 1008 Chinese JJ PER https://en.wikipedia.org/wiki/Hu_Jintao
+54 63 1009 President NNP PER https://en.wikipedia.org/wiki/Hu_Jintao
+64 66 1010 Hu NNP PER https://en.wikipedia.org/wiki/Hu_Jintao
+67 73 1011 Jintao NNP PER https://en.wikipedia.org/wiki/Hu_Jintao
+74 79 1012 plans VBZ
+80 82 1013 to TO
+83 88 1014 visit VB
+89 92 1015 the DT
+93 99 1016 United NNP COU https://en.wikipedia.org/wiki/United_States
+100 106 1017 States NNP COU https://en.wikipedia.org/wiki/United_States
+107 109 1018 in IN
+110 115 1019 April NNP
+115 116 1020 . .
+117 124 2001 Details NNS
+125 127 2002 of IN
+128 131 2003 his PRP$
+132 136 2004 trip NN
+137 141 2005 have VBP
+142 145 2006 not RB
+146 150 2007 been VBN
+151 159 2008 released VBN
+159 160 2009 . .
+161 164 3001 The DT
+165 169 3002 news NN
+170 175 3003 comes VBZ
+176 178 3004 as IN
+179 183 3005 U.S. NNP PER https://en.wikipedia.org/wiki/Robert_Zoellick
+184 190 3006 Deputy NNP PER https://en.wikipedia.org/wiki/Robert_Zoellick
+191 200 3007 Secretary NNP PER https://en.wikipedia.org/wiki/Robert_Zoellick
+201 203 3008 of IN PER https://en.wikipedia.org/wiki/Robert_Zoellick
+204 209 3009 State NNP PER https://en.wikipedia.org/wiki/Robert_Zoellick
+210 216 3010 Robert NNP PER https://en.wikipedia.org/wiki/Robert_Zoellick
+217 225 3011 Zoellick NNP PER https://en.wikipedia.org/wiki/Robert_Zoellick
+226 228 3012 is VBZ
+229 231 3013 in IN
+232 239 3014 Beijing NNP CIT https://en.wikipedia.org/wiki/Beijing
+240 243 3015 for IN
+244 249 3016 talks NNS
+250 254 3017 with IN
+255 258 3018 top JJ
+259 266 3019 Chinese JJ
+267 276 3020 officials NNS
+277 279 3021 on IN
+280 289 3022 bilateral JJ
+290 299 3023 relations NNS
+299 300 3024 , ,
+301 309 3025 security NN
+310 313 3026 and CC
+314 327 3027 proliferation NN
+328 334 3028 issues NNS
+334 335 3029 . .
+336 344 4001 Zoellick NNP PER https://en.wikipedia.org/wiki/Robert_Zoellick
+345 348 4002 met VBD
+349 353 4003 with IN
+354 361 4004 Chinese JJ PER https://en.wikipedia.org/wiki/Wen_Jiabao
+362 369 4005 Premier NNP PER https://en.wikipedia.org/wiki/Wen_Jiabao
+370 373 4006 Wen NNP PER https://en.wikipedia.org/wiki/Wen_Jiabao
+374 380 4007 Jiabao NNP PER https://en.wikipedia.org/wiki/Wen_Jiabao
+381 388 4008 Tuesday NNP
+388 389 4009 , ,
+390 393 4010 and CC
+394 396 4011 is VBZ
+397 405 4012 expected VBN
+406 408 4013 to TO
+409 413 4014 meet VB
+414 418 4015 with IN
+419 426 4016 Foreign NNP PER https://en.wikipedia.org/wiki/Li_Zhaoxing
+427 435 4017 Minister NNP PER https://en.wikipedia.org/wiki/Li_Zhaoxing
+436 438 4018 Li NNP PER https://en.wikipedia.org/wiki/Li_Zhaoxing
+439 447 4019 Zhaoxing NNP PER https://en.wikipedia.org/wiki/Li_Zhaoxing
+447 448 4020 . .
+449 451 5001 As IN
+452 456 5002 part NN
+457 459 5003 of IN
+460 463 5004 his PRP$
+464 473 5005 three-day NN
+474 478 5006 trip NN
+478 479 5007 , ,
+480 488 5008 Zoellick NNP PER https://en.wikipedia.org/wiki/Robert_Zoellick
+489 493 5009 will MD
+494 498 5010 also RB
+499 505 5011 travel VB
+506 508 5012 to IN
+509 512 5013 the DT
+513 525 5014 southwestern JJ
+526 530 5015 city NN
+531 533 5016 of IN
+534 541 5017 Chengdu NNP CIT https://en.wikipedia.org/wiki/Chengdu
+541 542 5018 . .

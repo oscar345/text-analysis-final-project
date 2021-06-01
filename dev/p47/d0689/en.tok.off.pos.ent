@@ -1,0 +1,84 @@
+0 4 1001 This DT
+5 16 1002 uninhabited JJ
+17 23 1003 island NN NAT https://en.wikipedia.org/wiki/Island
+24 27 1004 was VBD
+28 35 1005 claimed VBN
+36 38 1006 by IN
+39 42 1007 the DT
+43 45 1008 US NNP COU https://en.wikipedia.org/wiki/United_States
+46 48 1009 in IN
+49 53 1010 1857 CD
+54 57 1011 for IN
+58 61 1012 its PRP$
+62 67 1013 guano NN
+67 68 1014 . .
+69 75 2001 Mining NNP
+76 80 2002 took VBD
+81 86 2003 place NN
+87 94 2004 between IN
+95 99 2005 1865 CD
+100 103 2006 and CC
+104 108 2007 1898 CD
+108 109 2008 . .
+110 113 3001 The DT
+114 124 3002 lighthouse NN
+124 125 3003 , ,
+126 131 3004 built VBN
+132 134 3005 in IN
+135 139 3006 1917 CD
+139 140 3007 , ,
+141 144 3008 was VBD
+145 149 3009 shut VBN
+150 154 3010 down RP
+155 157 3011 in IN
+158 162 3012 1996 CD
+163 166 3013 and CC
+167 181 3014 administration NN ORG https://en.wikipedia.org/wiki/Administration_(government)
+182 184 3015 of IN
+185 192 3016 Navassa NNP COU https://en.wikipedia.org/wiki/Navassa_Island
+193 199 3017 Island NNP COU https://en.wikipedia.org/wiki/Navassa_Island
+200 211 3018 transferred VBD
+212 216 3019 from IN
+217 220 3020 the DT
+221 226 3021 Coast NNP ORG https://en.wikipedia.org/wiki/United_States_Coast_Guard
+227 232 3022 Guard NNP ORG https://en.wikipedia.org/wiki/United_States_Coast_Guard
+233 235 3023 to TO
+236 239 3024 the DT
+240 250 3025 Department NNP ORG https://en.wikipedia.org/wiki/United_States_Department_of_the_Interior
+251 253 3026 of IN ORG https://en.wikipedia.org/wiki/United_States_Department_of_the_Interior
+254 257 3027 the DT ORG https://en.wikipedia.org/wiki/United_States_Department_of_the_Interior
+258 266 3028 Interior NNP ORG https://en.wikipedia.org/wiki/United_States_Department_of_the_Interior
+266 267 3029 . .
+268 269 4001 A DT
+270 274 4002 1998 CD
+275 285 4003 scientific JJ
+286 296 4004 expedition NN
+297 299 4005 to TO
+300 303 4006 the DT
+304 310 4007 island NN NAT https://en.wikipedia.org/wiki/Island
+311 320 4008 described VBD
+321 323 4009 it PRP
+324 326 4010 as IN
+327 328 4011 a DT
+329 335 4012 unique JJ
+336 344 4013 preserve NN
+345 347 4014 of IN
+348 357 4015 Caribbean NNP COU https://en.wikipedia.org/wiki/Caribbean
+358 370 4016 biodiversity NN
+370 371 4017 ; :
+372 375 4018 the DT
+376 385 4019 following JJ
+386 390 4020 year NN
+391 393 4021 it PRP
+394 400 4022 became VBD
+401 402 4023 a DT
+403 411 4024 National NNP
+412 420 4025 Wildlife NNP
+421 427 4026 Refuge NNP
+428 431 4027 and CC
+432 438 4028 annual JJ
+439 449 4029 scientific JJ
+450 461 4030 expeditions NNS
+462 466 4031 have VBP
+467 476 4032 continued VBN
+476 477 4033 . .

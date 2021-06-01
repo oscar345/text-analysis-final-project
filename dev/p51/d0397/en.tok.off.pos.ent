@@ -1,0 +1,96 @@
+0 8 1001 Estonian JJ COU https://en.wikipedia.org/wiki/Estonia
+9 18 1002 President NNP PER https://en.wikipedia.org/wiki/Arnold_R%C3%BC%C3%BCtel
+19 25 1003 Arnold NNP PER https://en.wikipedia.org/wiki/Arnold_R%C3%BC%C3%BCtel
+26 32 1004 Ruutel NNP PER https://en.wikipedia.org/wiki/Arnold_R%C3%BC%C3%BCtel
+33 36 1005 has VBZ
+37 45 1006 formally RB
+46 54 1007 approved VBN
+55 58 1008 the DT
+59 66 1009 country NN
+66 68 1010 's POS
+69 72 1011 new JJ
+73 83 1012 government NN
+83 84 1013 , ,
+85 90 1014 three CD
+91 96 1015 weeks NNS
+97 102 1016 after IN
+103 106 1017 the DT
+107 115 1018 previous JJ
+116 122 1019 ruling NN
+123 132 1020 coalition NN
+133 142 1021 collapsed VBD
+142 143 1022 . .
+144 147 2001 The DT
+148 157 2002 president NN
+157 159 2003 's POS
+160 166 2004 action NN
+167 175 2005 followed VBD
+176 177 2006 a DT
+178 191 2007 parliamentary JJ
+192 196 2008 vote NN
+197 207 2009 confirming VBG
+208 214 2010 Andrus NNP PER https://en.wikipedia.org/wiki/Andrus_Ansip
+215 220 2011 Ansip NNP PER https://en.wikipedia.org/wiki/Andrus_Ansip
+221 224 2012 and CC
+225 228 2013 his PRP$
+229 238 2014 coalition NN
+239 249 2015 government NN
+249 250 2016 . .
+251 254 3001 The DT
+255 266 3002 48-year-old JJ
+267 270 3003 Mr. NNP PER https://en.wikipedia.org/wiki/Andrus_Ansip
+271 276 3004 Ansip NNP PER https://en.wikipedia.org/wiki/Andrus_Ansip
+277 280 3005 was VBD
+281 284 3006 the DT
+285 293 3007 minister NN
+294 296 3008 of IN
+297 306 3009 economics NNS
+307 310 3010 and CC
+311 325 3011 communications NNS
+326 334 3012 minister NN
+335 337 3013 in IN
+338 341 3014 the DT
+342 350 3015 previous JJ
+351 361 3016 government NN
+361 362 3017 . .
+363 366 4001 The DT
+367 370 4002 new JJ
+371 380 4003 coalition NN
+381 387 4004 brings VBZ
+388 396 4005 together RB
+397 400 4006 Mr. NNP PER https://en.wikipedia.org/wiki/Andrus_Ansip
+401 406 4007 Ansip NNP PER https://en.wikipedia.org/wiki/Andrus_Ansip
+406 408 4008 's POS
+409 415 4009 Reform NNP ORG https://en.wikipedia.org/wiki/Estonian_Reform_Party
+416 421 4010 Party NNP ORG https://en.wikipedia.org/wiki/Estonian_Reform_Party
+421 422 4011 , ,
+423 426 4012 the DT
+427 433 4013 Centre NNP ORG https://en.wikipedia.org/wiki/Estonian_Centre_Party
+434 439 4014 Party NNP ORG https://en.wikipedia.org/wiki/Estonian_Centre_Party
+440 443 4015 and CC
+444 447 4016 the DT
+448 454 4017 People NNP ORG https://en.wikipedia.org/wiki/People%27s_Union_of_Estonia
+454 456 4018 's POS ORG https://en.wikipedia.org/wiki/People%27s_Union_of_Estonia
+457 462 4019 Union NNP ORG https://en.wikipedia.org/wiki/People%27s_Union_of_Estonia
+462 463 4020 . .
+464 471 5001 Estonia NNP COU https://en.wikipedia.org/wiki/Estonia
+471 473 5002 's POS
+474 482 5003 previous JJ
+483 488 5004 prime JJ
+489 497 5005 minister NN
+497 498 5006 , ,
+499 504 5007 Juhan NNP PER https://en.wikipedia.org/wiki/Juhan_Parts
+505 510 5008 Parts NNP PER https://en.wikipedia.org/wiki/Juhan_Parts
+510 511 5009 , ,
+512 520 5010 resigned VBD
+521 525 5011 last JJ
+526 531 5012 month NN
+532 537 5013 after IN
+538 547 5014 lawmakers NNS
+548 553 5015 voted VBD
+554 567 5016 no-confidence NN
+568 570 5017 in IN
+571 574 5018 his PRP$
+575 582 5019 justice NN
+583 591 5020 minister NN
+591 592 5021 . .

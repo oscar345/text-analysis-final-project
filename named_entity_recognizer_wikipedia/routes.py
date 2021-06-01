@@ -16,13 +16,16 @@ def about():
 @app.route("/documentation", methods=["GET", "POST"])
 def documentation():
     return render_template("documentation.html")
-
+   
 
 @app.route("/output", methods=["GET"])
 def output():
     output = session["output"]
     index_user = session["index_user"]
     is_testing = session["is_testing"]
+    if is_testing:
+        scores = session["scores"]
+        return render_template("output.html", output=output.items(), index_user=str(index_user), is_testing=is_testing, scores=scores)
     return render_template("output.html", output=output.items(), index_user=str(index_user), is_testing=is_testing)
 
 

@@ -1,0 +1,96 @@
+0 4 1001 Iraq NNP COU https://en.wikipedia.org/wiki/Iraq
+4 6 1002 's POS
+7 17 1003 government NN
+18 22 1004 says VBZ
+23 28 1005 Prime NNP
+29 37 1006 Minister NNP
+38 43 1007 Nouri NNP PER https://en.wikipedia.org/wiki/Nouri_al-Maliki
+44 53 1008 al-Maliki NN PER https://en.wikipedia.org/wiki/Nouri_al-Maliki
+54 58 1009 will MD
+59 63 1010 make VB
+64 67 1011 his PRP$
+68 73 1012 first JJ
+74 82 1013 official JJ
+83 88 1014 visit NN
+89 91 1015 to TO
+92 96 1016 Iran NNP COU https://en.wikipedia.org/wiki/Iran
+97 99 1017 on IN
+100 106 1018 Monday NNP
+106 107 1019 . .
+108 117 2001 Officials NNS
+118 121 2002 say VBP
+122 125 2003 his PRP$
+126 133 2004 two-day JJ
+134 139 2005 visit NN
+140 144 2006 will MD
+145 150 2007 focus VB
+151 153 2008 on IN
+154 162 2009 security NN
+163 169 2010 issues NNS
+170 173 2011 and CC
+174 183 2012 promoting VBG
+184 193 2013 bilateral JJ
+194 203 2014 relations NNS
+203 204 2015 . .
+205 212 3001 Earlier RBR
+213 217 3002 this DT
+218 222 3003 week NN
+222 223 3004 , ,
+224 229 3005 Iraqi NNP COU https://en.wikipedia.org/wiki/Iraq
+230 236 3006 Deputy NNP
+237 242 3007 Prime NNP
+243 251 3008 Minister NNP
+252 258 3009 Barham NNP PER https://en.wikipedia.org/wiki/Barham_Salih
+259 264 3010 Saleh NNP PER https://en.wikipedia.org/wiki/Barham_Salih
+265 268 3011 led VBD
+269 270 3012 a DT
+271 281 3013 delegation NN
+282 284 3014 of IN
+285 294 3015 officials NNS
+295 297 3016 on IN
+298 299 3017 a DT
+300 305 3018 visit NN
+306 308 3019 to TO
+309 313 3020 Iran NNP COU https://en.wikipedia.org/wiki/Iran
+314 319 3021 aimed VBN
+320 322 3022 at IN
+323 332 3023 enhancing VBG
+333 341 3024 economic JJ
+342 346 3025 ties NNS
+347 354 3026 between IN
+355 358 3027 the DT
+359 362 3028 two CD
+363 370 3029 nations NNS
+370 371 3030 . .
+372 376 4001 Iraq NNP COU https://en.wikipedia.org/wiki/Iraq
+377 380 4002 and CC
+381 385 4003 Iran NNP COU https://en.wikipedia.org/wiki/Iran
+386 392 4004 fought VBD
+393 394 4005 a DT
+395 401 4006 bloody JJ
+402 405 4007 war NN
+406 408 4008 in IN
+409 412 4009 the DT
+413 418 4010 1980s CD
+419 423 4011 when WRB
+424 434 4012 then-Iraqi JJ COU https://en.wikipedia.org/wiki/Iraq
+435 441 4013 leader NN
+442 448 4014 Saddam NNP PER https://en.wikipedia.org/wiki/Saddam_Hussein
+449 456 4015 Hussein NNP PER https://en.wikipedia.org/wiki/Saddam_Hussein
+457 460 4016 was VBD
+461 463 4017 in IN
+464 469 4018 power NN
+469 470 4019 . .
+471 474 5001 The DT
+475 486 5002 neighboring JJ
+487 496 5003 countries NNS
+497 501 5004 have VBP
+502 507 5005 tried VBN
+508 510 5006 to TO
+511 516 5007 build VB
+517 523 5008 closer JJR
+524 528 5009 ties NNS
+529 531 5010 in IN
+532 538 5011 recent JJ
+539 544 5012 years NNS
+544 545 5013 . .

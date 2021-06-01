@@ -1,0 +1,95 @@
+0 8 1001 Zimbabwe NNP COU https://en.wikipedia.org/wiki/Zimbabwe
+9 14 1002 marks VBZ
+15 17 1003 25 CD
+18 23 1004 years NNS
+24 26 1005 of IN
+27 39 1006 independence NN
+40 44 1007 from IN
+45 52 1008 Britain NNP COU https://en.wikipedia.org/wiki/United_Kingdom
+53 59 1009 Monday NNP
+60 64 1010 amid IN
+65 75 1011 opposition NN
+76 82 1012 claims NNS
+83 87 1013 that IN
+88 91 1014 the DT
+92 99 1015 country NN
+99 101 1016 's POS
+102 109 1017 economy NN
+110 113 1018 has VBZ
+114 117 1019 not RB
+118 122 1020 done VBN
+123 127 1021 well RB
+128 134 1022 during IN
+135 140 1023 those DT
+141 146 1024 years NNS
+146 147 1025 . .
+148 157 2001 Officials NNS
+158 162 2002 said VBD
+163 170 2003 leaders NNS
+171 173 2004 of IN
+174 185 2005 neighboring VBG
+186 196 2006 Democratic JJ COU https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo
+197 205 2007 Republic NNP COU https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo
+206 208 2008 of IN COU https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo
+209 214 2009 Congo NNP COU https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo
+214 215 2010 , ,
+216 224 2011 Tanzania NNP COU https://en.wikipedia.org/wiki/Tanzania
+224 225 2012 , ,
+226 233 2013 Namibia NNP COU https://en.wikipedia.org/wiki/Namibia
+233 234 2014 , ,
+235 241 2015 Angola NNP COU https://en.wikipedia.org/wiki/Angola
+241 242 2016 , ,
+243 253 2017 Mozambique NNP COU https://en.wikipedia.org/wiki/Mozambique
+254 257 2018 and CC
+258 266 2019 Botswana NNP COU https://en.wikipedia.org/wiki/Botswana
+267 270 2020 are VBP
+271 280 2021 attending VBG
+281 284 2022 the DT
+285 296 2023 anniversary JJ
+297 309 2024 celebrations NNS
+309 310 2025 . .
+311 320 3001 President NNP PER https://en.wikipedia.org/wiki/Robert_Mugabe
+321 327 3002 Robert NNP PER https://en.wikipedia.org/wiki/Robert_Mugabe
+328 334 3003 Mugabe NNP PER https://en.wikipedia.org/wiki/Robert_Mugabe
+334 335 3004 , ,
+336 339 3005 who WP
+340 343 3006 has VBZ
+344 347 3007 led VBN
+348 351 3008 the DT
+352 359 3009 country NN
+360 365 3010 since IN
+366 378 3011 independence NN
+378 379 3012 , ,
+380 382 3013 is VBZ
+383 392 3014 scheduled VBN
+393 395 3015 to TO
+396 400 3016 give VB
+401 402 3017 a DT
+403 409 3018 speech NN
+410 419 3019 extolling VBG
+420 423 3020 the DT
+424 431 3021 country NN
+431 433 3022 's POS
+434 446 3023 achievements NNS
+446 447 3024 . .
+448 451 4001 But CC
+452 462 4002 opposition NN
+463 469 4003 groups NNS
+470 473 4004 are VBP
+474 480 4005 saying VBG
+481 485 4006 that IN
+486 489 4007 the DT
+490 497 4008 country NN
+498 500 4009 is VBZ
+501 506 4010 worse JJR
+507 510 4011 off IN
+511 516 4012 today NN
+517 521 4013 than IN
+522 526 4014 when WRB
+527 529 4015 it PRP
+530 536 4016 gained VBD
+537 549 4017 independence RB
+550 552 4018 25 CD
+553 558 4019 years NNS
+559 562 4020 ago RB
+562 563 4021 . .

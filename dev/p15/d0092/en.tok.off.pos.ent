@@ -1,0 +1,82 @@
+0 6 1001 Police NNS
+7 9 1002 in IN
+10 13 1003 Sri NNP COU https://en.wikipedia.org/wiki/Sri_Lanka
+14 19 1004 Lanka NNP COU https://en.wikipedia.org/wiki/Sri_Lanka
+20 23 1005 say VBP
+24 27 1006 300 CD
+28 37 1007 prisoners NNS
+38 42 1008 took VBD
+43 52 1009 advantage NN
+53 55 1010 of IN
+56 62 1011 Sunday NNP
+62 64 1012 's POS
+65 72 1013 massive JJ
+73 83 1014 earthquake NN
+84 86 1015 to TO
+87 91 1016 make VB
+92 97 1017 their PRP$
+98 104 1018 escape NN
+105 109 1019 from IN
+110 111 1020 a DT
+112 125 1021 high-security JJ
+126 130 1022 jail NN
+130 131 1023 . .
+132 143 2001 Authorities NNS
+144 147 2002 say VBP
+148 151 2003 the DT
+152 159 2004 inmates NNS
+160 164 2005 fled VBD
+165 170 2006 after IN
+171 172 2007 a DT
+173 178 2008 tidal JJ
+179 183 2009 wave NN
+184 190 2010 caused VBN
+191 193 2011 by IN
+194 197 2012 the DT
+198 203 2013 quake NN
+204 213 2014 destroyed VBD
+214 219 2015 their PRP$
+220 226 2016 prison NN
+226 227 2017 , ,
+228 229 2018 a DT
+230 234 2019 16th JJ
+235 242 2020 century NN
+243 254 2021 Dutch-built NNP
+255 259 2022 fort NN
+260 262 2023 in IN
+263 264 2024 a DT
+265 273 2025 southern JJ
+274 281 2026 coastal JJ
+282 286 2027 town NN
+287 293 2028 Matara NNP CIT https://en.wikipedia.org/wiki/Matara,_Sri_Lanka
+293 294 2029 . .
+295 302 3001 Reuters NNP ORG https://en.wikipedia.org/wiki/Reuters
+303 307 3002 news NN ORG https://en.wikipedia.org/wiki/Reuters
+308 314 3003 agency NN ORG https://en.wikipedia.org/wiki/Reuters
+315 322 3004 reports VBZ
+323 324 3005 a DT
+325 332 3006 similar JJ
+333 339 3007 prison NN
+340 345 3008 break NN
+346 348 3009 in IN
+349 358 3010 Indonesia NNP COU https://en.wikipedia.org/wiki/Indonesia
+358 360 3011 's POS
+361 365 3012 Aceh NNP COU https://en.wikipedia.org/wiki/Aceh
+366 374 3013 province NN
+374 375 3014 . .
+376 382 4001 Police NNP
+383 388 4002 there EX
+389 392 4003 say VBP
+393 396 4004 200 CD
+397 406 4005 prisoners NNS
+407 411 4006 fled VBD
+412 417 4007 after IN
+418 419 4008 a DT
+420 427 4009 tsunami NN
+428 437 4010 destroyed VBD
+438 441 4011 the DT
+442 447 4012 walls NNS
+448 450 4013 of IN
+451 454 4014 the DT
+455 463 4015 facility NN
+463 464 4016 . .

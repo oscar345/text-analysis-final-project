@@ -1,0 +1,70 @@
+ 0 2 1001 In IN
+ 3 10 1002 Liberia NNP COU https://en.wikipedia.org/wiki/Liberia
+ 10 11 1003 , ,
+ 12 22 1004 supporters NNS
+ 23 25 1005 of IN
+ 26 32 1006 former JJ
+ 33 39 1007 soccer NN
+ 40 44 1008 star NN
+ 45 51 1009 George NNP PER https://en.wikipedia.org/wiki/George_Weah
+ 52 56 1010 Weah NNP PER https://en.wikipedia.org/wiki/George_Weahelection
+ 57 61 1011 have VBP
+ 62 67 1012 vowed VBN
+ 68 70 1013 to TO
+ 71 79 1014 continue VB
+ 80 85 1015 their PRP$
+ 86 94 1016 protests NNS
+ 95 97 1017 of IN
+ 98 101 1018 the DT
+ 102 110 1019 November NNP
+ 111 112 1020 8 CD
+ 113 125 1021 presidential JJ
+ 126 133 1022 run-off NN
+ 134 142 1023 election NN
+ 142 143 1024 , ,
+ 144 149 1025 which WDT
+ 150 154 1026 they PRP
+ 155 158 1027 say VBP
+ 159 162 1028 was VBD
+ 163 173 1029 fraudulent JJ
+ 173 174 1030 . .
+ 175 178 2001 The DT
+ 179 188 2002 elections NNS
+ 189 199 2003 commission NN
+ 200 202 2004 is VBZ
+ 203 211 2005 expected VBN
+ 212 214 2006 to TO
+ 215 223 2007 announce VB
+ 224 227 2008 the DT
+ 228 233 2009 final JJ
+ 234 241 2010 results NNS
+ 242 249 2011 Tuesday NNP
+ 249 250 2012 . .
+ 251 256 3001 Frank NNP PER
+ 257 266 3002 Sainworla NNP PER
+ 266 267 3003 , ,
+ 268 273 3004 radio NN
+ 274 282 3005 director NN
+ 283 285 3006 of IN
+ 286 289 3007 the DT
+ 290 293 3008 VOA NNP ORG https://en.wikipedia.org/wiki/Voice_of_America
+ 294 303 3009 affiliate NN
+ 303 304 3010 , ,
+ 305 310 3011 Radio NNP ORG https://en.wikipedia.org/wiki/List_of_radio_stations_in_Liberia
+ 311 318 3012 Veritas NNP ORG https://en.wikipedia.org/wiki/List_of_radio_stations_in_Liberia
+ 319 321 3013 in IN
+ 322 325 3014 the DT
+ 326 334 3015 Liberian JJ
+ 335 342 3016 capital NN
+ 342 343 3017 , ,
+ 344 352 3018 Monrovia NNP CIT https://en.wikipedia.org/wiki/Monrovia
+ 352 353 3019 , ,
+ 354 360 3020 talked VBD
+ 361 365 3021 with IN
+ 366 373 3022 English NNP
+ 374 376 3023 to TO
+ 377 383 3024 Africa NNP COU https://en.wikipedia.org/wiki/Africa
+ 384 392 3025 reporter NN
+ 393 398 3026 James NNP PER https://en.wikipedia.org/wiki/Elections_in_Liberia
+ 399 404 3027 Butty NNP PER https://en.wikipedia.org/wiki/Elections_in_Liberia
+ 404 405 3028 . .

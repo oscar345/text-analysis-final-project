@@ -1,0 +1,55 @@
+1 3 1001 In IN
+4 8 1002 many JJ
+9 14 1003 rural JJ
+15 20 1004 areas NNS
+21 23 1005 of IN
+24 29 1006 North NNP COU https://en.wikipedia.org/wiki/North_America
+30 37 1007 America NNP COU https://en.wikipedia.org/wiki/North_America
+37 38 1008 , ,
+39 45 1009 cowboy NN
+46 54 1010 churches NNS
+55 58 1011 are VBP
+59 69 1012 attracting VBG
+70 76 1013 people NNS
+77 81 1014 that WDT
+82 87 1015 might MD
+88 91 1016 shy VB
+92 96 1017 away RP
+97 101 1018 from IN
+102 113 1019 traditional JJ
+114 123 1020 Christian JJ ORG https://en.wikipedia.org/wiki/Christianity
+124 132 1021 churches NNS
+132 133 1022 . .
+134 139 2001 These DT
+140 149 2002 religious JJ
+150 160 2003 gatherings NNS
+161 164 2004 are VBP
+165 174 2005 generally RB
+175 179 2006 held VBN
+180 186 2007 during IN
+187 190 2008 the DT
+191 195 2009 week NN
+196 199 2010 and CC
+200 207 2011 feature NN
+208 209 2012 a DT
+210 214 2013 very RB
+215 221 2014 casual JJ
+222 227 2015 style NN
+227 228 2016 . .
+229 232 3001 For IN
+233 241 3002 producer NN
+242 244 3003 Yi NNP
+245 249 3004 Suli NNP
+249 250 3005 , ,
+251 257 3006 Elaine NNP
+258 260 3007 Lu NNP
+261 264 3008 has VBZ
+265 269 3009 more JJR
+270 272 3010 on IN
+273 276 3011 one CD
+277 283 3012 cowboy NN
+284 290 3013 church NN
+291 293 3014 in IN
+294 299 3015 North NNP COU https://en.wikipedia.org/wiki/North_Carolina
+300 308 3016 Carolina NNP COU https://en.wikipedia.org/wiki/North_Carolina
+308 309 3017 . .

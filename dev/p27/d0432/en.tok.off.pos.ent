@@ -1,0 +1,77 @@
+0 1 1001 A DT
+2 7 1002 train NN
+8 16 1003 accident NN
+17 19 1004 in IN
+20 23 1005 the DT
+24 32 1006 Republic NNP COU https://en.wikipedia.org/wiki/Republic_of_the_Congo
+33 35 1007 of IN COU https://en.wikipedia.org/wiki/Republic_of_the_Congo
+36 41 1008 Congo NNP COU https://en.wikipedia.org/wiki/Republic_of_the_Congo
+42 45 1009 has VBZ
+46 52 1010 killed VBN
+53 59 1011 around IN
+60 62 1012 60 CD
+63 69 1013 people NNS
+70 73 1014 and CC
+74 81 1015 injured JJ
+82 90 1016 hundreds NNS
+91 93 1017 of IN
+94 100 1018 others NNS
+100 101 1019 . .
+103 112 2001 Officials NNS
+113 117 2002 with IN
+118 122 2003 rail JJ
+123 130 2004 company NN
+131 135 2005 CFCO NNP ORG https://en.wikipedia.org/wiki/Congo%E2%80%93Ocean_Railway
+136 139 2006 say VBP
+140 144 2007 four CD
+145 150 2008 train NN
+151 155 2009 cars NNS
+156 162 2010 filled VBN
+163 167 2011 with IN
+168 178 2012 passengers NNS
+179 187 2013 derailed VBN
+188 191 2014 and CC
+192 199 2015 plunged VBN
+200 204 2016 into IN
+205 206 2017 a DT
+207 213 2018 ravine NN NAT https://en.wikipedia.org/wiki/Ravine
+214 218 2019 late RB
+219 221 2020 on IN
+222 228 2021 Monday NNP
+228 229 2022 . .
+233 238 3001 Media NNP
+239 246 3002 reports NNS
+247 250 3003 say VBP
+251 253 3004 at IN
+254 259 3005 least JJS
+260 263 3006 300 CD
+264 270 3007 people NNS
+271 275 3008 were VBD
+276 280 3009 hurt VBN
+281 283 3010 in IN
+284 287 3011 the DT
+288 293 3012 crash NN
+293 294 3013 . .
+296 299 4001 The DT
+300 308 4002 accident NN
+309 317 4003 occurred VBD
+318 322 4004 near IN
+323 326 4005 the DT
+327 335 4006 southern JJ
+336 343 4007 coastal JJ
+344 348 4008 city NN
+349 351 4009 of IN
+352 358 4010 Pointe NNP CIT https://en.wikipedia.org/wiki/Pointe-Noire
+359 364 4011 Noire NNP CIT https://en.wikipedia.org/wiki/Pointe-Noire
+364 365 4012 . .
+367 370 5001 The DT
+371 376 5002 train NN
+377 380 5003 was VBD
+381 383 5004 en RB
+384 389 5005 route NN
+390 392 5006 to TO
+393 396 5007 the DT
+397 404 5008 capital NN
+404 405 5009 , ,
+406 417 5010 Brazzaville NNP CIT https://en.wikipedia.org/wiki/Brazzaville
+417 418 5011 . .

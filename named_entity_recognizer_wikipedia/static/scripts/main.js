@@ -58,7 +58,7 @@ function getProgress() {
                 $("#progress-bar").css("width", `${percentage}%`);
                 $("#progress-bar").text(percentage);
             })
-        }, 500)
+        }, 1000)
     })
 }
 

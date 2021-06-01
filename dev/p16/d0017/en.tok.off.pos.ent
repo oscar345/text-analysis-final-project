@@ -1,0 +1,89 @@
+0 7 1001 Someone NN
+8 10 1002 in IN
+11 14 1003 the DT
+15 20 1004 world NN
+21 25 1005 dies VBZ
+26 28 1006 in IN
+29 30 1007 a DT
+31 38 1008 traffic NN
+39 47 1009 accident NN
+47 48 1010 , ,
+49 51 1011 on IN
+52 59 1012 average NN
+59 60 1013 , ,
+61 66 1014 every DT
+67 69 1015 30 CD
+70 77 1016 seconds NNS
+77 78 1017 . .
+79 83 2001 That DT
+84 86 2002 is VBZ
+87 90 2003 the DT
+91 101 2004 conclusion NN
+102 104 2005 of IN
+105 108 2006 the DT
+109 122 2007 international JJ
+123 128 2008 group NN
+129 133 2009 Make NNP ORG https://en.wikipedia.org/wiki/Make_Roads_Safe
+134 139 2010 Roads NNP ORG https://en.wikipedia.org/wiki/Make_Roads_Safe
+140 144 2011 Safe NNP ORG https://en.wikipedia.org/wiki/Make_Roads_Safe
+144 145 2012 , ,
+146 147 2013 a DT
+148 157 2014 worldwide JJ
+158 164 2015 effort NN
+165 167 2016 to TO
+168 172 2017 make VB
+173 177 2018 road NN
+178 184 2019 safety NN
+185 186 2020 a DT
+187 193 2021 global JJ
+194 202 2022 priority NN
+202 203 2023 . .
+204 206 3001 On IN
+207 209 3002 31 CD
+210 215 3003 March NNP
+216 221 3004 2008, CD
+222 225 3005 the DT
+226 232 3006 United NNP ORG https://en.wikipedia.org/wiki/United_Nations
+233 240 3007 Nations NNPS ORG https://en.wikipedia.org/wiki/United_Nations
+241 246 3008 plans VBZ
+247 249 3009 to TO
+250 254 3010 take VB
+255 257 3011 up RP
+258 261 3012 the DT
+262 267 3013 issue NN
+268 270 3014 of IN
+271 277 3015 global JJ
+278 282 3016 road NN
+283 289 3017 safety NN
+290 294 3018 amid IN
+295 300 3019 calls NNS
+301 304 3020 for IN
+305 306 3021 a DT
+307 311 3022 U.N. NNP ORG https://en.wikipedia.org/wiki/United_Nations
+312 322 3023 conference NN
+323 325 3024 to TO
+326 332 3025 tackle VB
+333 336 3026 the DT
+337 343 3027 rising VBG
+344 348 3028 toll NN
+349 351 3029 of IN
+352 356 3030 road NN
+357 363 3031 deaths NNS
+364 367 3032 and CC
+368 376 3033 injuries NNS
+376 377 3034 . .
+378 381 4001 VOA NNP ORG https://en.wikipedia.org/wiki/Voice_of_America
+381 383 4002 's POS
+384 391 4003 Tetiana NNP
+392 401 4004 Koprowicz NNP
+402 405 4005 has VBZ
+406 410 4006 more JJR
+411 413 4007 on IN
+414 421 4008 efforts NNS
+422 424 4009 to TO
+425 432 4010 improve VB
+433 437 4011 road NN
+438 444 4012 safety NN
+445 447 4013 in IN
+448 451 4014 the DT
+452 456 4015 U.S. NNP COU https://en.wikipedia.org/wiki/United_States

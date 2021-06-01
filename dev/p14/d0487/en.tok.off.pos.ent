@@ -1,0 +1,103 @@
+0 7 1001 Several JJ
+8 14 1002 people NNS
+15 19 1003 were VBD
+20 26 1004 killed VBN
+27 29 1005 in IN
+30 31 1006 a DT
+32 39 1007 bombing NN
+40 46 1008 Friday NNP
+46 47 1009 , ,
+48 50 1010 in IN
+51 60 1011 northwest JJ COU https://en.wikipedia.org/wiki/Pakistan
+61 69 1012 Pakistan NNP COU https://en.wikipedia.org/wiki/Pakistan
+69 71 1013 's POS
+72 79 1014 restive JJ
+80 84 1015 Swat NNP COU https://en.wikipedia.org/wiki/Swat_District
+85 91 1016 Valley NNP COU https://en.wikipedia.org/wiki/Swat_District
+91 92 1017 . .
+93 94 2001 A DT
+95 101 2002 former JJ
+102 112 2003 provincial JJ PER https://en.wikipedia.org/wiki/Miangul_Asfandyar_Amir_Zeb
+113 121 2004 minister NN PER https://en.wikipedia.org/wiki/Miangul_Asfandyar_Amir_Zeb
+122 131 2005 Asfandyar NNP PER https://en.wikipedia.org/wiki/Miangul_Asfandyar_Amir_Zeb
+132 139 2006 Amerzeb NNP PER https://en.wikipedia.org/wiki/Miangul_Asfandyar_Amir_Zeb
+140 143 2007 was VBD
+144 149 2008 among IN
+150 155 2009 those DT
+156 162 2010 killed VBN
+163 167 2011 when WRB
+168 169 2012 a DT
+170 176 2013 remote JJ
+177 184 2014 control NN
+185 189 2015 bomb NN
+190 198 2016 exploded VBD
+199 201 2017 as IN
+202 205 2018 his PRP$
+206 209 2019 car NN
+210 216 2020 passed VBD
+216 217 2021 . .
+218 220 3001 It PRP
+221 223 3002 is VBZ
+224 227 3003 not RB
+228 233 3004 clear JJ
+234 236 3005 if IN
+237 239 3006 it PRP
+240 244 3007 this DT
+245 247 3008 is VBZ
+248 251 3009 the DT
+252 256 3010 same JJ
+257 265 3011 incident NN
+266 270 3012 that IN
+271 278 3013 claimed VBD
+279 284 3014 lives NNS
+285 287 3015 of IN
+288 298 3016 supporters NNS
+299 301 3017 of IN
+302 311 3018 Pakistani NNP PER https://en.wikipedia.org/wiki/Pervez_Musharraf
+312 321 3019 President NNP PER https://en.wikipedia.org/wiki/Pervez_Musharraf
+322 328 3020 Pervez NNP PER https://en.wikipedia.org/wiki/Pervez_Musharraf
+329 338 3021 Musharraf NNP PER https://en.wikipedia.org/wiki/Pervez_Musharraf
+338 340 3022 's POS
+341 346 3023 party NN
+346 347 3024 , ,
+348 350 3025 as IN
+351 359 3026 reported VBN
+360 367 3027 earlier RBR
+367 368 3028 . .
+369 378 4001 Pakistani NNP ORG https://en.wikipedia.org/wiki/Pakistan_Army
+379 385 4002 troops NNS ORG https://en.wikipedia.org/wiki/Pakistan_Army
+386 390 4003 have VBP
+391 395 4004 been VBN
+396 404 4005 battling VBG
+405 414 4006 militants NNS
+415 417 4007 in IN
+418 422 4008 Swat NNP COU https://en.wikipedia.org/wiki/Swat_District
+423 428 4009 since IN
+429 433 4010 July NNP
+433 434 4011 , ,
+435 439 4012 when WRB
+440 441 4013 a DT
+442 449 4014 radical JJ
+450 456 4015 cleric NN
+457 463 4016 called VBN
+464 467 4017 for IN
+468 469 4018 a DT
+470 474 4019 holy JJ
+475 478 4020 war NN
+479 486 4021 against IN
+487 490 4022 the DT
+491 501 4023 government NN ORG https://en.wikipedia.org/wiki/Government
+501 502 4024 . .
+503 511 5001 Soldiers NNS
+512 520 5002 recently RB
+521 528 5003 ejected VBD
+529 538 5004 militants NNS
+539 543 5005 from IN
+544 553 5006 territory NN
+554 558 5007 they PRP
+559 562 5008 had VBD
+563 569 5009 seized VBN
+570 572 5010 in IN
+573 576 5011 the DT
+577 581 5012 area NN
+581 582 5013 . .

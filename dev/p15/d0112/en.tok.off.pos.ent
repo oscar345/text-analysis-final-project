@@ -1,0 +1,102 @@
+0 7 1001 Sheriff NNP
+7 9 1002 's POS
+10 23 1003 investigators NNS
+24 28 1004 have VBP
+29 38 1005 conducted VBN
+39 40 1006 a DT
+41 47 1007 search NN
+48 50 1008 of IN
+51 58 1009 Michael NNP PER https://en.wikipedia.org/wiki/Michael_Jackson
+59 66 1010 Jackson NNP PER https://en.wikipedia.org/wiki/Michael_Jackson
+66 68 1011 's POS
+69 78 1012 Neverland NNP ENT https://en.wikipedia.org/wiki/Neverland_Ranch
+79 84 1013 Ranch NNP ENT https://en.wikipedia.org/wiki/Neverland_Ranch
+85 87 1014 in IN
+88 98 1015 California NNP COU https://en.wikipedia.org/wiki/California
+98 99 1016 . .
+100 110 2001 California NNP COU https://en.wikipedia.org/wiki/California
+111 122 2002 authorities NNS
+123 128 2003 filed VBD
+129 134 2004 child JJ
+135 146 2005 molestation NN
+147 154 2006 charges NNS
+155 162 2007 against IN
+163 166 2008 the DT
+167 170 2009 pop NN
+171 176 2010 music NN
+177 181 2011 star NN
+182 184 2012 in IN
+185 193 2013 December NNP
+194 198 2014 2003 CD
+198 199 2015 . .
+200 203 3001 The DT
+204 211 3002 charges NNS
+212 219 3003 involve VBP
+220 222 3004 an DT
+223 235 3005 unidentified JJ
+236 241 3006 child NN
+242 247 3007 under IN
+248 251 3008 the DT
+252 255 3009 age NN
+256 258 3010 of IN
+259 261 3011 14 CD
+261 262 3012 . .
+263 264 4001 A DT
+265 272 4002 sheriff NN
+272 274 4003 's POS
+275 284 4004 spokesman NN
+285 294 4005 confirmed VBD
+295 301 4006 Friday NNP
+301 303 4007 's POS
+304 310 4008 search NN
+310 311 4009 , ,
+312 315 4010 but CC
+316 324 4011 declined VBD
+325 327 4012 to TO
+328 332 4013 give VB
+333 336 4014 any DT
+337 344 4015 further JJR
+345 352 4016 details NNS
+352 353 4017 . .
+354 361 5001 Jackson NNP PER https://en.wikipedia.org/wiki/Michael_Jackson
+361 363 5002 's POS
+364 373 5003 Neverland NNP ENT https://en.wikipedia.org/wiki/Neverland_Ranch
+374 379 5004 Ranch NNP ENT https://en.wikipedia.org/wiki/Neverland_Ranch
+380 382 5005 is VBZ
+383 384 5006 a DT
+385 400 5007 theme-park-like JJ
+401 407 5008 estate NN
+408 413 5009 about IN
+414 417 5010 160 CD
+418 428 5011 kilometers NNS
+429 438 5012 northwest RB
+439 441 5013 of IN
+442 445 5014 Los NNP CIT https://en.wikipedia.org/wiki/Los_Angeles
+446 453 5015 Angeles NNP CIT https://en.wikipedia.org/wiki/Los_Angeles
+453 454 5016 . .
+455 462 6001 Michael NNP PER https://en.wikipedia.org/wiki/Michael_Jackson
+463 470 6002 Jackson NNP PER https://en.wikipedia.org/wiki/Michael_Jackson
+471 474 6003 has VBZ
+475 482 6004 pleaded VBN
+483 486 6005 not RB
+487 493 6006 guilty JJ
+494 496 6007 to TO
+497 502 6008 child VB
+503 514 6009 molestation NN
+514 515 6010 , ,
+516 526 6011 conspiracy NN
+527 530 6012 and CC
+531 544 6013 administering VBG
+545 547 6014 an DT
+548 560 6015 intoxicating NN
+561 566 6016 agent NN
+566 567 6017 . .
+568 571 7001 His PRP$
+572 577 7002 trial NN
+578 580 7003 is VBZ
+581 590 7004 scheduled VBN
+591 593 7005 to TO
+594 599 7006 being VBG
+600 607 7007 January NNP
+608 610 7008 31 CD
+610 611 7009 . .

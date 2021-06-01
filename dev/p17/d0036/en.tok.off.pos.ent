@@ -1,0 +1,81 @@
+0 4 1001 When WRB
+5 12 1002 talking VBG
+13 18 1003 about IN
+19 28 1004 paintings NNS
+29 32 1005 and CC
+33 45 1006 contemporary JJ
+46 49 1007 art NN
+49 50 1008 , ,
+51 56 1009 names NNS
+57 61 1010 such JJ
+62 64 1011 as IN
+65 70 1012 Pablo NNP PER https://en.wikipedia.org/wiki/Pablo_Picasso
+71 78 1013 Picasso NNP PER https://en.wikipedia.org/wiki/Pablo_Picasso
+78 79 1014 , ,
+80 87 1015 Georgia NNP PER https://en.wikipedia.org/wiki/Georgia_O%27Keeffe
+88 96 1016 O'Keeffe NNP PER https://en.wikipedia.org/wiki/Georgia_O%27Keeffe
+96 97 1017 , ,
+98 105 1018 Vincent NNP PER https://en.wikipedia.org/wiki/Vincent_van_Gogh
+106 109 1019 Van NNP PER https://en.wikipedia.org/wiki/Vincent_van_Gogh
+110 114 1020 Gogh NNP PER https://en.wikipedia.org/wiki/Vincent_van_Gogh
+115 118 1021 and CC
+119 125 1022 others NNS
+126 131 1023 often RB
+132 136 1024 come VBP
+137 139 1025 to IN
+140 144 1026 mind NN
+144 145 1027 . .
+147 150 2001 But CC
+150 151 2002 , ,
+152 154 2003 as IN
+155 157 2004 we PRP
+158 161 2005 are VBP
+162 167 2006 about JJ
+168 170 2007 to TO
+171 175 2008 show VB
+176 179 2009 you PRP
+179 180 2010 , ,
+181 186 2011 there EX
+187 189 2012 is VBZ
+190 191 2013 a DT
+192 197 2014 whole JJ
+198 202 2015 body NN
+203 205 2016 of IN
+206 213 2017 artwork NN
+214 216 2018 on IN
+217 223 2019 Africa NNP COU https://en.wikipedia.org/wiki/Africa
+223 224 2020 , ,
+225 227 2021 by IN
+228 236 2022 European JJ
+237 240 2023 and CC
+241 248 2024 African JJ
+249 256 2025 artists NNS
+257 261 2026 that WDT
+262 264 2027 is VBZ
+265 272 2028 largely RB
+273 280 2029 unknown JJ
+280 281 2030 . .
+283 292 3001 Primimoda NNP
+293 300 3002 Gallery NNP
+300 301 3003 , ,
+302 309 3004 located VBN
+310 312 3005 in IN
+313 316 3006 the DT
+317 322 3007 heart NN
+323 325 3008 of IN
+326 336 3009 Washington NNP CIT https://en.wikipedia.org/wiki/Washington_(state)
+336 337 3010 , ,
+338 340 3011 is VBZ
+341 346 3012 where WRB
+347 350 3013 you PRP
+351 355 3014 will MD
+356 360 3015 find VB
+361 365 3016 this DT
+366 369 3017 art NN
+369 370 3018 . .
+372 380 4001 Ndimyake NNP
+381 392 4002 Mwakalyelye NNP
+393 398 4003 tells VBZ
+399 401 4004 us PRP
+402 406 4005 more JJR
+406 407 4006 . .

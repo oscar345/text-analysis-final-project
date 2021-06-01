@@ -1,0 +1,92 @@
+0 1 1001 A DT
+2 9 1002 Ugandan NNP COU https://en.wikipedia.org/wiki/Uganda
+10 18 1003 official NN
+19 23 1004 says VBZ
+24 25 1005 a DT
+26 33 1006 massive JJ
+34 43 1007 landslide NN
+44 46 1008 in IN
+47 54 1009 eastern JJ
+55 61 1010 Uganda NNP COU https://en.wikipedia.org/wiki/Uganda
+62 65 1011 has VBZ
+66 72 1012 killed VBN
+73 75 1013 at IN
+76 81 1014 least JJS
+82 85 1015 106 CD
+86 92 1016 people NNS
+92 93 1017 . .
+95 103 2001 Minister NNP
+104 106 2002 of IN
+107 112 2003 State NNP
+113 116 2004 for IN
+117 126 2005 Disasters NNP
+127 132 2006 Mussa NNP PER https://en.wikipedia.org/wiki/Musa_Ecweru
+133 139 2007 Ecweru NNP PER https://en.wikipedia.org/wiki/Musa_Ecweru
+140 144 2008 told VBD
+145 148 2009 VOA NNP ORG https://en.wikipedia.org/wiki/Voice_of_America
+148 150 2010 's POS
+151 158 2011 Swahili NNP NAT https://en.wikipedia.org/wiki/Swahili_coast
+159 166 2012 service NN
+167 171 2013 that IN
+172 175 2014 300 CD
+176 182 2015 people NNS
+183 189 2016 remain VBP
+190 197 2017 missing VBG
+197 198 2018 . .
+200 203 3001 The DT
+204 213 3002 landslide NN
+214 222 3003 engulfed VBD
+223 228 3004 three CD
+229 237 3005 villages NNS
+238 240 3006 in IN
+241 244 3007 the DT
+245 251 3008 Bududa NNP CIT https://en.wikipedia.org/wiki/Bududa
+252 258 3009 region NN
+259 263 3010 near IN
+264 269 3011 Mount NNP NAT https://en.wikipedia.org/wiki/Mount_Elgon
+270 275 3012 Elgon NNP NAT https://en.wikipedia.org/wiki/Mount_Elgon
+276 280 3013 late RB
+281 283 3014 on IN
+284 290 3015 Monday NNP
+290 291 3016 , ,
+292 301 3017 following VBG
+302 306 3018 more JJR
+307 311 3019 than IN
+312 313 3020 a DT
+314 318 3021 week NN
+319 321 3022 of IN
+322 327 3023 heavy JJ
+328 332 3024 rain NN
+333 335 3025 in IN
+336 339 3026 the DT
+340 344 3027 area NN
+344 345 3028 . .
+347 353 4001 Police NNP
+354 357 4002 and CC
+358 363 4003 armed VBN
+364 370 4004 forces NNS
+371 374 4005 are VBP
+375 381 4006 taking VBG
+382 386 4007 part NN
+387 389 4008 in IN
+390 397 4009 efforts NNS
+398 400 4010 to TO
+401 405 4011 find VB
+406 415 4012 survivors NNS
+415 416 4013 . .
+418 427 5001 Officials NNS
+428 431 5002 say VBP
+432 435 5003 the DT
+436 444 5004 mudslide NN
+445 454 5005 destroyed VBD
+455 460 5006 homes NNS
+460 461 5007 , ,
+462 469 5008 markets NNS
+469 470 5009 , ,
+471 478 5010 schools NNS
+478 479 5011 , ,
+480 483 5012 and CC
+484 485 5013 a DT
+486 492 5014 health NN
+493 499 5015 clinic NN
+499 500 5016 . .

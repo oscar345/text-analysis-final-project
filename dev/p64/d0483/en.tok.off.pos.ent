@@ -1,0 +1,97 @@
+0 5 1001 World NNP
+6 9 1002 oil NN
+10 16 1003 prices NNS
+17 25 1004 declined VBD
+26 31 1005 below IN
+32 33 1006 $ $
+33 35 1007 54 CD
+36 37 1008 a DT
+38 44 1009 barrel NN
+45 51 1010 Friday NNP
+52 57 1011 after IN
+58 65 1012 hitting VBG
+66 73 1013 records NNS
+74 79 1014 above IN
+80 81 1015 $ $
+81 83 1016 58 CD
+84 89 1017 early RB
+90 94 1018 this DT
+95 99 1019 week NN
+99 100 1020 . .
+101 104 2001 The DT
+105 111 2002 easing NN
+112 114 2003 of IN
+115 121 2004 prices NNS
+122 129 2005 follows VBZ
+130 131 2006 a DT
+132 136 2007 U.S. NNP ORG https://en.wikipedia.org/wiki/Federal_government_of_the_United_States
+137 147 2008 government NN ORG https://en.wikipedia.org/wiki/Federal_government_of_the_United_States
+148 154 2009 report NN
+155 157 2010 on IN
+158 167 2011 Wednesday NNP
+168 175 2012 showing VBG
+176 178 2013 an DT
+179 189 2014 increasing VBG
+190 196 2015 supply NN
+197 199 2016 of IN
+200 205 2017 crude JJ
+206 209 2018 oil NN
+210 212 2019 in IN
+213 216 2020 the DT
+217 221 2021 U.S. NNP COU https://en.wikipedia.org/wiki/United_states
+222 228 2022 market NN
+228 229 2023 , ,
+230 233 2024 and CC
+234 241 2025 growing VBG
+242 250 2026 refinery NN
+251 261 2027 operations NNS
+262 264 2028 to TO
+265 269 2029 turn VB
+270 273 2030 out RP
+274 282 2031 gasoline NN
+282 283 2032 . .
+284 289 3001 While IN
+290 296 3002 prices NNS
+297 301 3003 have VBP
+302 309 3004 dropped VBN
+309 310 3005 , ,
+311 315 3006 they PRP
+316 319 3007 are VBP
+320 325 3008 still RB
+326 331 3009 about IN
+332 334 3010 44 CD
+335 342 3011 percent NN
+343 349 3012 higher JJR
+350 354 3013 than IN
+355 359 3014 they PRP
+360 364 3015 were VBD
+365 366 3016 a DT
+367 371 3017 year NN
+372 375 3018 ago RB
+375 376 3019 . .
+377 381 4001 Most JJS
+382 392 4002 economists NNS
+393 401 4003 surveyed VBN
+402 404 4004 by IN
+405 408 4005 the DT ORG
+409 418 4006 Bloomberg NNP ORG https://en.wikipedia.org/wiki/Bloomberg_News
+419 428 4007 financial JJ ORG https://en.wikipedia.org/wiki/Bloomberg_News
+429 433 4008 news NN ORG https://en.wikipedia.org/wiki/Bloomberg_News
+434 441 4009 service NN ORG https://en.wikipedia.org/wiki/Bloomberg_News
+442 445 4010 say VBP
+446 450 4011 high JJ
+451 454 4012 oil NN
+455 461 4013 prices NNS
+462 465 4014 and CC
+466 472 4015 rising VBG
+473 481 4016 interest NN
+482 487 4017 rates NNS
+488 492 4018 will MD
+493 497 4019 slow VB
+498 502 4020 U.S. NNP COU https://en.wikipedia.org/wiki/United_states
+503 511 4021 economic JJ
+512 518 4022 growth NN
+519 524 4023 later RBR
+525 529 4024 this DT
+530 534 4025 year NN
+534 535 4026 . .

@@ -1,0 +1,88 @@
+1 8 1001 Israeli JJ
+9 15 1002 troops NNS
+16 20 1003 have VBP
+21 25 1004 shot VBN
+26 30 1005 dead VBP
+31 32 1006 a DT
+33 44 1007 Palestinian JJ
+45 53 1008 militant NN
+54 56 1009 in IN
+57 60 1010 the DT
+61 65 1011 West NNP COU https://en.wikipedia.org/wiki/West_Bank
+66 70 1012 Bank NNP COU https://en.wikipedia.org/wiki/West_Bank
+70 71 1013 . .
+72 79 2001 Israeli JJ ORG https://en.wikipedia.org/wiki/Israel_Defense_Forces
+80 84 2002 army NN ORG https://en.wikipedia.org/wiki/Israel_Defense_Forces
+85 94 2003 officials NNS
+95 98 2004 say VBP
+99 107 2005 soldiers NNS
+108 114 2006 killed VBD
+115 122 2007 Mahmoud NNP
+123 129 2008 Hammad NNP
+129 130 2009 , ,
+131 132 2010 a DT
+133 139 2011 member NN
+140 142 2012 of IN
+143 146 2013 the DT
+147 155 2014 militant JJ
+156 161 2015 group NN
+162 169 2016 Islamic NNP ORG https://en.wikipedia.org/wiki/Islamic_Jihad_Movement_in_Palestine
+170 175 2017 Jihad NNP ORG https://en.wikipedia.org/wiki/Islamic_Jihad_Movement_in_Palestine
+175 176 2018 , ,
+177 179 2019 as IN
+180 182 2020 he PRP
+183 188 2021 tried VBD
+189 191 2022 to TO
+192 198 2023 escape VB
+199 203 2024 from IN
+204 205 2025 a DT
+206 211 2026 house NN
+212 214 2027 in IN
+215 218 2028 the DT
+219 226 2029 village NN
+227 229 2030 of IN
+230 234 2031 Raba NNP CIT https://en.wikipedia.org/wiki/Raba,_Jenin
+234 235 2032 , ,
+236 241 2033 close RB
+242 244 2034 to TO
+245 248 2035 the DT
+249 253 2036 West NNP COU https://en.wikipedia.org/wiki/West_Bank
+254 258 2037 Bank NNP COU https://en.wikipedia.org/wiki/West_Bank
+259 263 2038 town NN
+264 266 2039 of IN
+267 272 2040 Jenin NNP CIT https://en.wikipedia.org/wiki/Jenin
+272 273 2041 . .
+274 278 3001 They PRP
+279 282 3002 say VBP
+283 286 3003 the DT
+287 295 3004 militant NN
+296 299 3005 was VBD
+300 308 3006 carrying VBG
+309 310 3007 a DT
+311 317 3008 weapon NN
+318 322 3009 when WRB
+323 325 3010 he PRP
+326 329 3011 was VBD
+330 334 3012 shot VBN
+334 335 3013 . .
+336 343 4001 Israeli JJ
+344 350 4002 troops NNS
+351 355 4003 have VBP
+356 363 4004 carried VBN
+364 367 4005 out RP
+368 376 4006 frequent JJ
+377 382 4007 raids NNS
+383 385 4008 in IN
+386 390 4009 West NNP COU https://en.wikipedia.org/wiki/West_Bank
+391 395 4010 Bank NNP COU https://en.wikipedia.org/wiki/West_Bank
+396 402 4011 cities NNS
+403 406 4012 and CC
+407 412 4013 towns NNS
+413 422 4014 targeting VBG
+423 432 4015 militants NNS
+433 445 4016 spearheading VBG
+446 447 4017 a DT
+448 461 4018 four-year-old JJ
+462 473 4019 Palestinian JJ
+474 482 4020 uprising NN
+482 483 4021 . .

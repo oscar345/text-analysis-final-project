@@ -81,7 +81,9 @@ def process_files():
         with open(filenames[3], "r") as file:
             ent_file_tags = NERecognizer.get_data_from_file_ent_file(file.read())        
         named_entities_tags = [named_entity[1] for named_entity in named_entities]
-        results = ner_mod.calculate_scores(named_entities_tags, ent_file_tags)
+        guessed_urls = [value[2] for value in output.values()]
+        results = ner_mod.calculate_scores(named_entities_tags, ent_file_tags[0], guessed_urls, ent_file_tags[1])
+        session["scores"] = [results[1], results[2], results[3], results[4]]
         results[0].figure.savefig(app.config["USER_UPLOADS"] + f"user_upload_{index_user}" + "/plot.png")
         
     session["is_testing"] = is_testing

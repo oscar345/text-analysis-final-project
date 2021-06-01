@@ -1,0 +1,80 @@
+0 5 1001 Crude JJ
+6 9 1002 oil NN
+10 16 1003 prices NNS
+17 21 1004 fell VBD
+22 31 1005 Wednesday NNP
+32 37 1006 after IN
+38 39 1007 a DT
+40 44 1008 U.S. NNP ORG https://en.wikipedia.org/wiki/Federal_government_of_the_United_States
+45 55 1009 government NN ORG https://en.wikipedia.org/wiki/Federal_government_of_the_United_States
+56 62 1010 report NN
+63 69 1011 showed VBD
+70 72 1012 an DT
+73 81 1013 increase NN
+82 84 1014 in IN
+85 96 1015 inventories NNS
+96 97 1016 , ,
+98 108 1017 reflecting VBG
+109 118 1018 decreased JJ
+119 125 1019 demand NN
+125 126 1020 . .
+128 131 2001 The DT
+132 137 2002 price NN
+138 140 2003 of IN
+141 142 2004 a DT
+143 149 2005 barrel NN
+150 152 2006 of IN
+153 156 2007 oil NN
+157 160 2008 for IN
+161 167 2009 future JJ
+168 176 2010 delivery NN
+177 181 2011 fell VBD
+182 184 2012 35 CD
+185 190 2013 cents NNS
+191 192 2014 [ -LRB-
+192 197 2015 about RB
+198 201 2016 one CD
+202 209 2017 percent NN
+209 210 2018 ] -RRB-
+211 213 2019 to IN
+214 215 2020 $ $
+215 220 2021 38.68 CD
+221 222 2022 a DT
+223 229 2023 barrel NN
+230 236 2024 during IN
+237 244 2025 trading NN
+245 247 2026 in IN
+248 251 2027 New NNP CIT https://en.wikipedia.org/wiki/New_York_City
+252 256 2028 York NNP CIT https://en.wikipedia.org/wiki/New_York_City
+256 257 2029 . .
+259 262 3001 The DT
+263 267 3002 fall NN
+268 270 3003 in IN
+271 277 3004 prices NNS
+278 286 3005 followed VBD
+287 288 3006 a DT
+289 293 3007 U.S. NNP ORG https://en.wikipedia.org/wiki/United_States_Department_of_Energy
+294 300 3008 Energy NNP ORG https://en.wikipedia.org/wiki/United_States_Department_of_Energy
+301 311 3009 Department NNP ORG https://en.wikipedia.org/wiki/United_States_Department_of_Energy
+312 318 3010 report NN
+319 326 3011 showing VBG
+327 332 3012 crude JJ
+333 336 3013 oil NN
+337 345 3014 supplies NNS
+346 348 3015 in IN
+349 352 3016 the DT
+353 357 3017 U.S. NNP COU https://en.wikipedia.org/wiki/United_States
+358 362 3018 rose VBD
+363 367 3019 last JJ
+368 372 3020 week NN
+373 375 3021 by IN
+376 383 3022 549000 CD
+384 391 3023 barrels NNS
+391 392 3024 , ,
+393 395 3025 or CC
+396 401 3026 about RB
+402 412 3027 two-tenths NNS
+413 415 3028 of IN
+416 419 3029 one CD
+420 427 3030 percent NN
+427 428 3031 . .

@@ -1,0 +1,92 @@
+0 3 1001 The DT
+4 8 1002 Ford NNP ORG https://en.wikipedia.org/wiki/Ford_Motor_Company
+9 14 1003 Motor NNP ORG https://en.wikipedia.org/wiki/Ford_Motor_Company
+15 22 1004 Company NNP ORG https://en.wikipedia.org/wiki/Ford_Motor_Company
+23 27 1005 says VBZ
+28 33 1006 sales NNS
+34 36 1007 of IN
+37 40 1008 its PRP$
+41 49 1009 products NNS
+50 52 1010 in IN
+53 58 1011 China NNP COU https://en.wikipedia.org/wiki/China
+59 62 1012 are VBP
+63 70 1013 booming VBG
+70 71 1014 . .
+72 74 2001 In IN
+75 76 2002 a DT
+77 86 2003 statement NN
+87 93 2004 Monday NNP
+94 98 2005 Ford NNP ORG https://en.wikipedia.org/wiki/Ford_Motor_Company
+99 103 2006 says VBZ
+104 109 2007 sales NNS
+110 114 2008 rose VBD
+115 117 2009 46 CD
+118 125 2010 percent NN
+126 130 2011 last JJ
+131 135 2012 year NN
+136 138 2013 to TO
+139 143 2014 more JJR
+144 148 2015 than IN
+149 155 2016 82,000 CD
+156 164 2017 vehicles NNS
+165 166 2018 - :
+167 168 2019 a DT
+169 175 2020 record NN
+175 176 2021 . .
+177 179 3001 If IN
+180 184 3002 Ford NNP ORG https://en.wikipedia.org/wiki/Ford_Motor_Company
+184 186 3003 's POS
+187 197 3004 affiliated JJ
+198 204 3005 brands NNS
+205 206 3006 - :
+207 211 3007 like IN
+212 217 3008 Mazda NNP ORG https://en.wikipedia.org/wiki/Mazda
+218 219 3009 - :
+220 223 3010 are VBP
+224 229 3011 added VBN
+230 232 3012 to TO
+233 236 3013 the DT
+237 242 3014 total NN
+242 243 3015 , ,
+244 247 3016 the DT
+248 255 3017 company NN
+256 260 3018 sold VBD
+261 268 3019 220,000 CD
+269 277 3020 vehicles NNS
+278 280 3021 in IN
+281 286 3022 China NNP COU https://en.wikipedia.org/wiki/China
+287 291 3023 last JJ
+292 296 3024 year NN
+296 297 3025 . .
+298 302 4001 Ford NNP ORG https://en.wikipedia.org/wiki/Ford_Motor_Company
+303 305 4002 is VBZ
+306 309 4003 the DT
+310 316 4004 second JJ
+317 324 4005 largest JJS
+325 329 4006 U.S. NNP COU https://en.wikipedia.org/wiki/United_States
+330 339 4007 automaker NN
+339 340 4008 , ,
+341 344 4009 and CC
+345 351 4010 number NN
+352 357 4011 three CD
+358 360 4012 in IN
+361 364 4013 the DT
+365 370 4014 world NN
+371 376 4015 after IN
+377 384 4016 General NNP ORG https://en.wikipedia.org/wiki/General_Motors
+385 391 4017 Motors NNPS ORG https://en.wikipedia.org/wiki/General_Motors
+392 395 4018 and CC
+396 402 4019 Toyota NNP ORG https://en.wikipedia.org/wiki/Toyota
+402 403 4020 . .
+404 406 5001 In IN
+407 412 5002 China NNP COU https://en.wikipedia.org/wiki/China
+412 413 5003 , ,
+414 418 5004 Ford NNP ORG https://en.wikipedia.org/wiki/Ford_Motor_Company
+419 421 5005 is VBZ
+422 429 5006 outsold VBN
+430 432 5007 by IN
+433 437 5008 both DT
+438 440 5009 GM NNP ORG https://en.wikipedia.org/wiki/General_Motors
+441 444 5010 and CC
+445 455 5011 Volkswagen NNP ORG https://en.wikipedia.org/wiki/Volkswagen
+455 456 5012 . .

@@ -1,0 +1,100 @@
+0 4 1001 U.S. NNP COU https://en.wikipedia.org/wiki/United_states
+5 14 1002 President NNP PER https://en.wikipedia.org/wiki/Barack_Obama
+15 21 1003 Barack NNP PER https://en.wikipedia.org/wiki/Barack_Obama
+22 27 1004 Obama NNP PER https://en.wikipedia.org/wiki/Barack_Obama
+28 31 1005 and CC
+32 35 1006 his PRP$
+36 40 1007 wife NN
+40 41 1008 , ,
+42 50 1009 Michelle NNP PER https://en.wikipedia.org/wiki/Michelle_Obama
+50 51 1010 , ,
+52 57 1011 spent VBD
+58 59 1012 a DT
+60 67 1013 portion NN
+68 70 1014 of IN
+71 74 1015 the DT
+75 84 1016 Christmas NNP
+85 93 1017 holidays VBZ
+94 102 1018 visiting VBG
+103 109 1019 troops NNS
+110 113 1020 and CC
+114 119 1021 their PRP$
+120 128 1022 families NNS
+129 131 1023 at IN
+132 133 1024 a DT
+134 140 1025 Hawaii NNP COU https://en.wikipedia.org/wiki/Hawaii
+141 147 1026 Marine NNP
+148 152 1027 base NN
+152 153 1028 . .
+155 158 2001 The DT
+159 165 2002 Obamas NNP
+166 173 2003 visited VBD
+174 177 2004 the DT
+178 182 2005 same JJ
+183 191 2006 military JJ
+192 196 2007 base NN
+197 201 2008 last JJ
+202 206 2009 year NN
+207 213 2010 during IN
+214 219 2011 their PRP$
+220 227 2012 holiday JJ
+228 236 2013 vacation NN
+237 239 2014 in IN
+240 243 2015 the DT
+244 253 2016 president NN
+253 255 2017 's POS
+256 260 2018 home NN
+261 266 2019 state NN
+266 267 2020 . .
+269 272 3001 Mr. NNP PER https://en.wikipedia.org/wiki/Barack_Obama
+273 278 3002 Obama NNP PER https://en.wikipedia.org/wiki/Barack_Obama
+279 282 3003 and CC
+283 286 3004 the DT
+287 292 3005 first JJ
+293 297 3006 lady NN
+298 301 3007 are VBP
+302 313 3008 encouraging VBG
+314 317 3009 the DT
+318 324 3010 public NN
+325 327 3011 to TO
+328 335 3012 support VB
+336 344 3013 military JJ
+345 356 3014 communities NNS
+356 357 3015 , ,
+358 368 3016 especially RB
+369 375 3017 during IN
+376 379 3018 the DT
+380 388 3019 holidays NNS
+389 393 3020 when WRB
+394 404 3021 separation NN
+405 409 3022 from IN
+410 416 3023 family NN
+417 420 3024 can MD
+421 423 3025 be VB
+424 433 3026 difficult JJ
+433 434 3027 . .
+436 440 4001 Mrs. NNP PER https://en.wikipedia.org/wiki/Michelle_Obama
+441 446 4002 Obama NNP PER https://en.wikipedia.org/wiki/Michelle_Obama
+447 451 4003 says VBZ
+452 453 4004 a DT
+454 455 4005 " NNP
+455 459 4006 care NN
+460 467 4007 package NN
+467 468 4008 " NN
+469 471 4009 or CC
+472 473 4010 a DT
+474 480 4011 simple JJ
+481 482 4012 " NNP
+482 487 4013 thank NN
+488 491 4014 you PRP
+491 492 4015 " VBP
+493 495 4016 is VBZ
+496 498 4017 an DT
+499 508 4018 important JJ
+509 513 4019 gift NN
+514 516 4020 to TO
+517 524 4021 members NNS
+525 527 4022 of IN
+528 531 4023 the DT
+532 540 4024 military NN
+540 541 4025 . .

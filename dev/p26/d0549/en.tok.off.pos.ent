@@ -1,0 +1,92 @@
+0 1 1001 A DT
+2 11 1002 suspected JJ
+12 16 1003 U.S. NNP
+17 24 1004 missile NN
+25 31 1005 strike NN
+32 35 1006 has VBZ
+36 42 1007 killed VBN
+43 46 1008 two CD
+47 53 1009 people NNS
+54 56 1010 in IN
+57 65 1011 Pakistan NNP COU https://en.wikipedia.org/wiki/Pakistan
+65 67 1012 's POS
+68 73 1013 North NNP COU https://en.wikipedia.org/wiki/North_Waziristan_District
+74 84 1014 Waziristan NNP COU https://en.wikipedia.org/wiki/North_Waziristan_District
+85 91 1015 tribal JJ
+92 98 1016 region NN
+98 99 1017 . .
+101 110 2001 Pakistani NNP ORG https://en.wikipedia.org/wiki/Inter-Services_Intelligence
+111 123 2002 intelligence NN ORG https://en.wikipedia.org/wiki/Inter-Services_Intelligence
+124 133 2003 officials NNS
+134 137 2004 say VBP
+138 141 2005 the DT
+142 148 2006 strike NN
+149 157 2007 Saturday NNP
+158 161 2008 hit VBD
+162 163 2009 a DT
+164 169 2010 house NN
+170 174 2011 near IN
+175 178 2012 the DT
+179 185 2013 region NN
+185 187 2014 's POS
+188 192 2015 main JJ
+193 197 2016 town NN
+198 200 2017 of IN
+201 206 2018 Miran NNP CIT https://en.wikipedia.org/wiki/Miramshah
+207 211 2019 Shah NNP CIT https://en.wikipedia.org/wiki/Miramshah
+211 212 2020 . .
+214 217 3001 The DT
+218 227 3002 Pakistani JJ ORG https://en.wikipedia.org/wiki/Government_of_Pakistan
+228 238 3003 government NN ORG https://en.wikipedia.org/wiki/Government_of_Pakistan
+239 242 3004 has VBZ
+243 251 3005 strongly RB
+252 261 3006 condemned VBN
+262 265 3007 the DT
+266 275 3008 suspected JJ
+276 280 3009 U.S. NNP
+281 288 3010 strikes NNS
+289 291 3011 in IN
+292 295 3012 the DT
+296 303 3013 country NN
+303 304 3014 , ,
+305 311 3015 saying VBG
+312 316 3016 they PRP
+317 326 3017 undermine VBP
+327 335 3018 Pakistan NNP COU https://en.wikipedia.org/wiki/Pakistan
+335 337 3019 's POS
+338 355 3020 counter-terrorism NN
+356 363 3021 efforts NNS
+363 364 3022 . .
+367 375 4001 Pakistan NNP COU https://en.wikipedia.org/wiki/Pakistan
+375 377 4002 's POS
+378 385 4003 defense NN
+386 394 4004 minister NN
+394 395 4005 , ,
+396 401 4006 Ahmed NNP PER https://en.wikipedia.org/wiki/Ahmad_Mukhtar
+402 409 4007 Mukhtar NNP PER https://en.wikipedia.org/wiki/Ahmad_Mukhtar
+409 410 4008 , ,
+411 415 4009 says VBZ
+416 425 4010 officials NNS
+426 430 4011 will MD
+431 435 4012 meet VB
+436 438 4013 in IN
+439 444 4014 early JJ
+445 453 4015 December NNP
+454 456 4016 to TO
+457 464 4017 discuss VB
+465 468 4018 the DT
+469 476 4019 strikes NNS
+476 477 4020 , ,
+478 483 4021 which WDT
+484 493 4022 allegedly RB
+494 497 4023 are VBP
+498 505 4024 carried VBN
+506 509 4025 out RP
+510 512 4026 by IN
+513 521 4027 unmanned JJ
+522 523 4028 ( (
+523 528 4029 drone NN
+528 529 4030 ) )
+530 534 4031 U.S. NNP
+535 543 4032 aircraft NN
+543 544 4033 . .
