@@ -32,3 +32,15 @@ $ python3 wikfier.py en.tok.off.pos
 ```
 
 Features like testing testing and chosing the categories the Wordnet tagger should look for, are not available here. For those you should use the website.
+
+## Get Core NLP running
+This is necessary for both the script and the website to process tagging the files. It will tag most of the persons and countries named in the pos files. Add the `server.properties` and the `.ner-model.ser.gz` files in your Stanford Core NLP directory. Open this directory in your terminal and enter the following command:
+```
+java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000 -host "0.0.0.0" -serverProperties server.properties
+```
+
+A server will start listening and is now accessible by the python scripts, hopefully. If an error occurs that the Core NLP server is not accessible, you should open `request.py` when using the website and `wikifier.py` when using the script. In those scripts this function is run:
+```
+NERecognizer.tag_named_entities_Core_NLP("http://localhost:9000")
+```
+Running Core NLP on another system (like a virtual machine) than the Flask server or `wikifier.py`, will require you to replace localhost with your local ip address (this connects your computer with your router).
