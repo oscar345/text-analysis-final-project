@@ -23,4 +23,12 @@ With the packages install you are able to run the website with the flask backend
 $ python3 run.py
 ```
 
-A server is running now and the terminal provided a URL for you to open in your browser.  
+A server is running now and the terminal provided a URL for you to open in your browser.
+
+## Use this as a script in the terminal
+For this you need to get the virtual environment running as well, which is discussed above. Running the script in the terminal can be done with `wikifier.py`, which takes one argument: the path to the .pos file. 
+```
+$ python3 wikfier.py en.tok.off.pos
+```
+
+Features like testing testing and chosing the categories the Wordnet tagger should look for, are not available here. For those you should use the website.
