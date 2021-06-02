@@ -129,7 +129,9 @@ class NamedEntityRecognizer():
 
     # Here are the functions that will be used to recognize named entities
     def create_pos_file(self, pos_file):
-        # TODO : needs some work
+        #f = open('document.pos', 'w+')
+        #f.write(sys.argv[1])
+        #f.close()
         self.pos_file = pos_file
 
     def add_pos_file(self, pos_file):
