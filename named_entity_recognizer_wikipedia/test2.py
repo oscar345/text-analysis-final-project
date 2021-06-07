@@ -1,38 +1,27 @@
 import sys
 from nltk import word_tokenize, sent_tokenize, pos_tag
+from nltk.tokenize.repp import ReppTokenizer
+from nltk.tokenize import TreebankWordTokenizer as twt
 
 
 def main():
-
     f = open('document.pos', 'w+')
     input_text = sys.argv[1]
     raw = input_text
-    input_text_split = input_text.split()
-    token = word_tokenize(raw)
-    sent_token = sent_tokenize(raw)
-    sent_tokens_word = []
-    for sentences in range(len(sent_token)):
-        sent_tokens_word.append(word_tokenize(sent_token[sentences]))
-
-    word_tag = pos_tag(token)
-    for x, y in word_tag:
-
-
-        for i in range(len(sent_token)):
-            if x in sent_token[i]:
-                sentence_number = ((i+1)*1000 + \
-                                   sent_tokens_word[i].index(x) + 1)
-                sent_tokens_word[i].pop(sent_tokens_word[i].index(x))
-        print(raw.index(x), raw.index(x[-1]), sentence_number, x, y)
-        f.write(str(raw.index(x)))
-        f.write(' ')
-        f.write(str(raw.index(x[-1])))
-        f.write(' ')
-        f.write(str(sentence_number))
-        f.write(' ')
-        f.write(x+" "+y+"\n")
+    pos_file = list()
+    token_num = 0
+    span = twt().span_tokenize(raw)
+    locations = [location for location in span]
+    print(locations)
+    for i, sent in enumerate(sent_tokenize(input_text)):
+        for j, (token, tag) in enumerate(pos_tag(word_tokenize(sent))):
+            token_id = (i + 1) * 1000 + j + 1
+            pos_file.append(f"0 0 {token_id} {token} {tag}")
+            token_num += 1
+            
+    f.write("\n".join(pos_file))
     f.close()
-    # Maybe remove dublicates with set?
+
 
 if __name__ == "__main__":
     main()

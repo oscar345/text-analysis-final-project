@@ -61,6 +61,7 @@ def process_files():
     
     if text_area_input:
         NERecognizer.create_pos_file(text_area_input)
+        pos_file = NERecognizer.return_pos_file()
     elif file_input:
         file_input.save(os.path.join(Path().absolute(), filenames[0]))
         with open(filenames[0], "r") as file:

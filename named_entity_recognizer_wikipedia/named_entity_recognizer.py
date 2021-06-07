@@ -129,10 +129,16 @@ class NamedEntityRecognizer():
         return "\n".join(new_training_data_file)
 
     # Here are the functions that will be used to recognize named entities
-    def create_pos_file(self, pos_file):
-        # Need to add the test2.py
-        # Will make pos file of raw text
+    def create_pos_file(self, raw_text):
+        pos_file = list()
+        token_num = 0
+        for i, sent in enumerate(sent_tokenize(raw_text)):
+            for j, (token, tag) in enumerate(pos_tag(word_tokenize(sent))):
+                token_id = (i + 1) * 1000 + j + 1
+                pos_file.append(f"0 0 {token_id} {token} {tag}")
+                token_num += 1
         self.pos_file = pos_file
+        
 
     def add_pos_file(self, pos_file):
         self.pos_file = pos_file.split("\n")
@@ -367,6 +373,9 @@ class NamedEntityRecognizer():
 
     def return_token_positions(self):
         return self.token_positions
+
+    def return_pos_file(self):
+        return self.pos_file
 
 
 class Wikifier():
