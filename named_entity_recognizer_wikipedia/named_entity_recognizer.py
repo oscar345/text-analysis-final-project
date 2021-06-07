@@ -87,6 +87,7 @@ class NamedEntityRecognizer():
         self.pos_tags_pos = list()
         
         nltk.download('punkt')
+        nltk.download('averaged_perceptron_tagger')
 
     # Functions that were used to create the training set
     def open_dev_files(self, directory_name, file_name):
