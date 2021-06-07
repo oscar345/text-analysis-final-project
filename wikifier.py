@@ -12,7 +12,7 @@ def main(arguments):
 
     NERecognizer.get_data_from_file()
     NERecognizer.tag_named_entities_Core_NLP(
-        "http://10.211.55.3:9000")
+        "http://localhost:9000")
     NERecognizer.create_lemma_synsets()
     NERecognizer.tag_named_entities_wordnet()
     NERecognizer.combine_named_entities()
@@ -21,11 +21,13 @@ def main(arguments):
     tokens = NERecognizer.return_tokens()
     token_positions = NERecognizer.return_token_positions()
     named_entities = NERecognizer.return_named_entities()
+    postags = NERecognizer.return_postags()
 
     Wikifier = ner_mod.Wikifier(
-        sents, named_entities, pos_file, tokens, token_positions)
+        sents, named_entities, pos_file, tokens, token_positions, postags)
     Wikifier.get_right_wiki_page()
-    output = Wikifier.create_dict_output()
+    Wikifier.create_dict_output()
+    output = Wikifier.create_output_file()
     print(output)
 
 

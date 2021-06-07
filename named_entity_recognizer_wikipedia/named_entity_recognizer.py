@@ -86,6 +86,7 @@ class NamedEntityRecognizer():
         self.token_positions = list()
         self.list_of_synsets = list()
         self.wordnet_named_entities = list()
+        self.pos_tags_pos = list()
 
     # Functions that were used to create the training set
     def open_dev_files(self, directory_name, file_name):
@@ -141,7 +142,7 @@ class NamedEntityRecognizer():
         in the posfile to the instance of NamedEntityRecognizer
         """
         sent = list()
-        sent_num = 0
+        sent_num = 1
         for line in self.pos_file:
             line = line.split()
             if line == []:
@@ -151,11 +152,13 @@ class NamedEntityRecognizer():
                 self.token_positions.append(f"{line[0]} {line[1]} {line[2]}")
                 sent.append(word)
                 self.tokens.append(word)
+                self.pos_tags_pos.append(line[4])
             else:
                 self.token_positions.append(line[2])
                 self.sents.append(sent)
                 sent.clear()
                 sent.append(word)
+                self.pos_tags_pos.append(line[4])
                 sent_num += 1
                 self.tokens.append(word)
         self.sents.append(sent)
@@ -214,10 +217,24 @@ class NamedEntityRecognizer():
         for index, token in enumerate(self.tokens):
             if token != self.named_entities[index][0]:
                 ne_index = 0
-                while self.tokens[index + 1] != self.named_entities[index +
-                                                                    ne_index][
-                                                                        0]:
-                    ne_index += 1
+                try:
+                    while self.tokens[index + 1] != self.named_entities[index + ne_index][0]:
+                        ne_index += 1
+                except IndexError:
+                    self.tokens = list()
+                    self.named_entities = list()
+                    self.sents = list()
+                    self.pos_file = list()
+                    self.token_positions = list()
+                    self.list_of_synsets = list()
+                    self.wordnet_named_entities = list()
+                    self.pos_tags_pos = list()
+                    break
+                    # core NLP will tokenize the named entities again,
+                    # if will not sync with the original tokens, the
+                    # program will stop working because of an uneven
+                    # amount of items in the lists
+                    
                 ne_tag = self.named_entities[index][1]
                 del self.named_entities[index:index + ne_index]
                 self.named_entities.insert(index, (token, ne_tag))
@@ -227,7 +244,9 @@ class NamedEntityRecognizer():
         it will add a list with synsets for each lemmatized token in the
         text if it can find a synset.
         """
+        print(len(self.tokens))
         token_pos_tags = pos_tag(self.tokens)
+        print(len(token_pos_tags))
         lemmatizer = WordNetLemmatizer()
         for token_pos_tag in token_pos_tags:
             if token_pos_tag[1].startswith('NN'):
@@ -239,6 +258,7 @@ class NamedEntityRecognizer():
                     self.list_of_synsets.append(None)
             else:
                 self.list_of_synsets.append(None)
+        print(len(self.list_of_synsets))
 
     def hypernym_of(self, lemma_synset, hypernym_synset):
         """
@@ -246,7 +266,7 @@ class NamedEntityRecognizer():
         checks if that token is a hyponym of the synset of one of the
         categories
         hypernym_synset -- the synset of one of the the categories
-        
+
         returns -- a boolean value, that is true when the lemma was a
         hyponym of the category synset
         """
@@ -267,7 +287,7 @@ class NamedEntityRecognizer():
         lemma_synsets -- all the synsets of the lemma that is checked
         for being the hyponym of the category.
         index -- the index of the token/lemma being checked
-        
+
         will add the category to self.wordnet_named_entities if the
         lemma is a hyponym of the category.
         """
@@ -296,6 +316,7 @@ class NamedEntityRecognizer():
         hypernym_synsets = list()
         for category in categories:
             hypernym_synsets.append(wordnet.synsets(category, pos="n")[0])
+        print(len(self.list_of_synsets), len(self.tokens))
         for index, lemma_synsets in enumerate(self.list_of_synsets):
             self.wordnet_named_entities.append([self.tokens[index], "0"])
             if lemma_synsets is not None:
@@ -333,12 +354,15 @@ class NamedEntityRecognizer():
 
     def return_named_entities(self):
         return self.named_entities
-    
+
     def return_wordnet_named_entities(self):
         return self.wordnet_named_entities
 
     def return_tokens(self):
         return self.tokens
+
+    def return_postags(self):
+        return self.pos_tags_pos
 
     def return_token_positions(self):
         return self.token_positions
@@ -346,7 +370,7 @@ class NamedEntityRecognizer():
 
 class Wikifier():
     def __init__(self, sents_text, named_entities, pos_file, tokens,
-                 token_positions):
+                 token_positions, pos_tags_pos):
         """
         This class and its methods will look for the right wikipedia
         page for a given named entity
@@ -397,6 +421,8 @@ class Wikifier():
             "NAT": "natural place",
             "ENT": "entertainment"
         }
+        self.pos_tags_pos = pos_tags_pos
+        self.output = OrderedDict()
 
     def check_for_collocation(self, index, category_previous):
         """
@@ -407,9 +433,12 @@ class Wikifier():
         entity
         """
         extra_tokens = 0
-        while self.named_entities[index + extra_tokens + 1][1] == \
-                category_previous:
-            extra_tokens += 1
+        try:
+            while self.named_entities[index + extra_tokens + 1][1] == \
+                    category_previous:
+                extra_tokens += 1
+        except IndexError:
+            print("no extra tokens, because end of file without a dot.")
         return extra_tokens
 
     def handle_wiki_page_err(self, most_similiar_wiki_page, abbreviation,
@@ -438,6 +467,8 @@ class Wikifier():
                 except wikipedia.exceptions.DisambiguationError:
                     print("again ambiguation")
                 except TypeError:
+                    print("page id does not exist")
+                except wikipedia.exceptions.PageError:
                     print("page id does not exist")
             except wikipedia.exceptions.PageError:
                 print("page id does not exist")
@@ -506,15 +537,20 @@ class Wikifier():
                 self.wiki_urls.append("")
 
     def create_output_file(self):
-        return ""
+        output_file = list()
+        for index, (key, value) in enumerate(self.output.items()):
+            if (value[2] == ""):
+                output_file.append(f"{key} {value[0]} {self.pos_tags_pos[index]}")
+            else:
+                output_file.append(f"{key} {value[0]} {self.pos_tags_pos[index]} {value[1]} {value[2]}")
+        return ("\n").join(output_file)
 
     def create_dict_output(self):
-        output = OrderedDict()
-
+        
         for i, location in enumerate(self.token_positions):
-            output[location] = [self.tokens[i], self.named_entities[i][1],
+            self.output[location] = [self.tokens[i], self.named_entities[i][1],
                                 self.wiki_urls[i]]
-        return output
+        return self.output
 
 
 def calculate_scores(new_file, annotated_file, guessed_urls, annotated_urls):
