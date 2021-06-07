@@ -1,6 +1,6 @@
 # text-analysis-final-project
 
-**You do not need to start the Core NLP server. This is done inside python.
+**You do not need to start the Core NLP server. This is done inside python.**
 
 ## Get the website running for yourself
 ### Get the required packages
