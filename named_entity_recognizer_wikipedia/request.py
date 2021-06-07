@@ -8,11 +8,12 @@ import matplotlib.pyplot as plt
 
 
 def create_filenames_and_user_id():
-    user_ids = sorted([int(dr.replace("user_upload_", "")) for dr in os.listdir(app.config["USER_UPLOADS"])])
+    user_ids = sorted([int(dr.replace("user_upload_", "")) for dr in os.listdir(app.config["USER_UPLOADS"]) if dr != ".DS_Store"])
     try:
         index_user = user_ids[-1] + 1
     except IndexError:
         index_user = 0
+
     create_files = ["pos_file.txt", "progress.txt", "en.tok.off.pos.ent", "test_ent_file.txt"]
     file_path = os.path.join(Path().absolute(), app.config["USER_UPLOADS"], f"user_upload_{index_user}")
     os.mkdir(file_path)
