@@ -1,5 +1,7 @@
 # text-analysis-final-project
 
+**You do not need to start the Core NLP server. This is done inside python.
+
 ## Get the website running for yourself
 ### Get the required packages
 To get the website running, you will need a virtual environment. This way you have the same versions of packages installed as the ones we had installed. 
