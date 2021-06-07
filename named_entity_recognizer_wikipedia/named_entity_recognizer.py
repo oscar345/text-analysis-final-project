@@ -78,7 +78,7 @@ class NamedEntityRecognizer():
             combines wordnet and Core NLP named entities when wordnet is
             used in addition to Core NLP
         """
-        
+
         self.tokens = list()
         self.named_entities = list()
         self.sents = list()
@@ -130,7 +130,8 @@ class NamedEntityRecognizer():
 
     # Here are the functions that will be used to recognize named entities
     def create_pos_file(self, pos_file):
-        # TODO : needs some work
+        # Need to add the test2.py
+        # Will make pos file of raw text
         self.pos_file = pos_file
 
     def add_pos_file(self, pos_file):
@@ -428,7 +429,7 @@ class Wikifier():
         """
         index -- the index of the token being handled
         category_previous -- the tag of the previous token
-        
+
         returns the number of extra tokens to create the whole named
         entity
         """
@@ -450,7 +451,7 @@ class Wikifier():
         will auto suggest a page
         named_entity -- the tag of the named entity is used in case of a
         disambiguation error. this could help find the right page.
-        
+
         returns -- the wikipage that the function found
         """
         if most_similiar_wiki_page:
@@ -587,18 +588,18 @@ def calculate_scores(new_file, annotated_file, guessed_urls, annotated_urls):
     cfmatrix_img = sns.heatmap(cfmsk, annot=True, cmap='Blues',
                                xticklabels=labels, yticklabels=labels)
     plt.xlabel("Predicted")
-    plt.ylabel("Annotated") 
-    
+    plt.ylabel("Annotated")
+
     print(annotated_urls)
 
     correct_urls = len([url for index, url in enumerate(guessed_urls) if url !=
                         "" and annotated_urls[index] == url])
     guessed_urls = len([url for url in guessed_urls if url != ""])
     anno_urls = len([url for url in annotated_urls if url != ""])
-    
+
     print(correct_urls, guessed_urls, anno_urls)
     accuracy_recall = round(correct_urls / anno_urls * 100, 2)
     accuracy_precision = round(correct_urls / guessed_urls * 100, 2)
 
-    return (cfmatrix_img, f_scores, round(cohen_kappa_score(new_file, \
-        annotated_file), 3), accuracy_recall, accuracy_precision, labels)
+    return (cfmatrix_img, f_scores, round(cohen_kappa_score(new_file,
+            annotated_file), 3), accuracy_recall, accuracy_precision, labels)
