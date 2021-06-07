@@ -8,9 +8,6 @@ import os
 import wikipedia
 from collections import OrderedDict, Counter
 from nltk.tag.stanford import StanfordNERTagger
-import socket
-import time
-import logging
 from urllib.parse import urlparse
 from fuzzywuzzy import fuzz, process
 from sklearn.metrics import cohen_kappa_score, confusion_matrix
@@ -188,7 +185,7 @@ class NamedEntityRecognizer():
                 ent_tags.append("0")
         return ent_tags, ent_urls
 
-    def tag_named_entities_Core_NLP(self, url_Core_NLP):
+    def tag_named_entities_Core_NLP(self):
         """
         url_Core_NLP -- the url on which the core nlp server is
         listening. Most of the time this would be localhost:9000

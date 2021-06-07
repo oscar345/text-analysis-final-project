@@ -11,8 +11,7 @@ def main(arguments):
         pos_file = file
 
     NERecognizer.get_data_from_file()
-    NERecognizer.tag_named_entities_Core_NLP(
-        "http://localhost:9000")
+    NERecognizer.tag_named_entities_Core_NLP()
     NERecognizer.create_lemma_synsets()
     NERecognizer.tag_named_entities_wordnet()
     NERecognizer.combine_named_entities()
@@ -22,7 +21,6 @@ def main(arguments):
     token_positions = NERecognizer.return_token_positions()
     named_entities = NERecognizer.return_named_entities()
     postags = NERecognizer.return_postags()
-
     Wikifier = ner_mod.Wikifier(
         sents, named_entities, pos_file, tokens, token_positions, postags)
     Wikifier.get_right_wiki_page()

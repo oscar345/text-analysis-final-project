@@ -16,8 +16,7 @@ def main():
         print(pos_file)
         NERecognizer.add_pos_file(pos_file)
         NERecognizer.get_data_from_file()
-        NERecognizer.tag_named_entities_Core_NLP(
-            "http://localhost:9000")
+        NERecognizer.tag_named_entities_Core_NLP()
         NERecognizer.create_lemma_synsets()
         NERecognizer.tag_named_entities_wordnet()
         NERecognizer.combine_named_entities()

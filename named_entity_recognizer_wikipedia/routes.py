@@ -8,11 +8,6 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/about", methods=["GET"])
-def about():
-    return render_template("about.html")
-
-
 @app.route("/documentation", methods=["GET", "POST"])
 def documentation():
     return render_template("documentation.html")

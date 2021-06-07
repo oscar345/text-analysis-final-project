@@ -28,8 +28,7 @@ def write_progress(filename, number):
 def recognize_named_entities(progress_file, categories, NERecognizer):
     write_progress(progress_file, "0")
     NERecognizer.get_data_from_file()
-    NERecognizer.tag_named_entities_Core_NLP(
-        "http://localhost:9000")
+    NERecognizer.tag_named_entities_Core_NLP()
     if categories != []:
         write_progress(progress_file, "1")
         NERecognizer.create_lemma_synsets()
