@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-4 mb-3">
             <h3>Download ent file</h3>
-            <p class="text-muted">Download the entfile here. This entfile can be used for calculating the f-scores and
+            <p class="text-muted">Download the ent-file here. This entfile can be used for calculating the f-scores and
                 the cohen-kappa-score with your own script. This can also be done by uploading an
                 entfile on the homepage.</p>
             <a href="{{ url_for('download_file', index_user=index_user) }}" style="width: 100%;"
@@ -40,7 +40,7 @@
         </div>
         <div class="col-md-6 mb-3">
             <h3>Kappa score and f-scores</h3>
-            <p>The diagonal line from top let to right bottom in the confusion matrix shows the named entities tags that
+            <p>The diagonal line from top left corner to right bottom in the confusion matrix shows the named entities tags that
                 were the same for each token in the annotated file and the created file. The more tokens are represented
                 on the diagonal line, the better. Besides the confusion matrix, the cohen-kappa-score is calculated,
                 which has a value of <b>{{ scores[1] }}</b>. Not only are the named entity tags tested, the wiki urls

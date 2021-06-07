@@ -17,16 +17,6 @@
             <h4 class="text-center my-2">Index</h4>
             <ul style="list-style-type: none; padding: 0px">
                 <li class="mt-1">
-                    <a href="#setup-section">How to set up the website</a>
-                </li>
-                <li class="mt-1">
-                    <ul class="pl-3" style="list-style-type: none; padding: 0px">
-                        <li class="mt-1">
-                            <a href="#setup-model-section">Setting up the server properties</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="mt-1">
                     <a href="#form-section">How does the form work</a>
                 </li>
                 <li class="mt-1">
@@ -62,41 +52,14 @@
     <!-- <div class="col-md-4" style="z-index: -2; min-height: 100%;"></div> -->
     <div class="col-md-8 p-3">
         <h1 class="text-center my-5">Documentation</h1>
-        <h2 id="setup-section">How to set up the website</h2>
-        <h4 id="setup-model-section">Setting up the server properties</h4>
-        <p>
-            When you read this documentation, setting up the website must have been successful. However it is possible
-            you still need to start running the Core NLP server. The next part can also be found in the ReadMe on our
-            github: </p>
-
-        <p>
-            This is necessary for both the script and the website to process tagging the files. Add the
-            server.properties and the .ner-model.ser.gz files in your Stanford Core NLP directory (these can be found in
-            the Core_NLP_files directory on our github page). Open the Stanford directory (the one on your computer)
-            in your terminal and enter the following command:
-
-        </p>
-        <script src="https://gist.github.com/oscar345/5208584dc597d8799463c5bcd1365c90.js"></script>
-        <p>
-            A server will start listening and is now accessible by the python scripts, hopefully. If an error occurs
-            that the Core NLP server is not accessible, you should open request.py when using the website and
-            wikifier.py when using the script. In those scripts this function is used:
-        </p>
-        <script src="https://gist.github.com/oscar345/dfbf8fe9d805b82882ce93b98077864d.js"></script>
-        <p>
-            Running Core NLP on another system (like a virtual machine) than where your are running the Flask server or
-            wikifier.py script, will
-            require you to replace localhost with your local ip address.
-        </p>
-
         <h2 id="form-section">How does the form work</h2>
-        <p>There are multiple options available using the form to wikify your text. Each option is discussed here below.
+        <p>There are multiple options available using the form to wikify your text. Each option is discussed below.
         </p>
         <h4 id="form-files-section">File or text input</h4>
 
         <p>
             There are two methods of giving input to the form to wikify your text. This can be in the form of a .pos
-            file, which already has the right formatting, or your can enter text in the textarea. This text will be
+            file, which already has the right formatting, or you can enter your text in the textarea. This text will be
             converted to the same format as a posfile, so it can be used by the same functions.
         </p>
         <h4 id="form-testing-section">Testing the output</h4>
@@ -126,11 +89,11 @@
         </p>
         <h4 id="output-testing-section">Testing output</h4>
         <p>
-            The output when you have tested the system is slightly different. It contains all the element the standard
+            The output when you have tested the system is slightly different. It contains all the elements the standard
             output contains as well, but two extra elements are added. A confusion matrix showing the differences
             between the created file and the annotated file. Some scores regarding the performance of the system is the
             second extra element. These scores include the f-scores and cohen-kappa-score for the named entity tags and
-            also the accuracy score the wikipedia urls.
+            also the accuracy score for the wikipedia urls.
         </p>
     </div>
 
