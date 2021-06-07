@@ -7,7 +7,7 @@ from nltk import word_tokenize, sent_tokenize, pos_tag
 import os
 import wikipedia
 from collections import OrderedDict, Counter
-from nltk.parse import CoreNLPParser
+from nltk.tag.stanford import StanfordNERTagger
 import socket
 import time
 import logging
@@ -161,7 +161,7 @@ class NamedEntityRecognizer():
                 self.tokens.append(word)
                 self.pos_tags_pos.append(line[4])
             else:
-                self.token_positions.append(line[2])
+                self.token_positions.append(f"{line[0]} {line[1]} {line[2]}")
                 self.sents.append(sent)
                 sent.clear()
                 sent.append(word)
@@ -200,25 +200,11 @@ class NamedEntityRecognizer():
         cause wikipedia urls and named entity tags to be assigned to the
         wrong tokens.
         """
+        
+        jar = './Core_NLP_files/stanford-corenlp-4.2.0.jar'
+        model = './Core_NLP_files/ner-model.ser.gz'
 
-        ner_tagger = CoreNLPParser(url=url_Core_NLP, tagtype="ner")
-
-        # piece of code I stole from github to let flask wait for a
-        # request until the core NLP server is ready for one.
-        # https://github.com/Lynten/stanford-corenlp/blob/dec81f51b72469
-        # 877512c78abc45fd2581bd1237/stanfordcorenlp/corenlp.py
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        host_name = urlparse(url_Core_NLP).hostname
-        time.sleep(1)  # OSX, not tested
-        trial = 1
-        while sock.connect_ex((host_name, int(url_Core_NLP.split(":")[-1]))):
-            if trial > 5:
-                raise ValueError('Corenlp server is not available')
-            logging.info('Waiting until the server is available.')
-            trial += 1
-            time.sleep(1)
-        logging.info('The server is available.')
-        # End of the code i did not write myself.
+        ner_tagger = StanfordNERTagger(model, jar, encoding='utf-8')
         self.named_entities = list(ner_tagger.tag(self.tokens))
 
         for index, token in enumerate(self.tokens):
