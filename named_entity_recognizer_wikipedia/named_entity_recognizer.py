@@ -140,7 +140,6 @@ class NamedEntityRecognizer():
                 pos_file.append(f"0 0 {token_id} {token} {tag}")
                 token_num += 1
         self.pos_file = pos_file
-        
 
     def add_pos_file(self, pos_file):
         self.pos_file = pos_file.split("\n")
@@ -202,7 +201,7 @@ class NamedEntityRecognizer():
         cause wikipedia urls and named entity tags to be assigned to the
         wrong tokens.
         """
-        
+
         jar = './Core_NLP_files/stanford-corenlp-4.2.0.jar'
         model = './Core_NLP_files/ner-model.ser.gz'
 
@@ -229,7 +228,7 @@ class NamedEntityRecognizer():
                     # if will not sync with the original tokens, the
                     # program will stop working because of an uneven
                     # amount of items in the lists
-                    
+
                 ne_tag = self.named_entities[index][1]
                 del self.named_entities[index:index + ne_index]
                 self.named_entities.insert(index, (token, ne_tag))
@@ -544,10 +543,10 @@ class Wikifier():
         return ("\n").join(output_file)
 
     def create_dict_output(self):
-        
+
         for i, location in enumerate(self.token_positions):
             self.output[location] = [self.tokens[i], self.named_entities[i][1],
-                                self.wiki_urls[i]]
+                                     self.wiki_urls[i]]
         return self.output
 
 
