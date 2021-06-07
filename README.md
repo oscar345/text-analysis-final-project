@@ -30,7 +30,7 @@ A server is running now and the terminal provided a URL for you to open in your 
 ## Use this as a script in the terminal
 For this you need to get the virtual environment running as well, which is discussed above. Running the script in the terminal can be done with `wikifier.py`, which takes one argument: the path to the .pos file. 
 ```
-$ python3 wikfier.py en.tok.off.pos
+$ python3 wikifier.py en.tok.off.pos
 ```
 
 Features like testing, are not available here. For those you should use the website.
