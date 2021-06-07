@@ -5,6 +5,7 @@ from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.wsd import lesk
 from nltk import word_tokenize, sent_tokenize, pos_tag
 import os
+import nltk
 import wikipedia
 from collections import OrderedDict, Counter
 from nltk.tag.stanford import StanfordNERTagger
@@ -84,6 +85,8 @@ class NamedEntityRecognizer():
         self.list_of_synsets = list()
         self.wordnet_named_entities = list()
         self.pos_tags_pos = list()
+        
+        nltk.download('punkt')
 
     # Functions that were used to create the training set
     def open_dev_files(self, directory_name, file_name):
