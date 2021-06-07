@@ -532,12 +532,9 @@ class Wikifier():
         output_file = list()
         for index, (key, value) in enumerate(self.output.items()):
             if (value[2] == ""):
-                output_file.append(f"{key} {value[0]}
-                                   {self.pos_tags_pos[index]}")
+                output_file.append(f"{key} {value[0]} {self.pos_tags_pos[index]}")
             else:
-                output_file.append(f"{key} {value[0]}
-                                   {self.pos_tags_pos[index]}
-                                   {value[1]} {value[2]}")
+                output_file.append(f"{key} {value[0]} {self.pos_tags_pos[index]} {value[1]} {value[2]}")
         return ("\n").join(output_file)
 
     def create_dict_output(self):
