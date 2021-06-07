@@ -43,24 +43,24 @@ function showHideOptions() {
 }
 
 
-function getProgress() {
-    $("#submit-data").click(function() {
-        $("#progress-text").html(`<div class="progress"><div id="progress-bar" class="progress-bar"></div></div>`)
-        $("#universal-modal").modal("show");
-        window.setInterval(() => {
-            fetch("./progress", {
-                method: "POST",
-                type: "application/json"
-            })
-            .then(request => request.json())
-            .then((request) => {
-                let percentage = Math.round(request.progress / 7 * 100);
-                $("#progress-bar").css("width", `${percentage}%`);
-                $("#progress-bar").text(percentage);
-            })
-        }, 1000)
-    })
-}
+// function getProgress() {
+//     $("#submit-data").click(function() {
+//         $("#progress-text").html(`<div class="progress"><div id="progress-bar" class="progress-bar"></div></div>`)
+//         $("#universal-modal").modal("show");
+//         window.setInterval(() => {
+//             fetch("./progress", {
+//                 method: "POST",
+//                 type: "application/json"
+//             })
+//             .then(request => request.json())
+//             .then((request) => {
+//                 let percentage = Math.round(request.progress / 7 * 100);
+//                 $("#progress-bar").css("width", `${percentage}%`);
+//                 $("#progress-bar").text(percentage);
+//             })
+//         }, 1000)
+//     })
+// }
 
 
 $(document).ready(function () {
