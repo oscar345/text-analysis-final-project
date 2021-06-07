@@ -63,7 +63,7 @@ function getProgress() {
 }
 
 
-$(document).on("ready", function () {
+$(document).ready(function () {
     switchInputMethod();
     showUploadedFilename("file-input");
     showUploadedFilename("test-file-input");
