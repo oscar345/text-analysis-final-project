@@ -44,8 +44,9 @@ def recognize_named_entities(progress_file, categories, NERecognizer):
     token_positions = NERecognizer.return_token_positions()
     named_entities = NERecognizer.return_named_entities()
     postags = NERecognizer.return_postags()
+    token_char_positions = NERecognizer.return_token_char_positions()
     write_progress(progress_file, "5")
-    return sents, tokens, token_positions, named_entities, postags
+    return sents, tokens, token_positions, named_entities, postags, token_char_positions
 
 
 @app.post("/process_files")
@@ -68,11 +69,11 @@ def process_files():
             NERecognizer.add_pos_file(file.read())
             pos_file = file
         
-    sents, tokens, token_positions, named_entities, postags = \
+    sents, tokens, token_positions, named_entities, postags, token_char_positions = \
         recognize_named_entities(filenames[1], categories, NERecognizer)
 
     Wikifier = ner_mod.Wikifier(
-        sents, named_entities, pos_file, tokens, token_positions, postags)
+        sents, named_entities, pos_file, tokens, token_positions, postags, token_char_positions)
     Wikifier.get_right_wiki_page()
     write_progress(filenames[1], "6")
     output = Wikifier.create_dict_output()

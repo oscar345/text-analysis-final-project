@@ -85,6 +85,7 @@ class NamedEntityRecognizer():
         self.list_of_synsets = list()
         self.wordnet_named_entities = list()
         self.pos_tags_pos = list()
+        self.token_char_positions = list()
         
         nltk.download('punkt')
         nltk.download('averaged_perceptron_tagger')
@@ -157,12 +158,14 @@ class NamedEntityRecognizer():
                 break
             word = line[3]
             if sent_num == line[2][0]:
-                self.token_positions.append(f"{line[0]} {line[1]} {line[2]}")
+                self.token_char_positions.append(f"{line[0]} {line[1]}")
+                self.token_positions.append(line[2])
                 sent.append(word)
                 self.tokens.append(word)
                 self.pos_tags_pos.append(line[4])
             else:
-                self.token_positions.append(f"{line[0]} {line[1]} {line[2]}")
+                self.token_char_positions.append(f"{line[0]} {line[1]}")
+                self.token_positions.append(line[2])
                 self.sents.append(sent)
                 sent.clear()
                 sent.append(word)
@@ -360,6 +363,9 @@ class NamedEntityRecognizer():
 
     def return_token_positions(self):
         return self.token_positions
+    
+    def return_token_char_positions(self):
+        return self.token_char_positions
 
     def return_pos_file(self):
         return self.pos_file
@@ -367,7 +373,7 @@ class NamedEntityRecognizer():
 
 class Wikifier():
     def __init__(self, sents_text, named_entities, pos_file, tokens,
-                 token_positions, pos_tags_pos):
+                 token_positions, pos_tags_pos, token_char_positions):
         """
         This class and its methods will look for the right wikipedia
         page for a given named entity
@@ -419,6 +425,7 @@ class Wikifier():
             "ENT": "entertainment"
         }
         self.pos_tags_pos = pos_tags_pos
+        self.token_char_positions = token_char_positions
         self.output = OrderedDict()
 
     def check_for_collocation(self, index, category_previous):
@@ -537,9 +544,9 @@ class Wikifier():
         output_file = list()
         for index, (key, value) in enumerate(self.output.items()):
             if (value[2] == ""):
-                output_file.append(f"{key} {value[0]} {self.pos_tags_pos[index]}")
+                output_file.append(f"{self.token_char_positions[index]} {key} {value[0]} {self.pos_tags_pos[index]}")
             else:
-                output_file.append(f"{key} {value[0]} {self.pos_tags_pos[index]} {value[1]} {value[2]}")
+                output_file.append(f"{self.token_char_positions[index]} {key} {value[0]} {self.pos_tags_pos[index]} {value[1]} {value[2]}")
         return ("\n").join(output_file)
 
     def create_dict_output(self):
