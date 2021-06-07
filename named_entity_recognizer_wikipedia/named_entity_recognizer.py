@@ -241,9 +241,7 @@ class NamedEntityRecognizer():
         it will add a list with synsets for each lemmatized token in the
         text if it can find a synset.
         """
-        print(len(self.tokens))
         token_pos_tags = pos_tag(self.tokens)
-        print(len(token_pos_tags))
         lemmatizer = WordNetLemmatizer()
         for token_pos_tag in token_pos_tags:
             if token_pos_tag[1].startswith('NN'):
@@ -255,7 +253,6 @@ class NamedEntityRecognizer():
                     self.list_of_synsets.append(None)
             else:
                 self.list_of_synsets.append(None)
-        print(len(self.list_of_synsets))
 
     def hypernym_of(self, lemma_synset, hypernym_synset):
         """
@@ -313,7 +310,6 @@ class NamedEntityRecognizer():
         hypernym_synsets = list()
         for category in categories:
             hypernym_synsets.append(wordnet.synsets(category, pos="n")[0])
-        print(len(self.list_of_synsets), len(self.tokens))
         for index, lemma_synsets in enumerate(self.list_of_synsets):
             self.wordnet_named_entities.append([self.tokens[index], "0"])
             if lemma_synsets is not None:
@@ -442,7 +438,7 @@ class Wikifier():
                     category_previous:
                 extra_tokens += 1
         except IndexError:
-            print("no extra tokens, because end of file without a dot.")
+                pass
         return extra_tokens
 
     def handle_wiki_page_err(self, most_similiar_wiki_page, abbreviation,
@@ -469,15 +465,15 @@ class Wikifier():
                         title=f"{most_similiar_wiki_page} "
                         f"{self.fullout_tags[named_entity[1]]}")
                 except wikipedia.exceptions.DisambiguationError:
-                    print("again ambiguation")
+                    pass
                 except TypeError:
-                    print("page id does not exist")
+                    pass
                 except wikipedia.exceptions.PageError:
-                    print("page id does not exist")
+                    pass
             except wikipedia.exceptions.PageError:
-                print("page id does not exist")
+                pass
             except TypeError:
-                print("page id does not exist")
+                pass
 
             if best_wiki_page:
                 self.wiki_urls.append(best_wiki_page.url)
@@ -593,14 +589,11 @@ def calculate_scores(new_file, annotated_file, guessed_urls, annotated_urls):
     plt.xlabel("Predicted")
     plt.ylabel("Annotated")
 
-    print(annotated_urls)
-
     correct_urls = len([url for index, url in enumerate(guessed_urls) if url !=
                         "" and annotated_urls[index] == url])
     guessed_urls = len([url for url in guessed_urls if url != ""])
     anno_urls = len([url for url in annotated_urls if url != ""])
 
-    print(correct_urls, guessed_urls, anno_urls)
     accuracy_recall = round(correct_urls / anno_urls * 100, 2)
     accuracy_precision = round(correct_urls / guessed_urls * 100, 2)
 
