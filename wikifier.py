@@ -21,8 +21,8 @@ def main(arguments):
     token_positions = NERecognizer.return_token_positions()
     named_entities = NERecognizer.return_named_entities()
     postags = NERecognizer.return_postags()
-    token_char_positions = NERecognizer.return_token_char_positions()    
-    
+    token_char_positions = NERecognizer.return_token_char_positions() 
+
     Wikifier = ner_mod.Wikifier(
         sents, named_entities, pos_file, tokens, token_positions, postags,
         token_char_positions)

@@ -87,9 +87,9 @@ class NamedEntityRecognizer():
         self.pos_tags_pos = list()
         self.token_char_positions = list()
         
-        nltk.download('punkt')
-        nltk.download('averaged_perceptron_tagger')
-        nltk.download('wordnet')
+        # nltk.download('punkt')
+        # nltk.download('averaged_perceptron_tagger')
+        # nltk.download('wordnet')
 
     # Functions that were used to create the training set
     def open_dev_files(self, directory_name, file_name):
@@ -185,8 +185,12 @@ class NamedEntityRecognizer():
             if line == []:
                 break
             elif len(line) > 5:
-                ent_urls.append(line[6])
-                ent_tags.append(line[5])
+                try:
+                    ent_urls.append(line[6])
+                    ent_tags.append(line[5])
+                except IndexError:
+                    ent_urls.append("")
+                    ent_tags.append("0")
             else:
                 ent_urls.append("")
                 ent_tags.append("0")
@@ -359,7 +363,7 @@ class NamedEntityRecognizer():
 
     def return_token_positions(self):
         return self.token_positions
-    
+
     def return_token_char_positions(self):
         return self.token_char_positions
 
@@ -438,7 +442,7 @@ class Wikifier():
                     category_previous:
                 extra_tokens += 1
         except IndexError:
-                pass
+            pass
         return extra_tokens
 
     def handle_wiki_page_err(self, most_similiar_wiki_page, abbreviation,
